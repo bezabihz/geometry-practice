@@ -1,0 +1,22 @@
+{
+  "name": "geometry-exam-prep",
+  "version": "1.0.0",
+  "description": "Texas High School Geometry Credit by Exam Prep — McGraw Hill Glencoe Geometry TX 2015",
+  "scripts": {
+    "build:slides": "marp -I slides/ --html --allow-local-files -o docs/slides/",
+    "build:exam": "marp -I practice/ --html --allow-local-files -o docs/practice/",
+    "build:cheatsheets": "marp -I cheatsheets/ --html --allow-local-files -o docs/cheatsheets/",
+    "build": "npm run build:slides && npm run build:exam && npm run build:cheatsheets",
+    "slides": "marp slides/ --html --allow-local-files",
+    "exam": "marp practice/ --html --allow-local-files",
+    "cheatsheets": "marp cheatsheets/ --html --allow-local-files",
+    "slides:pdf": "marp slides/ --pdf --allow-local-files",
+    "exam:pdf": "marp practice/ --pdf --allow-local-files",
+    "cheatsheets:pdf": "marp cheatsheets/ --pdf --allow-local-files",
+    "all": "npm run slides && npm run exam && npm run cheatsheets",
+    "all:pdf": "npm run slides:pdf && npm run exam:pdf && npm run cheatsheets:pdf"
+  },
+  "devDependencies": {
+    "@marp-team/marp-cli": "^4.0.0"
+  }
+}

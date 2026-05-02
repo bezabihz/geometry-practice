@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Texas Geometry Exam Prep</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+      background: #f4f8fc;
+      color: #1a1a2e;
+      line-height: 1.6;
+    }
+
+    /* ── Hero ── */
+    .hero {
+      background: #1a3a5c;
+      color: #fff;
+      padding: 60px 40px 50px;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: 2.8rem;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      margin-bottom: 0.3em;
+    }
+    .hero h1 span { color: #e05c1a; }
+    .hero p {
+      color: #aecde8;
+      font-size: 1.15rem;
+      max-width: 620px;
+      margin: 0 auto 0.5em;
+    }
+    .hero .meta {
+      display: inline-flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 24px;
+      margin-top: 20px;
+      font-size: 0.9rem;
+      color: #aecde8;
+    }
+    .hero .meta span::before { content: "▸ "; color: #e05c1a; }
+
+    /* ── Main content ── */
+    main { max-width: 1100px; margin: 0 auto; padding: 48px 24px 64px; }
+
+    /* ── Section heading ── */
+    .section-heading {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 24px;
+      margin-top: 52px;
+    }
+    .section-heading:first-of-type { margin-top: 0; }
+    .section-heading h2 {
+      font-size: 1.5rem;
+      color: #1a3a5c;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+    .section-heading .count {
+      background: #e05c1a;
+      color: #fff;
+      font-size: 0.78rem;
+      font-weight: 700;
+      border-radius: 99px;
+      padding: 2px 10px;
+      white-space: nowrap;
+    }
+    .section-heading::after {
+      content: "";
+      flex: 1;
+      height: 2px;
+      background: linear-gradient(to right, #e05c1a44, transparent);
+    }
+
+    /* ── Card grids ── */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 14px;
+    }
+    .grid-exam {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 16px;
+    }
+
+    /* ── Card ── */
+    .card {
+      background: #fff;
+      border: 1px solid #dde4ef;
+      border-left: 5px solid #e05c1a;
+      border-radius: 8px;
+      padding: 18px 16px;
+      text-decoration: none;
+      color: inherit;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      transition: box-shadow 0.18s, transform 0.12s;
+    }
+    .card:hover {
+      box-shadow: 0 4px 18px rgba(26, 58, 92, 0.13);
+      transform: translateY(-2px);
+    }
+    .card .ch-num {
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #e05c1a;
+    }
+    .card .ch-title {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: #1a3a5c;
+      line-height: 1.3;
+    }
+    .card .ch-tag {
+      margin-top: auto;
+      padding-top: 10px;
+      font-size: 0.75rem;
+      color: #7a8db0;
+    }
+
+    /* Exam cards */
+    .card-exam .ch-title { font-size: 1.05rem; }
+    .card-exam .ch-desc {
+      font-size: 0.82rem;
+      color: #4a5568;
+      line-height: 1.45;
+      margin-top: 4px;
+    }
+
+    /* Answer key cards */
+    .card-answers { border-left-color: #1a3a5c; }
+    .card-answers .ch-num { color: #1a3a5c; }
+
+    /* ── Footer ── */
+    footer {
+      background: #1a3a5c;
+      color: #aecde8;
+      text-align: center;
+      padding: 28px 16px;
+      font-size: 0.85rem;
+    }
+  </style>
+</head>
+<body>
+
+<header class="hero">
+  <h1>Texas <span>Geometry</span> Exam Prep</h1>
+  <p>McGraw Hill Glencoe Geometry Texas, 2015 &mdash; UTHS Credit by Exam</p>
+  <div class="meta">
+    <span>13 Chapters</span>
+    <span>Semester A &amp; B Practice Exams</span>
+    <span>40 Questions &middot; 70% to Pass</span>
+  </div>
+</header>
+
+<main>
+
+  <!-- SLIDE DECKS -->
+  <div class="section-heading">
+    <h2>Slide Decks</h2>
+    <span class="count">13 chapters</span>
+  </div>
+  <div class="grid">
+    <a class="card" href="slides/ch01-points-lines-planes.html">
+      <span class="ch-num">Chapter 1</span>
+      <span class="ch-title">Points, Lines, Planes &amp; Angles</span>
+      <span class="ch-tag">Slides</span>
+    </a>
+    <a class="card" href="slides/ch02-reasoning-proof.html">
+      <span class="ch-num">Chapter 2</span>
+      <span class="ch-title">Reasoning and Proof</span>
+      <span class="ch-tag">Slides</span>
+    </a>
+    <a class="card" href="slides/ch03-parallel-perpendicular.html">
+      <span class="ch-num">Chapter 3</span>
+      <span class="ch-title">Parallel &amp; Perpendicular Lines</span>
+      <span class="ch-tag">Slides</span>
+    </a>
+    <a class="card" href="slides/ch04-congruent-triangles.html">
+      <span class="ch-num">Chapter 4</span>
+      <span class="ch-title">Congruent Triangles</span>
+      <span class="ch-tag">Slides</span>
+    </a>
+    <a class="card" href="slides/ch05-relationships-triangles.html">
+      <span class="ch-num">Chapter 5</span>
+      <span class="ch-title">Relationships in Triangles</span>
+      <span class="ch-tag">Slides</span>
+    </a>
+    <a class="card" href="slides/ch06-proportions-similarity.html">
+      <span class="ch-num">Chapter 6</span>
+      <span class="ch-title">Proportions &amp; Similarity</span>
+      <span class="ch-tag">Slides</span>
+    </a>
+    <a class="card" href="slides/ch07-right-triangles-trig.html">
+      <span class="ch-num">Chapter 7</span>
+      <span class="ch-title">Right Triangles &amp; Trigonometry</span>
+      <span class="ch-tag">Slides</span>
+    </a>
+    <a class="card" href="slides/ch08-quadrilaterals.html">
+      <span class="ch-num">Chapter 8</span>
+      <span class="ch-title">Quadrilaterals</span>
+      <span class="ch-tag">Slides</span>
+    </a>
+    <a class="card" href="slides/ch09-transformations.html">
+      <span class="ch-num">Chapter 9</span>
+      <span class="ch-title">Transformations</span>
+      <span class="ch-tag">Slides</span>
+    </a>
+    <a class="card" href="slides/ch10-circles.html">
+      <span class="ch-num">Chapter 10</span>
+      <span class="ch-title">Circles</span>
+      <span class="ch-tag">Slides</span>
+    </a>
+    <a class="card" href="slides/ch11-areas.html">
+      <span class="ch-num">Chapter 11</span>
+      <span class="ch-title">Areas of Polygons &amp; Circles</span>
+      <span class="ch-tag">Slides</span>
+    </a>
+    <a class="card" href="slides/ch12-surface-area.html">
+      <span class="ch-num">Chapter 12</span>
+      <span class="ch-title">Surface Area</span>
+      <span class="ch-tag">Slides</span>
+    </a>
+    <a class="card" href="slides/ch13-volume.html">
+      <span class="ch-num">Chapter 13</span>
+      <span class="ch-title">Volume</span>
+      <span class="ch-tag">Slides</span>
+    </a>
+  </div>
+
+  <!-- CHEATSHEETS -->
+  <div class="section-heading">
+    <h2>Cheatsheets</h2>
+    <span class="count">13 chapters</span>
+  </div>
+  <div class="grid">
+    <a class="card" href="cheatsheets/ch01-cheatsheet.html">
+      <span class="ch-num">Chapter 1</span>
+      <span class="ch-title">Points, Lines, Planes &amp; Angles</span>
+      <span class="ch-tag">Quick Reference</span>
+    </a>
+    <a class="card" href="cheatsheets/ch02-cheatsheet.html">
+      <span class="ch-num">Chapter 2</span>
+      <span class="ch-title">Reasoning and Proof</span>
+      <span class="ch-tag">Quick Reference</span>
+    </a>
+    <a class="card" href="cheatsheets/ch03-cheatsheet.html">
+      <span class="ch-num">Chapter 3</span>
+      <span class="ch-title">Parallel &amp; Perpendicular Lines</span>
+      <span class="ch-tag">Quick Reference</span>
+    </a>
+    <a class="card" href="cheatsheets/ch04-cheatsheet.html">
+      <span class="ch-num">Chapter 4</span>
+      <span class="ch-title">Congruent Triangles</span>
+      <span class="ch-tag">Quick Reference</span>
+    </a>
+    <a class="card" href="cheatsheets/ch05-cheatsheet.html">
+      <span class="ch-num">Chapter 5</span>
+      <span class="ch-title">Relationships in Triangles</span>
+      <span class="ch-tag">Quick Reference</span>
+    </a>
+    <a class="card" href="cheatsheets/ch06-cheatsheet.html">
+      <span class="ch-num">Chapter 6</span>
+      <span class="ch-title">Proportions &amp; Similarity</span>
+      <span class="ch-tag">Quick Reference</span>
+    </a>
+    <a class="card" href="cheatsheets/ch07-cheatsheet.html">
+      <span class="ch-num">Chapter 7</span>
+      <span class="ch-title">Right Triangles &amp; Trigonometry</span>
+      <span class="ch-tag">Quick Reference</span>
+    </a>
+    <a class="card" href="cheatsheets/ch08-cheatsheet.html">
+      <span class="ch-num">Chapter 8</span>
+      <span class="ch-title">Quadrilaterals</span>
+      <span class="ch-tag">Quick Reference</span>
+    </a>
+    <a class="card" href="cheatsheets/ch09-cheatsheet.html">
+      <span class="ch-num">Chapter 9</span>
+      <span class="ch-title">Transformations</span>
+      <span class="ch-tag">Quick Reference</span>
+    </a>
+    <a class="card" href="cheatsheets/ch10-cheatsheet.html">
+      <span class="ch-num">Chapter 10</span>
+      <span class="ch-title">Circles</span>
+      <span class="ch-tag">Quick Reference</span>
+    </a>
+    <a class="card" href="cheatsheets/ch11-cheatsheet.html">
+      <span class="ch-num">Chapter 11</span>
+      <span class="ch-title">Areas of Polygons &amp; Circles</span>
+      <span class="ch-tag">Quick Reference</span>
+    </a>
+    <a class="card" href="cheatsheets/ch12-cheatsheet.html">
+      <span class="ch-num">Chapter 12</span>
+      <span class="ch-title">Surface Area</span>
+      <span class="ch-tag">Quick Reference</span>
+    </a>
+    <a class="card" href="cheatsheets/ch13-cheatsheet.html">
+      <span class="ch-num">Chapter 13</span>
+      <span class="ch-title">Volume</span>
+      <span class="ch-tag">Quick Reference</span>
+    </a>
+  </div>
+
+  <!-- PRACTICE EXAMS -->
+  <div class="section-heading">
+    <h2>Practice Exams</h2>
+    <span class="count">4 files</span>
+  </div>
+  <div class="grid-exam">
+    <a class="card card-exam" href="practice/exam-A-practice.html">
+      <span class="ch-num">Semester A &mdash; Exam</span>
+      <span class="ch-title">Full-Length Practice Exam A</span>
+      <span class="ch-desc">40 questions &middot; Chapters 1&ndash;5, 7, 9 &middot; 3 hours</span>
+    </a>
+    <a class="card card-exam card-answers" href="practice/exam-A-answers.html">
+      <span class="ch-num">Semester A &mdash; Answer Key</span>
+      <span class="ch-title">Exam A Answer Key &amp; Explanations</span>
+      <span class="ch-desc">Full worked explanations for all 40 questions</span>
+    </a>
+    <a class="card card-exam" href="practice/exam-B-practice.html">
+      <span class="ch-num">Semester B &mdash; Exam</span>
+      <span class="ch-title">Full-Length Practice Exam B</span>
+      <span class="ch-desc">40 questions &middot; Chapters 6, 8, 10&ndash;13 &middot; 3 hours</span>
+    </a>
+    <a class="card card-exam card-answers" href="practice/exam-B-answers.html">
+      <span class="ch-num">Semester B &mdash; Answer Key</span>
+      <span class="ch-title">Exam B Answer Key &amp; Explanations</span>
+      <span class="ch-desc">Full worked explanations for all 40 questions</span>
+    </a>
+  </div>
+
+</main>
+
+<footer>
+  Texas Geometry Credit by Exam Prep &mdash;
+  McGraw Hill Glencoe Geometry Texas, 2015 &mdash;
+  UTHS Geometry A &amp; B
+</footer>
+
+</body>
+</html>

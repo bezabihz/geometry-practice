@@ -1,0 +1,3 @@
+theme: ./slides/theme.css
+html: true
+math: katex
