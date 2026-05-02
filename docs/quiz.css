@@ -1,0 +1,201 @@
+:root {
+  --blue: #1a3a5c;
+  --orange: #e05c1a;
+  --green: #2d6a4f;
+  --red: #b91c1c;
+  --bg: #f4f8fc;
+  --card-bg: #ffffff;
+  --border: #dde4ed;
+  --text: #1a2030;
+  --muted: #5a6a80;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+.site-header {
+  background: var(--blue);
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.site-header a {
+  color: rgba(255,255,255,0.75);
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+.site-header a:hover { color: white; }
+.site-header h1 {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+.chapter-label {
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  opacity: 0.65;
+}
+
+main {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 4rem;
+}
+
+.quiz-intro {
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 2px solid var(--border);
+}
+.quiz-intro h2 {
+  font-size: 1.5rem;
+  color: var(--blue);
+  margin-bottom: 0.4rem;
+}
+.quiz-intro p { color: var(--muted); font-size: 0.95rem; }
+
+.quiz-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-left: 5px solid var(--orange);
+  border-radius: 8px;
+  padding: 1.5rem 1.75rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.question-num {
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--orange);
+  margin-bottom: 0.5rem;
+}
+
+.question-text {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--blue);
+  margin-bottom: 1rem;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.options label {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.6rem 0.9rem;
+  border: 1.5px solid var(--border);
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.97rem;
+  transition: background 0.15s, border-color 0.15s;
+}
+.options label:hover { background: #eef4fb; border-color: #a8bcd4; }
+.options label input[type="radio"] { accent-color: var(--orange); }
+
+.options label.correct-choice {
+  background: #dcfce7;
+  border-color: var(--green);
+  color: #14532d;
+}
+.options label.wrong-choice {
+  background: #fee2e2;
+  border-color: var(--red);
+  color: #7f1d1d;
+}
+.options label.reveal-correct {
+  background: #dcfce7;
+  border-color: var(--green);
+  color: #14532d;
+  font-weight: 600;
+}
+
+.check-btn {
+  background: var(--orange);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 0.55rem 1.4rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s, transform 0.1s;
+}
+.check-btn:hover { background: #c44e14; transform: translateY(-1px); }
+.check-btn:disabled { background: #9ab0c4; cursor: default; transform: none; }
+
+.explanation {
+  display: none;
+  margin-top: 1rem;
+  padding: 0.85rem 1rem;
+  background: #f0f6ff;
+  border-left: 4px solid var(--blue);
+  border-radius: 4px;
+  font-size: 0.93rem;
+  color: var(--text);
+}
+.explanation.show { display: block; }
+.explanation strong { color: var(--blue); }
+
+.score-box {
+  display: none;
+  background: var(--blue);
+  color: white;
+  border-radius: 12px;
+  padding: 2rem;
+  text-align: center;
+  margin-top: 2rem;
+}
+.score-box.show { display: block; }
+.score-box .score-num {
+  font-size: 3rem;
+  font-weight: 800;
+  line-height: 1;
+}
+.score-box .score-label {
+  font-size: 1.1rem;
+  opacity: 0.8;
+  margin-top: 0.4rem;
+}
+.score-box .score-msg {
+  margin-top: 1rem;
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
+.score-btn-row {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+.score-btn-row a {
+  display: inline-block;
+  padding: 0.6rem 1.4rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  background: rgba(255,255,255,0.15);
+  color: white;
+  border: 1.5px solid rgba(255,255,255,0.4);
+  transition: background 0.15s;
+}
+.score-btn-row a:hover { background: rgba(255,255,255,0.25); }

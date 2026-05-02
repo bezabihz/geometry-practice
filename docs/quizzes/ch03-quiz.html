@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ch 3 Quiz — Parallel &amp; Perpendicular Lines</title>
+<link rel="stylesheet" href="../quiz.css">
+</head>
+<body>
+<header class="site-header">
+  <div>
+    <div class="chapter-label">Chapter 3</div>
+    <h1>Parallel &amp; Perpendicular Lines</h1>
+  </div>
+  <a href="../index.html">← Home</a>
+</header>
+<main>
+  <div class="quiz-intro">
+    <h2>Chapter 3 Mini-Quiz</h2>
+    <p>8 questions · select an answer then click <strong>Check</strong> · instant feedback</p>
+  </div>
+
+  <div class="quiz-card" id="q1">
+    <div class="question-num">Question 1 of 8</div>
+    <div class="question-text">A transversal crosses two parallel lines. If one angle measures 110°, what is its alternate interior angle?</div>
+    <div class="options">
+      <label><input type="radio" name="q1" value="A"> A) 70°</label>
+      <label><input type="radio" name="q1" value="B"> B) 110°</label>
+      <label><input type="radio" name="q1" value="C"> C) 80°</label>
+      <label><input type="radio" name="q1" value="D"> D) 180°</label>
+    </div>
+    <button class="check-btn" onclick="check('q1','B')">Check</button>
+    <div class="explanation" id="q1-exp"><strong>B is correct.</strong> Alternate Interior Angles Theorem: when lines are parallel, alternate interior angles are congruent (equal). So both measure 110°.</div>
+  </div>
+
+  <div class="quiz-card" id="q2">
+    <div class="question-num">Question 2 of 8</div>
+    <div class="question-text">Co-interior (same-side interior) angles formed by a transversal cutting parallel lines are:</div>
+    <div class="options">
+      <label><input type="radio" name="q2" value="A"> A) Congruent</label>
+      <label><input type="radio" name="q2" value="B"> B) Complementary (sum = 90°)</label>
+      <label><input type="radio" name="q2" value="C"> C) Supplementary (sum = 180°)</label>
+      <label><input type="radio" name="q2" value="D"> D) Vertical angles</label>
+    </div>
+    <button class="check-btn" onclick="check('q2','C')">Check</button>
+    <div class="explanation" id="q2-exp"><strong>C is correct.</strong> Consecutive (same-side) interior angles are supplementary — they add to 180°. This is the Co-Interior Angles Theorem.</div>
+  </div>
+
+  <div class="quiz-card" id="q3">
+    <div class="question-num">Question 3 of 8</div>
+    <div class="question-text">What is the slope of a line parallel to y = 3x − 5?</div>
+    <div class="options">
+      <label><input type="radio" name="q3" value="A"> A) −1/3</label>
+      <label><input type="radio" name="q3" value="B"> B) 1/3</label>
+      <label><input type="radio" name="q3" value="C"> C) −3</label>
+      <label><input type="radio" name="q3" value="D"> D) 3</label>
+    </div>
+    <button class="check-btn" onclick="check('q3','D')">Check</button>
+    <div class="explanation" id="q3-exp"><strong>D is correct.</strong> Parallel lines have the same slope. The slope of y = 3x − 5 is 3, so any parallel line also has slope 3.</div>
+  </div>
+
+  <div class="quiz-card" id="q4">
+    <div class="question-num">Question 4 of 8</div>
+    <div class="question-text">What is the slope of a line perpendicular to a line with slope 4?</div>
+    <div class="options">
+      <label><input type="radio" name="q4" value="A"> A) 4</label>
+      <label><input type="radio" name="q4" value="B"> B) −4</label>
+      <label><input type="radio" name="q4" value="C"> C) 1/4</label>
+      <label><input type="radio" name="q4" value="D"> D) −1/4</label>
+    </div>
+    <button class="check-btn" onclick="check('q4','D')">Check</button>
+    <div class="explanation" id="q4-exp"><strong>D is correct.</strong> Perpendicular slopes are negative reciprocals: m₁ × m₂ = −1. So the perpendicular slope is −1/4.</div>
+  </div>
+
+  <div class="quiz-card" id="q5">
+    <div class="question-num">Question 5 of 8</div>
+    <div class="question-text">Corresponding angles formed by a transversal cutting parallel lines are:</div>
+    <div class="options">
+      <label><input type="radio" name="q5" value="A"> A) Supplementary</label>
+      <label><input type="radio" name="q5" value="B"> B) Complementary</label>
+      <label><input type="radio" name="q5" value="C"> C) Congruent</label>
+      <label><input type="radio" name="q5" value="D"> D) Vertical</label>
+    </div>
+    <button class="check-btn" onclick="check('q5','C')">Check</button>
+    <div class="explanation" id="q5-exp"><strong>C is correct.</strong> Corresponding Angles Postulate: when a transversal cuts parallel lines, corresponding angles (same position at each intersection) are congruent.</div>
+  </div>
+
+  <div class="quiz-card" id="q6">
+    <div class="question-num">Question 6 of 8</div>
+    <div class="question-text">Two lines cut by a transversal. If alternate exterior angles are congruent, the lines are:</div>
+    <div class="options">
+      <label><input type="radio" name="q6" value="A"> A) Perpendicular</label>
+      <label><input type="radio" name="q6" value="B"> B) Parallel</label>
+      <label><input type="radio" name="q6" value="C"> C) Skew</label>
+      <label><input type="radio" name="q6" value="D"> D) Intersecting at 90°</label>
+    </div>
+    <button class="check-btn" onclick="check('q6','B')">Check</button>
+    <div class="explanation" id="q6-exp"><strong>B is correct.</strong> Converse of the Alternate Exterior Angles Theorem: if alternate exterior angles are congruent, the lines are parallel. This is one of several ways to prove lines parallel.</div>
+  </div>
+
+  <div class="quiz-card" id="q7">
+    <div class="question-num">Question 7 of 8</div>
+    <div class="question-text">Lines that do not intersect and are not in the same plane are called:</div>
+    <div class="options">
+      <label><input type="radio" name="q7" value="A"> A) Parallel lines</label>
+      <label><input type="radio" name="q7" value="B"> B) Perpendicular lines</label>
+      <label><input type="radio" name="q7" value="C"> C) Skew lines</label>
+      <label><input type="radio" name="q7" value="D"> D) Coincident lines</label>
+    </div>
+    <button class="check-btn" onclick="check('q7','C')">Check</button>
+    <div class="explanation" id="q7-exp"><strong>C is correct.</strong> Skew lines are non-coplanar and non-intersecting. Example: the top edge of a box and a front-to-back edge on the opposite side.</div>
+  </div>
+
+  <div class="quiz-card" id="q8">
+    <div class="question-num">Question 8 of 8</div>
+    <div class="question-text">A transversal forms a 72° angle with one parallel line. What is the co-interior (same-side interior) angle at the other parallel line?</div>
+    <div class="options">
+      <label><input type="radio" name="q8" value="A"> A) 72°</label>
+      <label><input type="radio" name="q8" value="B"> B) 18°</label>
+      <label><input type="radio" name="q8" value="C"> C) 108°</label>
+      <label><input type="radio" name="q8" value="D"> D) 144°</label>
+    </div>
+    <button class="check-btn" onclick="check('q8','C')">Check</button>
+    <div class="explanation" id="q8-exp"><strong>C is correct.</strong> Co-interior angles are supplementary: 180° − 72° = 108°.</div>
+  </div>
+
+  <div class="score-box" id="score-box">
+    <div class="score-num" id="score-num">0/8</div>
+    <div class="score-label">Questions Correct</div>
+    <div class="score-msg" id="score-msg"></div>
+    <div class="score-btn-row">
+      <a href="ch02-quiz.html">← Ch 2</a>
+      <a href="../index.html">All Chapters</a>
+      <a href="ch04-quiz.html">Ch 4 →</a>
+    </div>
+  </div>
+</main>
+<script>
+const TOTAL = 8;
+let answered = 0, correct = 0;
+function check(qid, ans) {
+  const card = document.getElementById(qid);
+  const selected = card.querySelector('input[type="radio"]:checked');
+  if (!selected) return;
+  const btn = card.querySelector('.check-btn');
+  btn.disabled = true;
+  card.querySelectorAll('input').forEach(i => i.disabled = true);
+  const labels = card.querySelectorAll('.options label');
+  labels.forEach(l => {
+    const v = l.querySelector('input').value;
+    if (v === ans) l.classList.add('reveal-correct');
+    if (v === selected.value && v !== ans) l.classList.add('wrong-choice');
+    if (v === selected.value && v === ans) l.classList.add('correct-choice');
+  });
+  if (selected.value === ans) correct++;
+  answered++;
+  document.getElementById(qid + '-exp').classList.add('show');
+  if (answered === TOTAL) showScore();
+}
+function showScore() {
+  const box = document.getElementById('score-box');
+  document.getElementById('score-num').textContent = correct + '/' + TOTAL;
+  const pct = correct / TOTAL;
+  document.getElementById('score-msg').textContent = pct === 1 ? 'Perfect score!' : pct >= 0.75 ? 'Great job!' : pct >= 0.5 ? 'Keep practicing.' : 'Review the chapter and try again.';
+  box.classList.add('show');
+  box.scrollIntoView({ behavior: 'smooth' });
+}
+</script>
+</body>
+</html>

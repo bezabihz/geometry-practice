@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ch 2 Quiz — Reasoning &amp; Proof</title>
+<link rel="stylesheet" href="../quiz.css">
+</head>
+<body>
+<header class="site-header">
+  <div>
+    <div class="chapter-label">Chapter 2</div>
+    <h1>Reasoning &amp; Proof</h1>
+  </div>
+  <a href="../index.html">← Home</a>
+</header>
+<main>
+  <div class="quiz-intro">
+    <h2>Chapter 2 Mini-Quiz</h2>
+    <p>8 questions · select an answer then click <strong>Check</strong> · instant feedback</p>
+  </div>
+
+  <div class="quiz-card" id="q1">
+    <div class="question-num">Question 1 of 8</div>
+    <div class="question-text">What is the hypothesis of the conditional: "If it is raining, then the ground is wet"?</div>
+    <div class="options">
+      <label><input type="radio" name="q1" value="A"> A) The ground is wet</label>
+      <label><input type="radio" name="q1" value="B"> B) It is raining</label>
+      <label><input type="radio" name="q1" value="C"> C) It is not raining</label>
+      <label><input type="radio" name="q1" value="D"> D) The ground is not wet</label>
+    </div>
+    <button class="check-btn" onclick="check('q1','B')">Check</button>
+    <div class="explanation" id="q1-exp"><strong>B is correct.</strong> In "If p, then q," the hypothesis is p (the "if" part). Here p = "it is raining."</div>
+  </div>
+
+  <div class="quiz-card" id="q2">
+    <div class="question-num">Question 2 of 8</div>
+    <div class="question-text">The contrapositive of "If p, then q" is:</div>
+    <div class="options">
+      <label><input type="radio" name="q2" value="A"> A) If q, then p</label>
+      <label><input type="radio" name="q2" value="B"> B) If not p, then not q</label>
+      <label><input type="radio" name="q2" value="C"> C) If not q, then not p</label>
+      <label><input type="radio" name="q2" value="D"> D) If q, then not p</label>
+    </div>
+    <button class="check-btn" onclick="check('q2','C')">Check</button>
+    <div class="explanation" id="q2-exp"><strong>C is correct.</strong> Contrapositive: "If ¬q, then ¬p." It is always logically equivalent to the original conditional. (A is the converse; B is the inverse.)</div>
+  </div>
+
+  <div class="quiz-card" id="q3">
+    <div class="question-num">Question 3 of 8</div>
+    <div class="question-text">Law of Detachment: Given "If p then q" is true AND p is true, what can you conclude?</div>
+    <div class="options">
+      <label><input type="radio" name="q3" value="A"> A) p is false</label>
+      <label><input type="radio" name="q3" value="B"> B) q is true</label>
+      <label><input type="radio" name="q3" value="C"> C) q is false</label>
+      <label><input type="radio" name="q3" value="D"> D) Nothing can be concluded</label>
+    </div>
+    <button class="check-btn" onclick="check('q3','B')">Check</button>
+    <div class="explanation" id="q3-exp"><strong>B is correct.</strong> Law of Detachment (modus ponens): if the conditional is true and the hypothesis is true, the conclusion must be true.</div>
+  </div>
+
+  <div class="quiz-card" id="q4">
+    <div class="question-num">Question 4 of 8</div>
+    <div class="question-text">Which best describes a biconditional statement?</div>
+    <div class="options">
+      <label><input type="radio" name="q4" value="A"> A) p → q only</label>
+      <label><input type="radio" name="q4" value="B"> B) q → p only</label>
+      <label><input type="radio" name="q4" value="C"> C) p → q AND q → p (p if and only if q)</label>
+      <label><input type="radio" name="q4" value="D"> D) ¬p → ¬q</label>
+    </div>
+    <button class="check-btn" onclick="check('q4','C')">Check</button>
+    <div class="explanation" id="q4-exp"><strong>C is correct.</strong> A biconditional (p ↔ q) is true when both the conditional and its converse are true — written "p if and only if q."</div>
+  </div>
+
+  <div class="quiz-card" id="q5">
+    <div class="question-num">Question 5 of 8</div>
+    <div class="question-text">In a two-column proof, what goes in the right column?</div>
+    <div class="options">
+      <label><input type="radio" name="q5" value="A"> A) Statements</label>
+      <label><input type="radio" name="q5" value="B"> B) Reasons (definitions, postulates, theorems)</label>
+      <label><input type="radio" name="q5" value="C"> C) Diagrams</label>
+      <label><input type="radio" name="q5" value="D"> D) Conjectures</label>
+    </div>
+    <button class="check-btn" onclick="check('q5','B')">Check</button>
+    <div class="explanation" id="q5-exp"><strong>B is correct.</strong> A two-column proof has Statements on the left and Reasons (postulates, definitions, theorems) on the right. Each reason justifies the corresponding statement.</div>
+  </div>
+
+  <div class="quiz-card" id="q6">
+    <div class="question-num">Question 6 of 8</div>
+    <div class="question-text">Which type of reasoning uses specific examples to form a general conclusion?</div>
+    <div class="options">
+      <label><input type="radio" name="q6" value="A"> A) Deductive reasoning</label>
+      <label><input type="radio" name="q6" value="B"> B) Inductive reasoning</label>
+      <label><input type="radio" name="q6" value="C"> C) Contrapositive reasoning</label>
+      <label><input type="radio" name="q6" value="D"> D) Algebraic reasoning</label>
+    </div>
+    <button class="check-btn" onclick="check('q6','B')">Check</button>
+    <div class="explanation" id="q6-exp"><strong>B is correct.</strong> Inductive reasoning observes specific cases and conjectures a pattern. Deductive reasoning applies general rules to reach specific conclusions — deductive proofs guarantee truth, inductive conclusions can be wrong.</div>
+  </div>
+
+  <div class="quiz-card" id="q7">
+    <div class="question-num">Question 7 of 8</div>
+    <div class="question-text">Law of Syllogism: "If p→q and q→r," then you can conclude:</div>
+    <div class="options">
+      <label><input type="radio" name="q7" value="A"> A) p → r</label>
+      <label><input type="radio" name="q7" value="B"> B) r → p</label>
+      <label><input type="radio" name="q7" value="C"> C) q is always true</label>
+      <label><input type="radio" name="q7" value="D"> D) p is always false</label>
+    </div>
+    <button class="check-btn" onclick="check('q7','A')">Check</button>
+    <div class="explanation" id="q7-exp"><strong>A is correct.</strong> Law of Syllogism: chaining conditionals. If p→q and q→r are both true, then p→r is true. Like a logical chain.</div>
+  </div>
+
+  <div class="quiz-card" id="q8">
+    <div class="question-num">Question 8 of 8</div>
+    <div class="question-text">A conjecture is best described as:</div>
+    <div class="options">
+      <label><input type="radio" name="q8" value="A"> A) A proven theorem</label>
+      <label><input type="radio" name="q8" value="B"> B) An educated guess based on patterns or observations</label>
+      <label><input type="radio" name="q8" value="C"> C) A definition from a textbook</label>
+      <label><input type="radio" name="q8" value="D"> D) A postulate accepted without proof</label>
+    </div>
+    <button class="check-btn" onclick="check('q8','B')">Check</button>
+    <div class="explanation" id="q8-exp"><strong>B is correct.</strong> A conjecture is an unproven statement based on observation — it becomes a theorem only after it is formally proven. A counterexample can disprove a conjecture.</div>
+  </div>
+
+  <div class="score-box" id="score-box">
+    <div class="score-num" id="score-num">0/8</div>
+    <div class="score-label">Questions Correct</div>
+    <div class="score-msg" id="score-msg"></div>
+    <div class="score-btn-row">
+      <a href="ch01-quiz.html">← Ch 1</a>
+      <a href="../index.html">All Chapters</a>
+      <a href="ch03-quiz.html">Ch 3 →</a>
+    </div>
+  </div>
+</main>
+<script>
+const TOTAL = 8;
+let answered = 0, correct = 0;
+function check(qid, ans) {
+  const card = document.getElementById(qid);
+  const selected = card.querySelector('input[type="radio"]:checked');
+  if (!selected) return;
+  const btn = card.querySelector('.check-btn');
+  btn.disabled = true;
+  card.querySelectorAll('input').forEach(i => i.disabled = true);
+  const labels = card.querySelectorAll('.options label');
+  labels.forEach(l => {
+    const v = l.querySelector('input').value;
+    if (v === ans) l.classList.add('reveal-correct');
+    if (v === selected.value && v !== ans) l.classList.add('wrong-choice');
+    if (v === selected.value && v === ans) l.classList.add('correct-choice');
+  });
+  if (selected.value === ans) correct++;
+  answered++;
+  document.getElementById(qid + '-exp').classList.add('show');
+  if (answered === TOTAL) showScore();
+}
+function showScore() {
+  const box = document.getElementById('score-box');
+  document.getElementById('score-num').textContent = correct + '/' + TOTAL;
+  const pct = correct / TOTAL;
+  document.getElementById('score-msg').textContent = pct === 1 ? 'Perfect score!' : pct >= 0.75 ? 'Great job!' : pct >= 0.5 ? 'Keep practicing.' : 'Review the chapter and try again.';
+  box.classList.add('show');
+  box.scrollIntoView({ behavior: 'smooth' });
+}
+</script>
+</body>
+</html>

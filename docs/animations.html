@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Animated Diagrams — Geometry Exam Prep</title>
+<style>
+:root {
+  --blue: #1a3a5c;
+  --orange: #e05c1a;
+  --green: #2d6a4f;
+  --purple: #5c1a8c;
+  --bg: #f4f8fc;
+  --card: #ffffff;
+  --border: #dde4ed;
+  --text: #1a2030;
+  --muted: #5a6a80;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Segoe UI', system-ui, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+
+.site-header {
+  background: var(--blue); color: white;
+  padding: 1rem 2rem;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.site-header h1 { font-size: 1.3rem; font-weight: 700; }
+.site-header a { color: rgba(255,255,255,0.75); text-decoration: none; font-size: 0.9rem; }
+.site-header a:hover { color: white; }
+
+main { max-width: 960px; margin: 0 auto; padding: 2.5rem 1.5rem 5rem; }
+.page-title { font-size: 2rem; color: var(--blue); margin-bottom: 0.4rem; }
+.page-sub { color: var(--muted); margin-bottom: 2.5rem; font-size: 1rem; }
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(420px, 1fr));
+  gap: 2rem;
+}
+
+.anim-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-left: 5px solid var(--purple);
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+}
+.anim-card h2 { font-size: 1.1rem; color: var(--blue); margin-bottom: 0.3rem; }
+.anim-card p { font-size: 0.88rem; color: var(--muted); margin-bottom: 1rem; }
+.anim-card svg { display: block; margin: 0 auto; }
+
+/* ── 1. Vertical Angles ── */
+@keyframes va-flash1 { 0%,45%,100%{fill:#fff3e0;opacity:1} 50%,95%{fill:#e05c1a;opacity:0.85} }
+@keyframes va-flash2 { 0%,45%,100%{fill:#deeaf7;opacity:1} 50%,95%{fill:#1a3a5c;opacity:0.85} }
+.va-sector1 { animation: va-flash1 2.4s ease-in-out infinite; }
+.va-sector2 { animation: va-flash2 2.4s ease-in-out infinite; }
+.va-sector3 { animation: va-flash1 2.4s ease-in-out infinite 1.2s; }
+.va-sector4 { animation: va-flash2 2.4s ease-in-out infinite 1.2s; }
+
+/* ── 2. Parallel Lines ── */
+@keyframes pl-alt { 0%,30%,100%{fill:#f4f8fc;opacity:0} 40%,70%{fill:#e05c1a;opacity:0.7} }
+@keyframes pl-co  { 0%,60%,100%{fill:#f4f8fc;opacity:0} 70%,95%{fill:#2d6a4f;opacity:0.7} }
+.pl-alt1 { animation: pl-alt 4s ease-in-out infinite; }
+.pl-alt2 { animation: pl-alt 4s ease-in-out infinite 0.15s; }
+.pl-co1  { animation: pl-co  4s ease-in-out infinite; }
+.pl-co2  { animation: pl-co  4s ease-in-out infinite 0.15s; }
+
+/* ── 3. Pythagorean Theorem ── */
+@keyframes pt-a { 0%,10%{opacity:0;transform:scale(0)} 25%,100%{opacity:1;transform:scale(1)} }
+@keyframes pt-b { 0%,30%{opacity:0;transform:scale(0)} 50%,100%{opacity:1;transform:scale(1)} }
+@keyframes pt-c { 0%,55%{opacity:0;transform:scale(0)} 75%,100%{opacity:1;transform:scale(1)} }
+@keyframes pt-eq { 0%,70%{opacity:0} 85%,100%{opacity:1} }
+.pt-sq-a { transform-origin: 160px 240px; animation: pt-a 4s ease-out infinite; }
+.pt-sq-b { transform-origin: 280px 160px; animation: pt-b 4s ease-out infinite; }
+.pt-sq-c { transform-origin: 140px 120px; animation: pt-c 4s ease-out infinite; }
+.pt-eq   { animation: pt-eq 4s ease-out infinite; }
+
+/* ── 4. Centroid ── */
+@keyframes cen-dot {
+  0%   { cx: 80;  cy: 40; }
+  30%  { cx: 80;  cy: 40; }
+  70%  { cx: 160; cy: 213; }
+  85%  { cx: 160; cy: 213; }
+  100% { cx: 80;  cy: 40; }
+}
+@keyframes cen-label { 0%,60%{opacity:0} 72%,90%{opacity:1} 100%{opacity:0} }
+.cen-dot { animation: cen-dot 3.5s ease-in-out infinite; }
+.cen-label { animation: cen-label 3.5s ease-in-out infinite; }
+
+/* ── 5. Inscribed Angle ── */
+@keyframes ia-arc {
+  0%   { stroke-dashoffset: 314; }
+  50%  { stroke-dashoffset: 0; }
+  100% { stroke-dashoffset: 314; }
+}
+@keyframes ia-label { 0%,40%{opacity:0} 55%,90%{opacity:1} 100%{opacity:0} }
+.ia-arc { stroke-dasharray: 314; animation: ia-arc 4s ease-in-out infinite; }
+.ia-label { animation: ia-label 4s ease-in-out infinite; }
+
+/* ── 6. Reflection ── */
+@keyframes ref-pre  { 0%,40%{opacity:1} 55%,85%{opacity:0.25} 100%{opacity:1} }
+@keyframes ref-post { 0%,40%{opacity:0} 55%,85%{opacity:1}    100%{opacity:0} }
+.ref-pre  { animation: ref-pre  3.5s ease-in-out infinite; }
+.ref-post { animation: ref-post 3.5s ease-in-out infinite; }
+
+/* ── 7. Dilation ── */
+@keyframes dil-small { 0%,30%{opacity:1} 50%,75%{opacity:0.3} 100%{opacity:1} }
+@keyframes dil-large { 0%,30%{opacity:0} 50%,75%{opacity:1}   100%{opacity:0} }
+.dil-small { animation: dil-small 3.5s ease-in-out infinite; }
+.dil-large { animation: dil-large 3.5s ease-in-out infinite; }
+
+/* ── 8. Area ½bh ── */
+@keyframes area-para { 0%,20%{opacity:1} 40%,60%{opacity:0.2} 80%,100%{opacity:1} }
+@keyframes area-tri  { 0%,20%{opacity:0;transform:translateX(0)} 40%{opacity:1;transform:translateX(0)} 60%,80%{opacity:1;transform:translateX(120px)} 100%{opacity:0;transform:translateX(120px)} }
+.area-para { animation: area-para 4s ease-in-out infinite; }
+.area-tri  { transform-origin: 0 0; animation: area-tri 4s ease-in-out infinite; }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <h1>Animated Diagrams</h1>
+  <a href="index.html">← Back to Home</a>
+</header>
+
+<main>
+  <h1 class="page-title">Core Concepts Visualized</h1>
+  <p class="page-sub">8 key geometry ideas with step-by-step CSS animations. Watch each loop to build intuition.</p>
+
+  <div class="grid">
+
+    <!-- 1. Vertical Angles -->
+    <div class="anim-card">
+      <h2>1 · Vertical Angles</h2>
+      <p>Opposite angle pairs are always congruent. Watch each pair flash together.</p>
+      <svg width="280" height="220" viewBox="0 0 280 220">
+        <path class="va-sector1" d="M140,110 L220,50 A90,90 0 0,0 230,120 Z" fill="#fff3e0" stroke="none"/>
+        <path class="va-sector2" d="M140,110 L60,170 A90,90 0 0,0 50,100 Z" fill="#deeaf7" stroke="none"/>
+        <path class="va-sector3" d="M140,110 L220,170 A90,90 0 0,1 230,100 Z" fill="#fff3e0" stroke="none"/>
+        <path class="va-sector4" d="M140,110 L60,50 A90,90 0 0,1 50,120 Z" fill="#deeaf7" stroke="none"/>
+        <line x1="40" y1="60" x2="240" y2="160" stroke="#1a3a5c" stroke-width="3"/>
+        <line x1="240" y1="60" x2="40" y2="160" stroke="#1a3a5c" stroke-width="3"/>
+        <text x="200" y="70" font-size="15" fill="#e05c1a" font-family="Arial" font-weight="bold">α</text>
+        <text x="55" y="155" font-size="15" fill="#e05c1a" font-family="Arial" font-weight="bold">α</text>
+        <text x="55" y="80" font-size="15" fill="#1a3a5c" font-family="Arial" font-weight="bold">β</text>
+        <text x="198" y="155" font-size="15" fill="#1a3a5c" font-family="Arial" font-weight="bold">β</text>
+        <text x="60" y="210" font-size="12" fill="#5a6a80" font-family="Arial">Vertical angles: α = α, β = β</text>
+      </svg>
+    </div>
+
+    <!-- 2. Parallel Lines + Transversal -->
+    <div class="anim-card">
+      <h2>2 · Parallel Lines &amp; Transversal</h2>
+      <p>Orange = alternate interior angles (equal). Green = corresponding angles (equal).</p>
+      <svg width="280" height="220" viewBox="0 0 280 220">
+        <!-- Parallel lines -->
+        <line x1="20" y1="70"  x2="260" y2="70"  stroke="#1a3a5c" stroke-width="2.5"/>
+        <line x1="20" y1="150" x2="260" y2="150" stroke="#1a3a5c" stroke-width="2.5"/>
+        <!-- Arrows -->
+        <text x="245" y="66"  font-size="14" fill="#1a3a5c">→</text>
+        <text x="245" y="146" font-size="14" fill="#1a3a5c">→</text>
+        <!-- Transversal -->
+        <line x1="80" y1="20" x2="200" y2="200" stroke="#555" stroke-width="2.5"/>
+        <!-- Angle sectors at top intersection (~115,70) -->
+        <path class="pl-co1" d="M115,70 L145,70 A30,30 0 0,0 130,42 Z" fill="#2d6a4f"/>
+        <!-- Alternate interior at top intersection (below line) -->
+        <path class="pl-alt1" d="M115,70 L90,70 A30,30 0 0,1 105,98 Z" fill="#e05c1a"/>
+        <!-- Angle sectors at bottom intersection (~155,150) -->
+        <path class="pl-co2" d="M155,150 L125,150 A30,30 0 0,1 140,122 Z" fill="#2d6a4f"/>
+        <!-- Alternate interior at bottom intersection (above line) -->
+        <path class="pl-alt2" d="M155,150 L180,150 A30,30 0 0,0 165,178 Z" fill="#e05c1a"/>
+        <text x="148" y="63" font-size="12" fill="#2d6a4f" font-family="Arial" font-weight="bold">co</text>
+        <text x="86"  y="105" font-size="12" fill="#e05c1a" font-family="Arial" font-weight="bold">alt</text>
+        <text x="105" y="142" font-size="12" fill="#2d6a4f" font-family="Arial" font-weight="bold">co</text>
+        <text x="163" y="180" font-size="12" fill="#e05c1a" font-family="Arial" font-weight="bold">alt</text>
+        <text x="30" y="210" font-size="11" fill="#5a6a80" font-family="Arial">Corresponding &amp; alt-interior angles are equal</text>
+      </svg>
+    </div>
+
+    <!-- 3. Pythagorean Theorem -->
+    <div class="anim-card">
+      <h2>3 · Pythagorean Theorem</h2>
+      <p>The three squares appear in order: leg a², leg b², hypotenuse c². Then a²+b²=c².</p>
+      <svg width="280" height="240" viewBox="0 0 280 240">
+        <!-- Right triangle -->
+        <polygon points="120,190 200,190 200,110" fill="#f4f8fc" stroke="#1a3a5c" stroke-width="2.5"/>
+        <rect x="185" y="175" width="15" height="15" fill="none" stroke="#1a3a5c" stroke-width="1.5"/>
+        <!-- Square on a (left leg, vertical) -->
+        <g class="pt-sq-a">
+          <rect x="40" y="110" width="80" height="80" fill="#fff3e0" stroke="#e05c1a" stroke-width="2" opacity="0.9"/>
+          <text x="68" y="157" font-size="16" fill="#e05c1a" font-family="Arial" font-weight="bold">a²</text>
+        </g>
+        <!-- Square on b (bottom leg, horizontal) -->
+        <g class="pt-sq-b">
+          <rect x="120" y="190" width="80" height="80" fill="#deeaf7" stroke="#1a3a5c" stroke-width="2" opacity="0.9"/>
+          <text x="149" y="237" font-size="16" fill="#1a3a5c" font-family="Arial" font-weight="bold">b²</text>
+        </g>
+        <!-- Square on c (hypotenuse) -->
+        <g class="pt-sq-c">
+          <polygon points="120,190 65,110 145,53 200,110" fill="#dcfce7" stroke="#2d6a4f" stroke-width="2" opacity="0.9"/>
+          <text x="118" y="118" font-size="14" fill="#2d6a4f" font-family="Arial" font-weight="bold">c²</text>
+        </g>
+        <!-- Equation -->
+        <g class="pt-eq">
+          <rect x="40" y="10" width="200" height="32" rx="6" fill="#1a3a5c"/>
+          <text x="140" y="31" font-size="15" fill="white" font-family="Arial" font-weight="bold" text-anchor="middle">a² + b² = c²</text>
+        </g>
+        <text x="160" y="160" font-size="13" fill="#1a3a5c" font-family="Arial">a</text>
+        <text x="158" y="210" font-size="13" fill="#1a3a5c" font-family="Arial">b</text>
+      </svg>
+    </div>
+
+    <!-- 4. Centroid 2:1 -->
+    <div class="anim-card">
+      <h2>4 · Centroid 2:1 Ratio</h2>
+      <p>The dot travels along a median and stops at the centroid — ⅔ from vertex to midpoint.</p>
+      <svg width="280" height="230" viewBox="0 0 280 230">
+        <!-- Triangle -->
+        <polygon points="80,40 240,40 160,213" fill="#f4f8fc" stroke="#1a3a5c" stroke-width="2.5"/>
+        <!-- Median from top-left vertex (80,40) to midpoint of opposite side (200,126.5) -->
+        <line x1="80" y1="40" x2="200" y2="126.5" stroke="#aaa" stroke-width="1.5" stroke-dasharray="5,3"/>
+        <!-- Centroid approx at 2/3: (80+2*(200-80)/3, 40+2*(126.5-40)/3) = (160, 97.7) -->
+        <!-- midpoint label -->
+        <circle cx="200" cy="126.5" r="4" fill="#1a3a5c"/>
+        <text x="206" y="130" font-size="11" fill="#1a3a5c" font-family="Arial">M</text>
+        <!-- Animated dot -->
+        <circle class="cen-dot" cx="80" cy="40" r="6" fill="#e05c1a"/>
+        <!-- 2:1 label -->
+        <g class="cen-label">
+          <rect x="95" y="60" width="90" height="22" rx="4" fill="#1a3a5c"/>
+          <text x="140" y="75" font-size="12" fill="white" font-family="Arial" font-weight="bold" text-anchor="middle">centroid: 2:1</text>
+        </g>
+        <!-- Centroid dot (static) -->
+        <circle cx="160" cy="97.7" r="5" fill="#1a3a5c" opacity="0.4"/>
+        <text x="164" y="95" font-size="11" fill="#5a6a80" font-family="Arial">G</text>
+        <text x="30" y="220" font-size="11" fill="#5a6a80" font-family="Arial">Centroid divides each median 2:1 from vertex</text>
+      </svg>
+    </div>
+
+    <!-- 5. Inscribed Angle Theorem -->
+    <div class="anim-card">
+      <h2>5 · Inscribed Angle Theorem</h2>
+      <p>The arc sweeps in, then the labels appear: inscribed angle = ½ × central angle.</p>
+      <svg width="280" height="240" viewBox="0 0 280 240">
+        <!-- Circle -->
+        <circle cx="140" cy="115" r="90" fill="#f4f8fc" stroke="#1a3a5c" stroke-width="2"/>
+        <!-- Central angle radii -->
+        <line x1="140" y1="115" x2="230" y2="115" stroke="#1a3a5c" stroke-width="2"/>
+        <line x1="140" y1="115" x2="175" y2="28"  stroke="#1a3a5c" stroke-width="2"/>
+        <!-- Animated arc (top portion ~100° arc) -->
+        <path class="ia-arc" d="M230,115 A90,90 0 0,0 175,28" fill="none" stroke="#e05c1a" stroke-width="4" stroke-linecap="round"/>
+        <!-- Inscribed angle lines from bottom of circle -->
+        <line x1="140" y1="205" x2="230" y2="115" stroke="#2d6a4f" stroke-width="2" stroke-dasharray="5,3"/>
+        <line x1="140" y1="205" x2="175" y2="28"  stroke="#2d6a4f" stroke-width="2" stroke-dasharray="5,3"/>
+        <circle cx="140" cy="205" r="4" fill="#2d6a4f"/>
+        <!-- Labels -->
+        <g class="ia-label">
+          <text x="168" y="112" font-size="13" fill="#1a3a5c" font-family="Arial" font-weight="bold">2θ</text>
+          <text x="128" y="195" font-size="13" fill="#2d6a4f" font-family="Arial" font-weight="bold">θ</text>
+        </g>
+        <text x="20" y="232" font-size="11" fill="#5a6a80" font-family="Arial">Inscribed angle = ½ × intercepted arc</text>
+      </svg>
+    </div>
+
+    <!-- 6. Reflection -->
+    <div class="anim-card">
+      <h2>6 · Reflection across y-axis</h2>
+      <p>Pre-image fades; its mirror image across the y-axis appears.</p>
+      <svg width="280" height="230" viewBox="0 0 280 230">
+        <!-- Axes -->
+        <line x1="140" y1="10" x2="140" y2="220" stroke="#1a3a5c" stroke-width="2"/>
+        <line x1="10" y1="115" x2="270" y2="115" stroke="#1a3a5c" stroke-width="1.5"/>
+        <text x="144" y="18" font-size="12" fill="#1a3a5c" font-family="Arial">y</text>
+        <text x="258" y="128" font-size="12" fill="#1a3a5c" font-family="Arial">x</text>
+        <!-- Pre-image triangle (right side) -->
+        <polygon class="ref-pre" points="170,55 230,55 200,115" fill="#fff3e0" stroke="#e05c1a" stroke-width="2.5"/>
+        <text class="ref-pre" x="193" y="73" font-size="11" fill="#e05c1a" font-family="Arial">A</text>
+        <!-- Reflected triangle (left side, x-coords mirrored about x=140: 170→110, 230→50, 200→80) -->
+        <polygon class="ref-post" points="110,55 50,55 80,115" fill="#deeaf7" stroke="#1a3a5c" stroke-width="2.5"/>
+        <text class="ref-post" x="82" y="73" font-size="11" fill="#1a3a5c" font-family="Arial">A'</text>
+        <!-- Mirror line label -->
+        <text x="143" y="220" font-size="11" fill="#1a3a5c" font-family="Arial">axis of reflection</text>
+      </svg>
+    </div>
+
+    <!-- 7. Dilation -->
+    <div class="anim-card">
+      <h2>7 · Dilation from Origin</h2>
+      <p>The small triangle dilates outward from the origin with scale factor k = 2.</p>
+      <svg width="280" height="230" viewBox="0 0 280 230">
+        <!-- Axes -->
+        <line x1="50" y1="200" x2="260" y2="200" stroke="#1a3a5c" stroke-width="1.5"/>
+        <line x1="50" y1="200" x2="50"  y2="30"  stroke="#1a3a5c" stroke-width="1.5"/>
+        <text x="252" y="213" font-size="11" fill="#1a3a5c" font-family="Arial">x</text>
+        <text x="38"  y="32"  font-size="11" fill="#1a3a5c" font-family="Arial">y</text>
+        <circle cx="50" cy="200" r="3" fill="#1a3a5c"/>
+        <text x="34" y="215" font-size="10" fill="#1a3a5c" font-family="Arial">O</text>
+        <!-- Small triangle: (50,200),(100,200),(50,150) scaled from O -->
+        <polygon class="dil-small" points="50,200 100,200 50,150" fill="#fff3e0" stroke="#e05c1a" stroke-width="2"/>
+        <text class="dil-small" x="73" y="196" font-size="10" fill="#e05c1a" font-family="Arial">k=1</text>
+        <!-- Large triangle: k=2 → (50,200),(150,200),(50,100) -->
+        <polygon class="dil-large" points="50,200 150,200 50,100" fill="#dcfce7" stroke="#2d6a4f" stroke-width="2.5"/>
+        <text class="dil-large" x="95" y="195" font-size="10" fill="#2d6a4f" font-family="Arial">k=2</text>
+        <!-- Dilation rays -->
+        <line x1="50" y1="200" x2="150" y2="200" stroke="#aaa" stroke-width="1" stroke-dasharray="4,3"/>
+        <line x1="50" y1="200" x2="50"  y2="100" stroke="#aaa" stroke-width="1" stroke-dasharray="4,3"/>
+        <text x="60" y="220" font-size="11" fill="#5a6a80" font-family="Arial">Each coord multiplied by scale factor k</text>
+      </svg>
+    </div>
+
+    <!-- 8. Area = ½bh -->
+    <div class="anim-card">
+      <h2>8 · Area = ½bh</h2>
+      <p>A triangle is exactly half a parallelogram with the same base and height.</p>
+      <svg width="280" height="230" viewBox="0 0 280 230">
+        <!-- Parallelogram fades -->
+        <g class="area-para">
+          <polygon points="40,180 200,180 240,80 80,80" fill="#deeaf7" stroke="#1a3a5c" stroke-width="2"/>
+          <text x="120" y="140" font-size="13" fill="#1a3a5c" font-family="Arial">A = bh</text>
+        </g>
+        <!-- Triangle that slides to fill second half -->
+        <g class="area-tri">
+          <polygon points="40,180 160,180 80,80" fill="#fff3e0" stroke="#e05c1a" stroke-width="2.5"/>
+          <text x="82" y="155" font-size="12" fill="#e05c1a" font-family="Arial" font-weight="bold">½bh</text>
+        </g>
+        <!-- Height line -->
+        <line x1="80" y1="80" x2="80" y2="180" stroke="#e05c1a" stroke-width="2" stroke-dasharray="5,3"/>
+        <rect x="80" y="163" width="14" height="14" fill="none" stroke="#e05c1a" stroke-width="1.5"/>
+        <text x="86" y="140" font-size="12" fill="#e05c1a" font-family="Arial" font-weight="bold">h</text>
+        <!-- Base label -->
+        <text x="100" y="200" font-size="12" fill="#1a3a5c" font-family="Arial">base b</text>
+        <text x="25" y="222" font-size="11" fill="#5a6a80" font-family="Arial">Triangle area = ½ × parallelogram area</text>
+      </svg>
+    </div>
+
+  </div><!-- /grid -->
+</main>
+</body>
+</html>

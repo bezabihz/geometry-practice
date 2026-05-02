@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ch 1 Quiz — Points, Lines &amp; Planes</title>
+<link rel="stylesheet" href="../quiz.css">
+</head>
+<body>
+<header class="site-header">
+  <div>
+    <div class="chapter-label">Chapter 1</div>
+    <h1>Points, Lines &amp; Planes</h1>
+  </div>
+  <a href="../index.html">← Home</a>
+</header>
+<main>
+  <div class="quiz-intro">
+    <h2>Chapter 1 Mini-Quiz</h2>
+    <p>8 questions · select an answer then click <strong>Check</strong> · instant feedback</p>
+  </div>
+
+  <div class="quiz-card" id="q1">
+    <div class="question-num">Question 1 of 8</div>
+    <div class="question-text">How many points are needed to define a unique line?</div>
+    <div class="options">
+      <label><input type="radio" name="q1" value="A"> A) 1</label>
+      <label><input type="radio" name="q1" value="B"> B) 2</label>
+      <label><input type="radio" name="q1" value="C"> C) 3</label>
+      <label><input type="radio" name="q1" value="D"> D) 4</label>
+    </div>
+    <button class="check-btn" onclick="check('q1','B')">Check</button>
+    <div class="explanation" id="q1-exp"><strong>B is correct.</strong> Any two distinct points determine exactly one line (Postulate 2-1). One point is insufficient; three or more are more than needed.</div>
+  </div>
+
+  <div class="quiz-card" id="q2">
+    <div class="question-num">Question 2 of 8</div>
+    <div class="question-text">Point M is the midpoint of segment AB. If AM = 3x + 1 and MB = 5x − 7, what is MB?</div>
+    <div class="options">
+      <label><input type="radio" name="q2" value="A"> A) 4</label>
+      <label><input type="radio" name="q2" value="B"> B) 13</label>
+      <label><input type="radio" name="q2" value="C"> C) 17</label>
+      <label><input type="radio" name="q2" value="D"> D) 9</label>
+    </div>
+    <button class="check-btn" onclick="check('q2','B')">Check</button>
+    <div class="explanation" id="q2-exp"><strong>B is correct.</strong> Set AM = MB (midpoint definition): 3x+1 = 5x−7 → 8 = 2x → x = 4. MB = 5(4)−7 = <strong>13</strong>.</div>
+  </div>
+
+  <div class="quiz-card" id="q3">
+    <div class="question-num">Question 3 of 8</div>
+    <div class="question-text">Points A, B, and C are collinear with B between A and C. If AC = 20 and BC = 7, find AB.</div>
+    <div class="options">
+      <label><input type="radio" name="q3" value="A"> A) 27</label>
+      <label><input type="radio" name="q3" value="B"> B) 7</label>
+      <label><input type="radio" name="q3" value="C"> C) 13</label>
+      <label><input type="radio" name="q3" value="D"> D) 14</label>
+    </div>
+    <button class="check-btn" onclick="check('q3','C')">Check</button>
+    <div class="explanation" id="q3-exp"><strong>C is correct.</strong> Segment Addition Postulate: AB + BC = AC → AB + 7 = 20 → AB = 13.</div>
+  </div>
+
+  <div class="quiz-card" id="q4">
+    <div class="question-num">Question 4 of 8</div>
+    <div class="question-text">What is the midpoint of segment PQ if P = (2, 6) and Q = (8, −2)?</div>
+    <div class="options">
+      <label><input type="radio" name="q4" value="A"> A) (5, 2)</label>
+      <label><input type="radio" name="q4" value="B"> B) (6, 4)</label>
+      <label><input type="radio" name="q4" value="C"> C) (3, 4)</label>
+      <label><input type="radio" name="q4" value="D"> D) (10, 4)</label>
+    </div>
+    <button class="check-btn" onclick="check('q4','A')">Check</button>
+    <div class="explanation" id="q4-exp"><strong>A is correct.</strong> Midpoint formula: ((2+8)/2, (6+(−2))/2) = (10/2, 4/2) = (5, 2).</div>
+  </div>
+
+  <div class="quiz-card" id="q5">
+    <div class="question-num">Question 5 of 8</div>
+    <div class="question-text">Two angles are supplementary. One angle measures 65°. What is the other?</div>
+    <div class="options">
+      <label><input type="radio" name="q5" value="A"> A) 25°</label>
+      <label><input type="radio" name="q5" value="B"> B) 115°</label>
+      <label><input type="radio" name="q5" value="C"> C) 125°</label>
+      <label><input type="radio" name="q5" value="D"> D) 295°</label>
+    </div>
+    <button class="check-btn" onclick="check('q5','B')">Check</button>
+    <div class="explanation" id="q5-exp"><strong>B is correct.</strong> Supplementary angles sum to 180°. 180° − 65° = 115°. (Complementary angles sum to 90°, not 180°.)</div>
+  </div>
+
+  <div class="quiz-card" id="q6">
+    <div class="question-num">Question 6 of 8</div>
+    <div class="question-text">Which pair of angles are vertical angles when two lines intersect?</div>
+    <div class="options">
+      <label><input type="radio" name="q6" value="A"> A) Adjacent angles on the same side</label>
+      <label><input type="radio" name="q6" value="B"> B) Angles that share a side</label>
+      <label><input type="radio" name="q6" value="C"> C) Opposite angles formed by two intersecting lines</label>
+      <label><input type="radio" name="q6" value="D"> D) Angles that form a straight line</label>
+    </div>
+    <button class="check-btn" onclick="check('q6','C')">Check</button>
+    <div class="explanation" id="q6-exp"><strong>C is correct.</strong> Vertical angles are the non-adjacent (opposite) pairs formed when two lines cross. They are always congruent.</div>
+  </div>
+
+  <div class="quiz-card" id="q7">
+    <div class="question-num">Question 7 of 8</div>
+    <div class="question-text">How many planes contain a given line?</div>
+    <div class="options">
+      <label><input type="radio" name="q7" value="A"> A) Exactly 1</label>
+      <label><input type="radio" name="q7" value="B"> B) Exactly 2</label>
+      <label><input type="radio" name="q7" value="C"> C) Exactly 3</label>
+      <label><input type="radio" name="q7" value="D"> D) Infinitely many</label>
+    </div>
+    <button class="check-btn" onclick="check('q7','D')">Check</button>
+    <div class="explanation" id="q7-exp"><strong>D is correct.</strong> A line lies in infinitely many planes — you can "rotate" any plane around the line to get a different plane still containing it.</div>
+  </div>
+
+  <div class="quiz-card" id="q8">
+    <div class="question-num">Question 8 of 8</div>
+    <div class="question-text">An angle bisector divides an angle into two angles each measuring (2x + 5)°. If the original angle is 70°, find x.</div>
+    <div class="options">
+      <label><input type="radio" name="q8" value="A"> A) 10</label>
+      <label><input type="radio" name="q8" value="B"> B) 15</label>
+      <label><input type="radio" name="q8" value="C"> C) 30</label>
+      <label><input type="radio" name="q8" value="D"> D) 32.5</label>
+    </div>
+    <button class="check-btn" onclick="check('q8','B')">Check</button>
+    <div class="explanation" id="q8-exp"><strong>B is correct.</strong> Each half = 70°/2 = 35°. So 2x+5 = 35 → 2x = 30 → x = 15.</div>
+  </div>
+
+  <div class="score-box" id="score-box">
+    <div class="score-num" id="score-num">0/8</div>
+    <div class="score-label">Questions Correct</div>
+    <div class="score-msg" id="score-msg"></div>
+    <div class="score-btn-row">
+      <a href="../index.html">← All Chapters</a>
+      <a href="ch02-quiz.html">Next Chapter →</a>
+    </div>
+  </div>
+</main>
+<script>
+const TOTAL = 8;
+let answered = 0, correct = 0;
+function check(qid, ans) {
+  const card = document.getElementById(qid);
+  const selected = card.querySelector('input[type="radio"]:checked');
+  if (!selected) return;
+  const btn = card.querySelector('.check-btn');
+  btn.disabled = true;
+  card.querySelectorAll('input').forEach(i => i.disabled = true);
+  const labels = card.querySelectorAll('.options label');
+  labels.forEach(l => {
+    const v = l.querySelector('input').value;
+    if (v === ans) l.classList.add('reveal-correct');
+    if (v === selected.value && v !== ans) l.classList.add('wrong-choice');
+    if (v === selected.value && v === ans) l.classList.add('correct-choice');
+  });
+  if (selected.value === ans) correct++;
+  answered++;
+  document.getElementById(qid + '-exp').classList.add('show');
+  if (answered === TOTAL) showScore();
+}
+function showScore() {
+  const box = document.getElementById('score-box');
+  document.getElementById('score-num').textContent = correct + '/' + TOTAL;
+  const pct = correct / TOTAL;
+  document.getElementById('score-msg').textContent = pct === 1 ? 'Perfect score! 🎉' : pct >= 0.75 ? 'Great job!' : pct >= 0.5 ? 'Keep practicing.' : 'Review the chapter and try again.';
+  box.classList.add('show');
+  box.scrollIntoView({ behavior: 'smooth' });
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ch 5 Quiz — Relationships in Triangles</title>
+<link rel="stylesheet" href="../quiz.css">
+</head>
+<body>
+<header class="site-header">
+  <div>
+    <div class="chapter-label">Chapter 5</div>
+    <h1>Relationships in Triangles</h1>
+  </div>
+  <a href="../index.html">← Home</a>
+</header>
+<main>
+  <div class="quiz-intro">
+    <h2>Chapter 5 Mini-Quiz</h2>
+    <p>8 questions · select an answer then click <strong>Check</strong> · instant feedback</p>
+  </div>
+
+  <div class="quiz-card" id="q1">
+    <div class="question-num">Question 1 of 8</div>
+    <div class="question-text">The point equidistant from all three vertices of a triangle is the:</div>
+    <div class="options">
+      <label><input type="radio" name="q1" value="A"> A) Incenter</label>
+      <label><input type="radio" name="q1" value="B"> B) Centroid</label>
+      <label><input type="radio" name="q1" value="C"> C) Circumcenter</label>
+      <label><input type="radio" name="q1" value="D"> D) Orthocenter</label>
+    </div>
+    <button class="check-btn" onclick="check('q1','C')">Check</button>
+    <div class="explanation" id="q1-exp"><strong>C is correct.</strong> The circumcenter is the intersection of perpendicular bisectors. It is equidistant from all three vertices and is the center of the circumscribed circle.</div>
+  </div>
+
+  <div class="quiz-card" id="q2">
+    <div class="question-num">Question 2 of 8</div>
+    <div class="question-text">The centroid divides each median in the ratio:</div>
+    <div class="options">
+      <label><input type="radio" name="q2" value="A"> A) 1:1</label>
+      <label><input type="radio" name="q2" value="B"> B) 1:2</label>
+      <label><input type="radio" name="q2" value="C"> C) 2:1 from vertex to midpoint</label>
+      <label><input type="radio" name="q2" value="D"> D) 3:1 from vertex to midpoint</label>
+    </div>
+    <button class="check-btn" onclick="check('q2','C')">Check</button>
+    <div class="explanation" id="q2-exp"><strong>C is correct.</strong> The Centroid Theorem: the centroid is located ⅔ of the way from each vertex to the midpoint of the opposite side — that's a 2:1 ratio from vertex.</div>
+  </div>
+
+  <div class="quiz-card" id="q3">
+    <div class="question-num">Question 3 of 8</div>
+    <div class="question-text">Can a triangle have sides of lengths 3, 4, and 8?</div>
+    <div class="options">
+      <label><input type="radio" name="q3" value="A"> A) Yes — any three positive lengths form a triangle</label>
+      <label><input type="radio" name="q3" value="B"> B) No — because 3 + 4 = 7 &lt; 8</label>
+      <label><input type="radio" name="q3" value="C"> C) Yes — because 3² + 4² = 5²</label>
+      <label><input type="radio" name="q3" value="D"> D) No — because two sides must be equal</label>
+    </div>
+    <button class="check-btn" onclick="check('q3','B')">Check</button>
+    <div class="explanation" id="q3-exp"><strong>B is correct.</strong> Triangle Inequality Theorem: the sum of any two sides must be GREATER THAN the third. 3 + 4 = 7, which is not greater than 8, so no triangle is possible.</div>
+  </div>
+
+  <div class="quiz-card" id="q4">
+    <div class="question-num">Question 4 of 8</div>
+    <div class="question-text">The midsegment of a triangle connects midpoints of two sides. It is:</div>
+    <div class="options">
+      <label><input type="radio" name="q4" value="A"> A) Parallel to the third side and half its length</label>
+      <label><input type="radio" name="q4" value="B"> B) Perpendicular to the third side</label>
+      <label><input type="radio" name="q4" value="C"> C) Equal in length to the third side</label>
+      <label><input type="radio" name="q4" value="D"> D) Twice the length of the third side</label>
+    </div>
+    <button class="check-btn" onclick="check('q4','A')">Check</button>
+    <div class="explanation" id="q4-exp"><strong>A is correct.</strong> Triangle Midsegment Theorem: a midsegment is parallel to the third side and exactly half as long.</div>
+  </div>
+
+  <div class="quiz-card" id="q5">
+    <div class="question-num">Question 5 of 8</div>
+    <div class="question-text">The point equidistant from all three sides of a triangle is the:</div>
+    <div class="options">
+      <label><input type="radio" name="q5" value="A"> A) Circumcenter</label>
+      <label><input type="radio" name="q5" value="B"> B) Centroid</label>
+      <label><input type="radio" name="q5" value="C"> C) Orthocenter</label>
+      <label><input type="radio" name="q5" value="D"> D) Incenter</label>
+    </div>
+    <button class="check-btn" onclick="check('q5','D')">Check</button>
+    <div class="explanation" id="q5-exp"><strong>D is correct.</strong> The incenter is the intersection of angle bisectors. It is equidistant from all three sides and is the center of the inscribed circle.</div>
+  </div>
+
+  <div class="quiz-card" id="q6">
+    <div class="question-num">Question 6 of 8</div>
+    <div class="question-text">In a triangle, the side opposite the largest angle is the:</div>
+    <div class="options">
+      <label><input type="radio" name="q6" value="A"> A) Shortest side</label>
+      <label><input type="radio" name="q6" value="B"> B) Middle side</label>
+      <label><input type="radio" name="q6" value="C"> C) Longest side</label>
+      <label><input type="radio" name="q6" value="D"> D) Midsegment</label>
+    </div>
+    <button class="check-btn" onclick="check('q6','C')">Check</button>
+    <div class="explanation" id="q6-exp"><strong>C is correct.</strong> Angle-Side Relationship: the largest angle is opposite the longest side. The smallest angle is opposite the shortest side.</div>
+  </div>
+
+  <div class="quiz-card" id="q7">
+    <div class="question-num">Question 7 of 8</div>
+    <div class="question-text">Which center is the intersection of the altitudes of a triangle?</div>
+    <div class="options">
+      <label><input type="radio" name="q7" value="A"> A) Centroid</label>
+      <label><input type="radio" name="q7" value="B"> B) Incenter</label>
+      <label><input type="radio" name="q7" value="C"> C) Circumcenter</label>
+      <label><input type="radio" name="q7" value="D"> D) Orthocenter</label>
+    </div>
+    <button class="check-btn" onclick="check('q7','D')">Check</button>
+    <div class="explanation" id="q7-exp"><strong>D is correct.</strong> The orthocenter is the intersection of the three altitudes (perpendicular segments from each vertex to the opposite side).</div>
+  </div>
+
+  <div class="quiz-card" id="q8">
+    <div class="question-num">Question 8 of 8</div>
+    <div class="question-text">A median in a triangle connects a vertex to the:</div>
+    <div class="options">
+      <label><input type="radio" name="q8" value="A"> A) Midpoint of the opposite side</label>
+      <label><input type="radio" name="q8" value="B"> B) Foot of the altitude</label>
+      <label><input type="radio" name="q8" value="C"> C) Incenter</label>
+      <label><input type="radio" name="q8" value="D"> D) Circumcenter</label>
+    </div>
+    <button class="check-btn" onclick="check('q8','A')">Check</button>
+    <div class="explanation" id="q8-exp"><strong>A is correct.</strong> A median goes from a vertex to the midpoint of the opposite side. Each triangle has exactly three medians, all meeting at the centroid.</div>
+  </div>
+
+  <div class="score-box" id="score-box">
+    <div class="score-num" id="score-num">0/8</div>
+    <div class="score-label">Questions Correct</div>
+    <div class="score-msg" id="score-msg"></div>
+    <div class="score-btn-row">
+      <a href="ch04-quiz.html">← Ch 4</a>
+      <a href="../index.html">All Chapters</a>
+      <a href="ch06-quiz.html">Ch 6 →</a>
+    </div>
+  </div>
+</main>
+<script>
+const TOTAL = 8;
+let answered = 0, correct = 0;
+function check(qid, ans) {
+  const card = document.getElementById(qid);
+  const selected = card.querySelector('input[type="radio"]:checked');
+  if (!selected) return;
+  const btn = card.querySelector('.check-btn');
+  btn.disabled = true;
+  card.querySelectorAll('input').forEach(i => i.disabled = true);
+  const labels = card.querySelectorAll('.options label');
+  labels.forEach(l => {
+    const v = l.querySelector('input').value;
+    if (v === ans) l.classList.add('reveal-correct');
+    if (v === selected.value && v !== ans) l.classList.add('wrong-choice');
+    if (v === selected.value && v === ans) l.classList.add('correct-choice');
+  });
+  if (selected.value === ans) correct++;
+  answered++;
+  document.getElementById(qid + '-exp').classList.add('show');
+  if (answered === TOTAL) showScore();
+}
+function showScore() {
+  const box = document.getElementById('score-box');
+  document.getElementById('score-num').textContent = correct + '/' + TOTAL;
+  const pct = correct / TOTAL;
+  document.getElementById('score-msg').textContent = pct === 1 ? 'Perfect score!' : pct >= 0.75 ? 'Great job!' : pct >= 0.5 ? 'Keep practicing.' : 'Review the chapter and try again.';
+  box.classList.add('show');
+  box.scrollIntoView({ behavior: 'smooth' });
+}
+</script>
+</body>
+</html>

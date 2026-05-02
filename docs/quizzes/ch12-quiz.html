@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ch 12 Quiz — Surface Area</title>
+<link rel="stylesheet" href="../quiz.css">
+</head>
+<body>
+<header class="site-header">
+  <div>
+    <div class="chapter-label">Chapter 12</div>
+    <h1>Surface Area</h1>
+  </div>
+  <a href="../index.html">← Home</a>
+</header>
+<main>
+  <div class="quiz-intro">
+    <h2>Chapter 12 Mini-Quiz</h2>
+    <p>8 questions · select an answer then click <strong>Check</strong> · instant feedback</p>
+  </div>
+
+  <div class="quiz-card" id="q1">
+    <div class="question-num">Question 1 of 8</div>
+    <div class="question-text">A rectangular prism has length 5, width 3, height 4. What is the total surface area?</div>
+    <div class="options">
+      <label><input type="radio" name="q1" value="A"> A) 60</label>
+      <label><input type="radio" name="q1" value="B"> B) 94</label>
+      <label><input type="radio" name="q1" value="C"> C) 47</label>
+      <label><input type="radio" name="q1" value="D"> D) 120</label>
+    </div>
+    <button class="check-btn" onclick="check('q1','B')">Check</button>
+    <div class="explanation" id="q1-exp"><strong>B is correct.</strong> SA = 2(lw + lh + wh) = 2(5·3 + 5·4 + 3·4) = 2(15+20+12) = 2(47) = 94.</div>
+  </div>
+
+  <div class="quiz-card" id="q2">
+    <div class="question-num">Question 2 of 8</div>
+    <div class="question-text">The lateral surface area of a cylinder with radius 4 and height 10 is:</div>
+    <div class="options">
+      <label><input type="radio" name="q2" value="A"> A) 40π</label>
+      <label><input type="radio" name="q2" value="B"> B) 80π</label>
+      <label><input type="radio" name="q2" value="C"> C) 160π</label>
+      <label><input type="radio" name="q2" value="D"> D) 16π</label>
+    </div>
+    <button class="check-btn" onclick="check('q2','B')">Check</button>
+    <div class="explanation" id="q2-exp"><strong>B is correct.</strong> Lateral SA of cylinder = 2πrh = 2π(4)(10) = 80π. (Total SA adds two bases: 80π + 2π(16) = 112π.)</div>
+  </div>
+
+  <div class="quiz-card" id="q3">
+    <div class="question-num">Question 3 of 8</div>
+    <div class="question-text">A square pyramid has a base side of 6 and slant height of 5. What is the lateral surface area?</div>
+    <div class="options">
+      <label><input type="radio" name="q3" value="A"> A) 30</label>
+      <label><input type="radio" name="q3" value="B"> B) 60</label>
+      <label><input type="radio" name="q3" value="C"> C) 90</label>
+      <label><input type="radio" name="q3" value="D"> D) 120</label>
+    </div>
+    <button class="check-btn" onclick="check('q3','B')">Check</button>
+    <div class="explanation" id="q3-exp"><strong>B is correct.</strong> Lateral SA of pyramid = ½Pl = ½(4×6)(5) = ½(24)(5) = 60. (P = perimeter of base, l = slant height.)</div>
+  </div>
+
+  <div class="quiz-card" id="q4">
+    <div class="question-num">Question 4 of 8</div>
+    <div class="question-text">The total surface area of a sphere with radius 6 is:</div>
+    <div class="options">
+      <label><input type="radio" name="q4" value="A"> A) 36π</label>
+      <label><input type="radio" name="q4" value="B"> B) 72π</label>
+      <label><input type="radio" name="q4" value="C"> C) 144π</label>
+      <label><input type="radio" name="q4" value="D"> D) 288π</label>
+    </div>
+    <button class="check-btn" onclick="check('q4','C')">Check</button>
+    <div class="explanation" id="q4-exp"><strong>C is correct.</strong> SA of sphere = 4πr² = 4π(36) = 144π.</div>
+  </div>
+
+  <div class="quiz-card" id="q5">
+    <div class="question-num">Question 5 of 8</div>
+    <div class="question-text">Euler's formula for polyhedra states: V − E + F =</div>
+    <div class="options">
+      <label><input type="radio" name="q5" value="A"> A) 0</label>
+      <label><input type="radio" name="q5" value="B"> B) 1</label>
+      <label><input type="radio" name="q5" value="C"> C) 2</label>
+      <label><input type="radio" name="q5" value="D"> D) 3</label>
+    </div>
+    <button class="check-btn" onclick="check('q5','C')">Check</button>
+    <div class="explanation" id="q5-exp"><strong>C is correct.</strong> Euler's Formula: Vertices − Edges + Faces = 2 for any convex polyhedron. E.g., a cube: 8 − 12 + 6 = 2. ✓</div>
+  </div>
+
+  <div class="quiz-card" id="q6">
+    <div class="question-num">Question 6 of 8</div>
+    <div class="question-text">The total surface area of a cone with radius 5 and slant height 13 is:</div>
+    <div class="options">
+      <label><input type="radio" name="q6" value="A"> A) 65π</label>
+      <label><input type="radio" name="q6" value="B"> B) 90π</label>
+      <label><input type="radio" name="q6" value="C"> C) 25π</label>
+      <label><input type="radio" name="q6" value="D"> D) 130π</label>
+    </div>
+    <button class="check-btn" onclick="check('q6','B')">Check</button>
+    <div class="explanation" id="q6-exp"><strong>B is correct.</strong> Total SA = πrl + πr² = π(5)(13) + π(25) = 65π + 25π = 90π.</div>
+  </div>
+
+  <div class="quiz-card" id="q7">
+    <div class="question-num">Question 7 of 8</div>
+    <div class="question-text">When you "unroll" a cylinder's lateral surface, you get a:</div>
+    <div class="options">
+      <label><input type="radio" name="q7" value="A"> A) Circle</label>
+      <label><input type="radio" name="q7" value="B"> B) Triangle</label>
+      <label><input type="radio" name="q7" value="C"> C) Rectangle</label>
+      <label><input type="radio" name="q7" value="D"> D) Trapezoid</label>
+    </div>
+    <button class="check-btn" onclick="check('q7','C')">Check</button>
+    <div class="explanation" id="q7-exp"><strong>C is correct.</strong> The net of a cylinder's lateral surface is a rectangle with width = height and length = circumference (2πr). That's why lateral SA = 2πrh.</div>
+  </div>
+
+  <div class="quiz-card" id="q8">
+    <div class="question-num">Question 8 of 8</div>
+    <div class="question-text">A cube has side length 4. What is the total surface area?</div>
+    <div class="options">
+      <label><input type="radio" name="q8" value="A"> A) 64</label>
+      <label><input type="radio" name="q8" value="B"> B) 48</label>
+      <label><input type="radio" name="q8" value="C"> C) 96</label>
+      <label><input type="radio" name="q8" value="D"> D) 24</label>
+    </div>
+    <button class="check-btn" onclick="check('q8','C')">Check</button>
+    <div class="explanation" id="q8-exp"><strong>C is correct.</strong> A cube has 6 faces each of area s² = 16. Total SA = 6 × 16 = 96.</div>
+  </div>
+
+  <div class="score-box" id="score-box">
+    <div class="score-num" id="score-num">0/8</div>
+    <div class="score-label">Questions Correct</div>
+    <div class="score-msg" id="score-msg"></div>
+    <div class="score-btn-row">
+      <a href="ch11-quiz.html">← Ch 11</a>
+      <a href="../index.html">All Chapters</a>
+      <a href="ch13-quiz.html">Ch 13 →</a>
+    </div>
+  </div>
+</main>
+<script>
+const TOTAL = 8;
+let answered = 0, correct = 0;
+function check(qid, ans) {
+  const card = document.getElementById(qid);
+  const selected = card.querySelector('input[type="radio"]:checked');
+  if (!selected) return;
+  const btn = card.querySelector('.check-btn');
+  btn.disabled = true;
+  card.querySelectorAll('input').forEach(i => i.disabled = true);
+  const labels = card.querySelectorAll('.options label');
+  labels.forEach(l => {
+    const v = l.querySelector('input').value;
+    if (v === ans) l.classList.add('reveal-correct');
+    if (v === selected.value && v !== ans) l.classList.add('wrong-choice');
+    if (v === selected.value && v === ans) l.classList.add('correct-choice');
+  });
+  if (selected.value === ans) correct++;
+  answered++;
+  document.getElementById(qid + '-exp').classList.add('show');
+  if (answered === TOTAL) showScore();
+}
+function showScore() {
+  const box = document.getElementById('score-box');
+  document.getElementById('score-num').textContent = correct + '/' + TOTAL;
+  const pct = correct / TOTAL;
+  document.getElementById('score-msg').textContent = pct === 1 ? 'Perfect score!' : pct >= 0.75 ? 'Great job!' : pct >= 0.5 ? 'Keep practicing.' : 'Review the chapter and try again.';
+  box.classList.add('show');
+  box.scrollIntoView({ behavior: 'smooth' });
+}
+</script>
+</body>
+</html>

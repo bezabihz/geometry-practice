@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ch 8 Quiz — Quadrilaterals</title>
+<link rel="stylesheet" href="../quiz.css">
+</head>
+<body>
+<header class="site-header">
+  <div>
+    <div class="chapter-label">Chapter 8</div>
+    <h1>Quadrilaterals</h1>
+  </div>
+  <a href="../index.html">← Home</a>
+</header>
+<main>
+  <div class="quiz-intro">
+    <h2>Chapter 8 Mini-Quiz</h2>
+    <p>8 questions · select an answer then click <strong>Check</strong> · instant feedback</p>
+  </div>
+
+  <div class="quiz-card" id="q1">
+    <div class="question-num">Question 1 of 8</div>
+    <div class="question-text">In a parallelogram, opposite angles are:</div>
+    <div class="options">
+      <label><input type="radio" name="q1" value="A"> A) Supplementary</label>
+      <label><input type="radio" name="q1" value="B"> B) Complementary</label>
+      <label><input type="radio" name="q1" value="C"> C) Congruent</label>
+      <label><input type="radio" name="q1" value="D"> D) Right angles</label>
+    </div>
+    <button class="check-btn" onclick="check('q1','C')">Check</button>
+    <div class="explanation" id="q1-exp"><strong>C is correct.</strong> In a parallelogram, opposite angles are congruent, and consecutive angles are supplementary (sum to 180°).</div>
+  </div>
+
+  <div class="quiz-card" id="q2">
+    <div class="question-num">Question 2 of 8</div>
+    <div class="question-text">Which property is TRUE for a rectangle but NOT necessarily for a general parallelogram?</div>
+    <div class="options">
+      <label><input type="radio" name="q2" value="A"> A) Opposite sides are parallel</label>
+      <label><input type="radio" name="q2" value="B"> B) Diagonals bisect each other</label>
+      <label><input type="radio" name="q2" value="C"> C) Diagonals are congruent</label>
+      <label><input type="radio" name="q2" value="D"> D) Opposite angles are congruent</label>
+    </div>
+    <button class="check-btn" onclick="check('q2','C')">Check</button>
+    <div class="explanation" id="q2-exp"><strong>C is correct.</strong> In a rectangle, the diagonals are congruent (equal length). In a general parallelogram, diagonals bisect each other but are not necessarily equal.</div>
+  </div>
+
+  <div class="quiz-card" id="q3">
+    <div class="question-num">Question 3 of 8</div>
+    <div class="question-text">Which quadrilateral has diagonals that are perpendicular bisectors of each other?</div>
+    <div class="options">
+      <label><input type="radio" name="q3" value="A"> A) Rectangle</label>
+      <label><input type="radio" name="q3" value="B"> B) Trapezoid</label>
+      <label><input type="radio" name="q3" value="C"> C) Rhombus</label>
+      <label><input type="radio" name="q3" value="D"> D) Kite</label>
+    </div>
+    <button class="check-btn" onclick="check('q3','C')">Check</button>
+    <div class="explanation" id="q3-exp"><strong>C is correct.</strong> In a rhombus, the diagonals are perpendicular bisectors of each other. A square (rhombus + rectangle) has this property too, plus congruent diagonals.</div>
+  </div>
+
+  <div class="quiz-card" id="q4">
+    <div class="question-num">Question 4 of 8</div>
+    <div class="question-text">The midsegment of a trapezoid equals:</div>
+    <div class="options">
+      <label><input type="radio" name="q4" value="A"> A) The longer base</label>
+      <label><input type="radio" name="q4" value="B"> B) The sum of the two bases</label>
+      <label><input type="radio" name="q4" value="C"> C) The average of the two bases</label>
+      <label><input type="radio" name="q4" value="D"> D) The shorter base</label>
+    </div>
+    <button class="check-btn" onclick="check('q4','C')">Check</button>
+    <div class="explanation" id="q4-exp"><strong>C is correct.</strong> Trapezoid Midsegment Theorem: the midsegment = (b₁ + b₂)/2, and it is parallel to both bases.</div>
+  </div>
+
+  <div class="quiz-card" id="q5">
+    <div class="question-num">Question 5 of 8</div>
+    <div class="question-text">A square is ALWAYS a:</div>
+    <div class="options">
+      <label><input type="radio" name="q5" value="A"> A) Rectangle only</label>
+      <label><input type="radio" name="q5" value="B"> B) Rhombus only</label>
+      <label><input type="radio" name="q5" value="C"> C) Both a rectangle and a rhombus</label>
+      <label><input type="radio" name="q5" value="D"> D) Neither a rectangle nor a rhombus</label>
+    </div>
+    <button class="check-btn" onclick="check('q5','C')">Check</button>
+    <div class="explanation" id="q5-exp"><strong>C is correct.</strong> A square has all right angles (→ rectangle) AND all equal sides (→ rhombus). It is the most specific type of parallelogram.</div>
+  </div>
+
+  <div class="quiz-card" id="q6">
+    <div class="question-num">Question 6 of 8</div>
+    <div class="question-text">In parallelogram ABCD, AB = 2x + 3 and CD = 4x − 5. Find x.</div>
+    <div class="options">
+      <label><input type="radio" name="q6" value="A"> A) 2</label>
+      <label><input type="radio" name="q6" value="B"> B) 4</label>
+      <label><input type="radio" name="q6" value="C"> C) 8</label>
+      <label><input type="radio" name="q6" value="D"> D) 1</label>
+    </div>
+    <button class="check-btn" onclick="check('q6','B')">Check</button>
+    <div class="explanation" id="q6-exp"><strong>B is correct.</strong> Opposite sides of a parallelogram are equal: 2x+3 = 4x−5 → 8 = 2x → x = 4.</div>
+  </div>
+
+  <div class="quiz-card" id="q7">
+    <div class="question-num">Question 7 of 8</div>
+    <div class="question-text">A kite has exactly one pair of congruent opposite angles. Where are those angles?</div>
+    <div class="options">
+      <label><input type="radio" name="q7" value="A"> A) At the ends of the longer diagonal</label>
+      <label><input type="radio" name="q7" value="B"> B) At the ends of the shorter diagonal (between the unequal sides)</label>
+      <label><input type="radio" name="q7" value="C"> C) At all four vertices</label>
+      <label><input type="radio" name="q7" value="D"> D) At the vertices where the equal sides meet</label>
+    </div>
+    <button class="check-btn" onclick="check('q7','B')">Check</button>
+    <div class="explanation" id="q7-exp"><strong>B is correct.</strong> In a kite, the two angles between the non-congruent pairs of sides (the "side" angles) are congruent. The vertex angles (where equal sides meet) are generally not equal to each other.</div>
+  </div>
+
+  <div class="quiz-card" id="q8">
+    <div class="question-num">Question 8 of 8</div>
+    <div class="question-text">An isosceles trapezoid has base angles of:</div>
+    <div class="options">
+      <label><input type="radio" name="q8" value="A"> A) 90° each</label>
+      <label><input type="radio" name="q8" value="B"> B) Congruent pairs on each base</label>
+      <label><input type="radio" name="q8" value="C"> C) Supplementary pairs on each leg</label>
+      <label><input type="radio" name="q8" value="D"> D) All equal</label>
+    </div>
+    <button class="check-btn" onclick="check('q8','B')">Check</button>
+    <div class="explanation" id="q8-exp"><strong>B is correct.</strong> Isosceles Trapezoid: base angles are congruent (both angles at the same base are equal). The diagonals are also congruent in an isosceles trapezoid.</div>
+  </div>
+
+  <div class="score-box" id="score-box">
+    <div class="score-num" id="score-num">0/8</div>
+    <div class="score-label">Questions Correct</div>
+    <div class="score-msg" id="score-msg"></div>
+    <div class="score-btn-row">
+      <a href="ch07-quiz.html">← Ch 7</a>
+      <a href="../index.html">All Chapters</a>
+      <a href="ch09-quiz.html">Ch 9 →</a>
+    </div>
+  </div>
+</main>
+<script>
+const TOTAL = 8;
+let answered = 0, correct = 0;
+function check(qid, ans) {
+  const card = document.getElementById(qid);
+  const selected = card.querySelector('input[type="radio"]:checked');
+  if (!selected) return;
+  const btn = card.querySelector('.check-btn');
+  btn.disabled = true;
+  card.querySelectorAll('input').forEach(i => i.disabled = true);
+  const labels = card.querySelectorAll('.options label');
+  labels.forEach(l => {
+    const v = l.querySelector('input').value;
+    if (v === ans) l.classList.add('reveal-correct');
+    if (v === selected.value && v !== ans) l.classList.add('wrong-choice');
+    if (v === selected.value && v === ans) l.classList.add('correct-choice');
+  });
+  if (selected.value === ans) correct++;
+  answered++;
+  document.getElementById(qid + '-exp').classList.add('show');
+  if (answered === TOTAL) showScore();
+}
+function showScore() {
+  const box = document.getElementById('score-box');
+  document.getElementById('score-num').textContent = correct + '/' + TOTAL;
+  const pct = correct / TOTAL;
+  document.getElementById('score-msg').textContent = pct === 1 ? 'Perfect score!' : pct >= 0.75 ? 'Great job!' : pct >= 0.5 ? 'Keep practicing.' : 'Review the chapter and try again.';
+  box.classList.add('show');
+  box.scrollIntoView({ behavior: 'smooth' });
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ch 10 Quiz — Circles</title>
+<link rel="stylesheet" href="../quiz.css">
+</head>
+<body>
+<header class="site-header">
+  <div>
+    <div class="chapter-label">Chapter 10</div>
+    <h1>Circles</h1>
+  </div>
+  <a href="../index.html">← Home</a>
+</header>
+<main>
+  <div class="quiz-intro">
+    <h2>Chapter 10 Mini-Quiz</h2>
+    <p>8 questions · select an answer then click <strong>Check</strong> · instant feedback</p>
+  </div>
+
+  <div class="quiz-card" id="q1">
+    <div class="question-num">Question 1 of 8</div>
+    <div class="question-text">A central angle of a circle measures 80°. What is the measure of its intercepted arc?</div>
+    <div class="options">
+      <label><input type="radio" name="q1" value="A"> A) 40°</label>
+      <label><input type="radio" name="q1" value="B"> B) 160°</label>
+      <label><input type="radio" name="q1" value="C"> C) 80°</label>
+      <label><input type="radio" name="q1" value="D"> D) 280°</label>
+    </div>
+    <button class="check-btn" onclick="check('q1','C')">Check</button>
+    <div class="explanation" id="q1-exp"><strong>C is correct.</strong> A central angle equals the measure of its intercepted arc. Both measure 80°.</div>
+  </div>
+
+  <div class="quiz-card" id="q2">
+    <div class="question-num">Question 2 of 8</div>
+    <div class="question-text">An inscribed angle intercepts an arc of 100°. What is the inscribed angle?</div>
+    <div class="options">
+      <label><input type="radio" name="q2" value="A"> A) 100°</label>
+      <label><input type="radio" name="q2" value="B"> B) 200°</label>
+      <label><input type="radio" name="q2" value="C"> C) 50°</label>
+      <label><input type="radio" name="q2" value="D"> D) 25°</label>
+    </div>
+    <button class="check-btn" onclick="check('q2','C')">Check</button>
+    <div class="explanation" id="q2-exp"><strong>C is correct.</strong> Inscribed Angle Theorem: inscribed angle = ½ × intercepted arc. ½ × 100° = 50°.</div>
+  </div>
+
+  <div class="quiz-card" id="q3">
+    <div class="question-num">Question 3 of 8</div>
+    <div class="question-text">A tangent line to a circle at point P is:</div>
+    <div class="options">
+      <label><input type="radio" name="q3" value="A"> A) Parallel to the radius at P</label>
+      <label><input type="radio" name="q3" value="B"> B) Perpendicular to the radius at P</label>
+      <label><input type="radio" name="q3" value="C"> C) A chord of the circle</label>
+      <label><input type="radio" name="q3" value="D"> D) Passing through the center</label>
+    </div>
+    <button class="check-btn" onclick="check('q3','B')">Check</button>
+    <div class="explanation" id="q3-exp"><strong>B is correct.</strong> A tangent is perpendicular to the radius drawn to the point of tangency. This is a key theorem used in many circle problems.</div>
+  </div>
+
+  <div class="quiz-card" id="q4">
+    <div class="question-num">Question 4 of 8</div>
+    <div class="question-text">Two tangent segments are drawn from an external point to a circle. They are:</div>
+    <div class="options">
+      <label><input type="radio" name="q4" value="A"> A) Parallel</label>
+      <label><input type="radio" name="q4" value="B"> B) Perpendicular to each other</label>
+      <label><input type="radio" name="q4" value="C"> C) Congruent</label>
+      <label><input type="radio" name="q4" value="D"> D) Unequal in length</label>
+    </div>
+    <button class="check-btn" onclick="check('q4','C')">Check</button>
+    <div class="explanation" id="q4-exp"><strong>C is correct.</strong> Two tangent segments from the same external point are congruent (equal length). This follows from the HL theorem applied to the two right triangles formed.</div>
+  </div>
+
+  <div class="quiz-card" id="q5">
+    <div class="question-num">Question 5 of 8</div>
+    <div class="question-text">Two chords intersect inside a circle. Chord AB is cut into segments of 4 and 6. Chord CD is cut into segments of 3 and x. Find x.</div>
+    <div class="options">
+      <label><input type="radio" name="q5" value="A"> A) 5</label>
+      <label><input type="radio" name="q5" value="B"> B) 7</label>
+      <label><input type="radio" name="q5" value="C"> C) 8</label>
+      <label><input type="radio" name="q5" value="D"> D) 9</label>
+    </div>
+    <button class="check-btn" onclick="check('q5','C')">Check</button>
+    <div class="explanation" id="q5-exp"><strong>C is correct.</strong> Chord-Chord product rule: segment₁ × segment₂ = segment₃ × segment₄. So 4 × 6 = 3 × x → 24 = 3x → x = 8.</div>
+  </div>
+
+  <div class="quiz-card" id="q6">
+    <div class="question-num">Question 6 of 8</div>
+    <div class="question-text">An inscribed angle that intercepts a semicircle (arc = 180°) measures:</div>
+    <div class="options">
+      <label><input type="radio" name="q6" value="A"> A) 180°</label>
+      <label><input type="radio" name="q6" value="B"> B) 90°</label>
+      <label><input type="radio" name="q6" value="C"> C) 45°</label>
+      <label><input type="radio" name="q6" value="D"> D) 360°</label>
+    </div>
+    <button class="check-btn" onclick="check('q6','B')">Check</button>
+    <div class="explanation" id="q6-exp"><strong>B is correct.</strong> Thales' Theorem: an inscribed angle intercepting a semicircle = ½ × 180° = 90°. Any angle inscribed in a semicircle is a right angle.</div>
+  </div>
+
+  <div class="quiz-card" id="q7">
+    <div class="question-num">Question 7 of 8</div>
+    <div class="question-text">A secant from an external point creates far arc = 200° and near arc = 80°. The angle at the external point is:</div>
+    <div class="options">
+      <label><input type="radio" name="q7" value="A"> A) 140°</label>
+      <label><input type="radio" name="q7" value="B"> B) 60°</label>
+      <label><input type="radio" name="q7" value="C"> C) 120°</label>
+      <label><input type="radio" name="q7" value="D"> D) 80°</label>
+    </div>
+    <button class="check-btn" onclick="check('q7','B')">Check</button>
+    <div class="explanation" id="q7-exp"><strong>B is correct.</strong> Secant-Secant angle from external point = ½(far arc − near arc) = ½(200° − 80°) = ½(120°) = 60°.</div>
+  </div>
+
+  <div class="quiz-card" id="q8">
+    <div class="question-num">Question 8 of 8</div>
+    <div class="question-text">The diameter of a circle is a chord that:</div>
+    <div class="options">
+      <label><input type="radio" name="q8" value="A"> A) Is tangent to the circle</label>
+      <label><input type="radio" name="q8" value="B"> B) Does not pass through the center</label>
+      <label><input type="radio" name="q8" value="C"> C) Passes through the center (longest chord)</label>
+      <label><input type="radio" name="q8" value="D"> D) Is perpendicular to the radius</label>
+    </div>
+    <button class="check-btn" onclick="check('q8','C')">Check</button>
+    <div class="explanation" id="q8-exp"><strong>C is correct.</strong> The diameter passes through the center and is the longest chord of the circle. d = 2r.</div>
+  </div>
+
+  <div class="score-box" id="score-box">
+    <div class="score-num" id="score-num">0/8</div>
+    <div class="score-label">Questions Correct</div>
+    <div class="score-msg" id="score-msg"></div>
+    <div class="score-btn-row">
+      <a href="ch09-quiz.html">← Ch 9</a>
+      <a href="../index.html">All Chapters</a>
+      <a href="ch11-quiz.html">Ch 11 →</a>
+    </div>
+  </div>
+</main>
+<script>
+const TOTAL = 8;
+let answered = 0, correct = 0;
+function check(qid, ans) {
+  const card = document.getElementById(qid);
+  const selected = card.querySelector('input[type="radio"]:checked');
+  if (!selected) return;
+  const btn = card.querySelector('.check-btn');
+  btn.disabled = true;
+  card.querySelectorAll('input').forEach(i => i.disabled = true);
+  const labels = card.querySelectorAll('.options label');
+  labels.forEach(l => {
+    const v = l.querySelector('input').value;
+    if (v === ans) l.classList.add('reveal-correct');
+    if (v === selected.value && v !== ans) l.classList.add('wrong-choice');
+    if (v === selected.value && v === ans) l.classList.add('correct-choice');
+  });
+  if (selected.value === ans) correct++;
+  answered++;
+  document.getElementById(qid + '-exp').classList.add('show');
+  if (answered === TOTAL) showScore();
+}
+function showScore() {
+  const box = document.getElementById('score-box');
+  document.getElementById('score-num').textContent = correct + '/' + TOTAL;
+  const pct = correct / TOTAL;
+  document.getElementById('score-msg').textContent = pct === 1 ? 'Perfect score!' : pct >= 0.75 ? 'Great job!' : pct >= 0.5 ? 'Keep practicing.' : 'Review the chapter and try again.';
+  box.classList.add('show');
+  box.scrollIntoView({ behavior: 'smooth' });
+}
+</script>
+</body>
+</html>

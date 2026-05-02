@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ch 7 Quiz — Right Triangles &amp; Trigonometry</title>
+<link rel="stylesheet" href="../quiz.css">
+</head>
+<body>
+<header class="site-header">
+  <div>
+    <div class="chapter-label">Chapter 7</div>
+    <h1>Right Triangles &amp; Trigonometry</h1>
+  </div>
+  <a href="../index.html">← Home</a>
+</header>
+<main>
+  <div class="quiz-intro">
+    <h2>Chapter 7 Mini-Quiz</h2>
+    <p>8 questions · select an answer then click <strong>Check</strong> · instant feedback</p>
+  </div>
+
+  <div class="quiz-card" id="q1">
+    <div class="question-num">Question 1 of 8</div>
+    <div class="question-text">A right triangle has legs 5 and 12. What is the hypotenuse?</div>
+    <div class="options">
+      <label><input type="radio" name="q1" value="A"> A) 17</label>
+      <label><input type="radio" name="q1" value="B"> B) 13</label>
+      <label><input type="radio" name="q1" value="C"> C) 10</label>
+      <label><input type="radio" name="q1" value="D"> D) 15</label>
+    </div>
+    <button class="check-btn" onclick="check('q1','B')">Check</button>
+    <div class="explanation" id="q1-exp"><strong>B is correct.</strong> Pythagorean Theorem: c² = 5² + 12² = 25 + 144 = 169. c = √169 = 13. (5-12-13 is a Pythagorean triple.)</div>
+  </div>
+
+  <div class="quiz-card" id="q2">
+    <div class="question-num">Question 2 of 8</div>
+    <div class="question-text">In a 30-60-90 triangle, if the short leg is 7, what is the hypotenuse?</div>
+    <div class="options">
+      <label><input type="radio" name="q2" value="A"> A) 7√2</label>
+      <label><input type="radio" name="q2" value="B"> B) 14</label>
+      <label><input type="radio" name="q2" value="C"> C) 7√3</label>
+      <label><input type="radio" name="q2" value="D"> D) 21</label>
+    </div>
+    <button class="check-btn" onclick="check('q2','B')">Check</button>
+    <div class="explanation" id="q2-exp"><strong>B is correct.</strong> 30-60-90 ratios: short leg : long leg : hypotenuse = 1 : √3 : 2. Hypotenuse = 2 × short leg = 2 × 7 = 14.</div>
+  </div>
+
+  <div class="quiz-card" id="q3">
+    <div class="question-num">Question 3 of 8</div>
+    <div class="question-text">In a 45-45-90 triangle with leg = 8, the hypotenuse is:</div>
+    <div class="options">
+      <label><input type="radio" name="q3" value="A"> A) 8√3</label>
+      <label><input type="radio" name="q3" value="B"> B) 16</label>
+      <label><input type="radio" name="q3" value="C"> C) 8√2</label>
+      <label><input type="radio" name="q3" value="D"> D) 4√2</label>
+    </div>
+    <button class="check-btn" onclick="check('q3','C')">Check</button>
+    <div class="explanation" id="q3-exp"><strong>C is correct.</strong> 45-45-90 ratios: leg : leg : hypotenuse = 1 : 1 : √2. Hypotenuse = 8√2.</div>
+  </div>
+
+  <div class="quiz-card" id="q4">
+    <div class="question-num">Question 4 of 8</div>
+    <div class="question-text">sin θ = opposite/hypotenuse. If opposite = 6 and hypotenuse = 10, what is sin θ?</div>
+    <div class="options">
+      <label><input type="radio" name="q4" value="A"> A) 10/6</label>
+      <label><input type="radio" name="q4" value="B"> B) 6/8</label>
+      <label><input type="radio" name="q4" value="C"> C) 6/10 = 0.6</label>
+      <label><input type="radio" name="q4" value="D"> D) 8/10</label>
+    </div>
+    <button class="check-btn" onclick="check('q4','C')">Check</button>
+    <div class="explanation" id="q4-exp"><strong>C is correct.</strong> SOH: sin = Opposite/Hypotenuse = 6/10 = 0.6. (Note: this is a 6-8-10 right triangle, a scaled 3-4-5.)</div>
+  </div>
+
+  <div class="quiz-card" id="q5">
+    <div class="question-num">Question 5 of 8</div>
+    <div class="question-text">Which ratio gives the tangent of an angle in a right triangle?</div>
+    <div class="options">
+      <label><input type="radio" name="q5" value="A"> A) adjacent/hypotenuse</label>
+      <label><input type="radio" name="q5" value="B"> B) opposite/hypotenuse</label>
+      <label><input type="radio" name="q5" value="C"> C) opposite/adjacent</label>
+      <label><input type="radio" name="q5" value="D"> D) hypotenuse/opposite</label>
+    </div>
+    <button class="check-btn" onclick="check('q5','C')">Check</button>
+    <div class="explanation" id="q5-exp"><strong>C is correct.</strong> TOA: Tangent = Opposite/Adjacent. Memory aid: SOH-CAH-TOA (Sin=O/H, Cos=A/H, Tan=O/A).</div>
+  </div>
+
+  <div class="quiz-card" id="q6">
+    <div class="question-num">Question 6 of 8</div>
+    <div class="question-text">A 12-foot ladder leans against a wall at 60° from the ground. How high does it reach? (Leave in exact form.)</div>
+    <div class="options">
+      <label><input type="radio" name="q6" value="A"> A) 6 ft</label>
+      <label><input type="radio" name="q6" value="B"> B) 6√3 ft</label>
+      <label><input type="radio" name="q6" value="C"> C) 12√3 ft</label>
+      <label><input type="radio" name="q6" value="D"> D) 6√2 ft</label>
+    </div>
+    <button class="check-btn" onclick="check('q6','B')">Check</button>
+    <div class="explanation" id="q6-exp"><strong>B is correct.</strong> height = hypotenuse × sin(60°) = 12 × (√3/2) = 6√3 ≈ 10.4 ft.</div>
+  </div>
+
+  <div class="quiz-card" id="q7">
+    <div class="question-num">Question 7 of 8</div>
+    <div class="question-text">The altitude from the right angle to the hypotenuse of a right triangle creates two smaller triangles. These triangles are:</div>
+    <div class="options">
+      <label><input type="radio" name="q7" value="A"> A) Congruent to each other only</label>
+      <label><input type="radio" name="q7" value="B"> B) Similar to the original and to each other</label>
+      <label><input type="radio" name="q7" value="C"> C) Equilateral</label>
+      <label><input type="radio" name="q7" value="D"> D) Neither similar nor congruent</label>
+    </div>
+    <button class="check-btn" onclick="check('q7','B')">Check</button>
+    <div class="explanation" id="q7-exp"><strong>B is correct.</strong> Geometric Mean (Altitude) Theorem: the altitude to the hypotenuse creates two triangles each similar to the original and to each other. This gives us the geometric mean relationships.</div>
+  </div>
+
+  <div class="quiz-card" id="q8">
+    <div class="question-num">Question 8 of 8</div>
+    <div class="question-text">To find a missing angle when you know opposite and adjacent sides, you use:</div>
+    <div class="options">
+      <label><input type="radio" name="q8" value="A"> A) sin⁻¹(opp/hyp)</label>
+      <label><input type="radio" name="q8" value="B"> B) cos⁻¹(adj/hyp)</label>
+      <label><input type="radio" name="q8" value="C"> C) tan⁻¹(opp/adj)</label>
+      <label><input type="radio" name="q8" value="D"> D) tan(opp/adj)</label>
+    </div>
+    <button class="check-btn" onclick="check('q8','C')">Check</button>
+    <div class="explanation" id="q8-exp"><strong>C is correct.</strong> Use the inverse trig function: θ = tan⁻¹(opposite/adjacent). Inverse functions "undo" the ratio to give the angle.</div>
+  </div>
+
+  <div class="score-box" id="score-box">
+    <div class="score-num" id="score-num">0/8</div>
+    <div class="score-label">Questions Correct</div>
+    <div class="score-msg" id="score-msg"></div>
+    <div class="score-btn-row">
+      <a href="ch06-quiz.html">← Ch 6</a>
+      <a href="../index.html">All Chapters</a>
+      <a href="ch08-quiz.html">Ch 8 →</a>
+    </div>
+  </div>
+</main>
+<script>
+const TOTAL = 8;
+let answered = 0, correct = 0;
+function check(qid, ans) {
+  const card = document.getElementById(qid);
+  const selected = card.querySelector('input[type="radio"]:checked');
+  if (!selected) return;
+  const btn = card.querySelector('.check-btn');
+  btn.disabled = true;
+  card.querySelectorAll('input').forEach(i => i.disabled = true);
+  const labels = card.querySelectorAll('.options label');
+  labels.forEach(l => {
+    const v = l.querySelector('input').value;
+    if (v === ans) l.classList.add('reveal-correct');
+    if (v === selected.value && v !== ans) l.classList.add('wrong-choice');
+    if (v === selected.value && v === ans) l.classList.add('correct-choice');
+  });
+  if (selected.value === ans) correct++;
+  answered++;
+  document.getElementById(qid + '-exp').classList.add('show');
+  if (answered === TOTAL) showScore();
+}
+function showScore() {
+  const box = document.getElementById('score-box');
+  document.getElementById('score-num').textContent = correct + '/' + TOTAL;
+  const pct = correct / TOTAL;
+  document.getElementById('score-msg').textContent = pct === 1 ? 'Perfect score!' : pct >= 0.75 ? 'Great job!' : pct >= 0.5 ? 'Keep practicing.' : 'Review the chapter and try again.';
+  box.classList.add('show');
+  box.scrollIntoView({ behavior: 'smooth' });
+}
+</script>
+</body>
+</html>
