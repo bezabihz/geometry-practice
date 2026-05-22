@@ -1,0 +1,365 @@
+:root {
+  --blue: #1a3a5c;
+  --blue-light: #2c5a85;
+  --orange: #e05c1a;
+  --green: #2d6a4f;
+  --red: #b91c1c;
+  --purple: #5c1a8c;
+  --bg: #f4f8fc;
+  --card-bg: #ffffff;
+  --border: #dde4ed;
+  --text: #1a2030;
+  --muted: #5a6a80;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+
+body {
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.65;
+}
+
+/* ── Header ── */
+.site-header {
+  background: var(--blue);
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+}
+.site-header a {
+  color: rgba(255,255,255,0.8);
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+.site-header a:hover { color: white; }
+.site-header h1 {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+.chapter-label {
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  opacity: 0.7;
+}
+
+/* ── Layout ── */
+.layout {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  gap: 2rem;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 4rem;
+}
+@media (max-width: 880px) {
+  .layout { grid-template-columns: 1fr; gap: 1rem; padding: 1rem 1rem 3rem; }
+  .toc { position: static !important; max-height: none !important; }
+}
+
+/* ── Table of Contents ── */
+.toc {
+  position: sticky;
+  top: 88px;
+  align-self: start;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--orange);
+  border-radius: 8px;
+  padding: 1rem 1rem;
+  font-size: 0.88rem;
+  max-height: calc(100vh - 110px);
+  overflow-y: auto;
+}
+.toc-title {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--orange);
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+.toc ol { list-style: none; padding: 0; }
+.toc ol li { margin: 0.3rem 0; }
+.toc ol li a {
+  display: block;
+  color: var(--blue);
+  text-decoration: none;
+  padding: 0.25rem 0.4rem;
+  border-radius: 4px;
+  border-left: 2px solid transparent;
+  transition: background 0.12s, border-color 0.12s;
+}
+.toc ol li a:hover {
+  background: #eef4fb;
+  border-left-color: var(--orange);
+}
+
+/* ── Main content ── */
+.content { min-width: 0; }
+
+.intro {
+  background: linear-gradient(135deg, #1a3a5c 0%, #2c5a85 100%);
+  color: white;
+  padding: 1.5rem 1.75rem;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 14px rgba(26,58,92,0.15);
+}
+.intro h2 {
+  font-size: 1.6rem;
+  margin-bottom: 0.4rem;
+}
+.intro p { opacity: 0.95; font-size: 0.97rem; }
+
+/* ── Sections ── */
+section.notes-section {
+  margin-bottom: 2.5rem;
+}
+section.notes-section h2 {
+  font-size: 1.35rem;
+  color: var(--blue);
+  margin-bottom: 1rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 2px solid var(--orange);
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  scroll-margin-top: 80px;
+}
+section.notes-section h2 .icon {
+  width: 26px; height: 26px;
+  background: var(--orange);
+  color: white;
+  border-radius: 50%;
+  font-size: 0.85rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+}
+section.notes-section h3 {
+  font-size: 1.05rem;
+  color: var(--blue);
+  margin: 1.25rem 0 0.5rem;
+}
+section.notes-section p { margin: 0.5rem 0; }
+
+/* ── Vocabulary / definition list ── */
+.vocab {
+  display: grid;
+  gap: 0.55rem;
+}
+.vocab dt {
+  font-weight: 700;
+  color: var(--blue);
+  display: inline-block;
+}
+.vocab dd { margin-left: 0; color: var(--text); }
+.vocab .row {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--blue);
+  border-radius: 6px;
+  padding: 0.6rem 0.85rem;
+  font-size: 0.95rem;
+}
+.vocab .row b { color: var(--blue); }
+
+/* ── Theorem / postulate cards ── */
+.thm {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-left: 5px solid var(--orange);
+  border-radius: 8px;
+  padding: 0.9rem 1.1rem;
+  margin: 0.65rem 0;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+}
+.thm.post { border-left-color: var(--blue); }
+.thm.def  { border-left-color: var(--green); }
+.thm.prop { border-left-color: var(--purple); }
+.thm.cor  { border-left-color: #c97a00; }
+
+.thm .label {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  font-weight: 700;
+  color: var(--orange);
+  margin-bottom: 0.2rem;
+}
+.thm.post .label { color: var(--blue); }
+.thm.def  .label { color: var(--green); }
+.thm.prop .label { color: var(--purple); }
+.thm.cor  .label { color: #c97a00; }
+
+.thm .name {
+  font-weight: 700;
+  color: var(--blue);
+  font-size: 1rem;
+  margin-bottom: 0.25rem;
+}
+.thm .stmt {
+  color: var(--text);
+  font-size: 0.97rem;
+}
+.thm .conv {
+  margin-top: 0.55rem;
+  padding-top: 0.55rem;
+  border-top: 1px dashed var(--border);
+  font-size: 0.92rem;
+  color: var(--muted);
+}
+.thm .conv b { color: var(--blue); }
+
+/* ── Callouts ── */
+.note, .tip, .warn, .key {
+  border-radius: 6px;
+  padding: 0.7rem 1rem;
+  margin: 0.7rem 0;
+  font-size: 0.95rem;
+  border-left: 4px solid;
+}
+.note {
+  background: #eef4fb;
+  border-left-color: var(--blue);
+  color: #1a2030;
+}
+.tip {
+  background: #ecfdf5;
+  border-left-color: var(--green);
+  color: #14532d;
+}
+.warn {
+  background: #fef2f2;
+  border-left-color: var(--red);
+  color: #7f1d1d;
+}
+.key {
+  background: #fffbeb;
+  border-left-color: #d97706;
+  color: #78350f;
+}
+.note b, .tip b, .warn b, .key b { font-weight: 700; }
+.note::before, .tip::before, .warn::before, .key::before {
+  font-weight: 700;
+  margin-right: 0.4rem;
+}
+.note::before { content: "Note ▸"; color: var(--blue); }
+.tip::before  { content: "Tip ▸";  color: var(--green); }
+.warn::before { content: "Watch out ▸"; color: var(--red); }
+.key::before  { content: "Key idea ▸";  color: #d97706; }
+
+/* ── Formula block ── */
+.formula {
+  background: #f7faff;
+  border: 1px solid #d6e2f0;
+  border-radius: 6px;
+  padding: 0.7rem 1rem;
+  font-family: 'Cambria Math', 'Georgia', serif;
+  font-size: 1.02rem;
+  color: var(--blue);
+  margin: 0.5rem 0;
+  overflow-x: auto;
+}
+.formula b { color: var(--orange); }
+
+/* ── Tables ── */
+.notes-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--card-bg);
+  font-size: 0.93rem;
+  margin: 0.75rem 0;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+}
+.notes-table th {
+  background: var(--blue);
+  color: white;
+  text-align: left;
+  padding: 0.55rem 0.8rem;
+  font-weight: 600;
+  font-size: 0.88rem;
+}
+.notes-table td {
+  padding: 0.5rem 0.8rem;
+  border-top: 1px solid var(--border);
+  vertical-align: top;
+}
+.notes-table tr:nth-child(even) td { background: #f8fbff; }
+
+/* ── Worked example ── */
+.example {
+  background: #f8fbff;
+  border: 1px solid #d6e2f0;
+  border-radius: 8px;
+  padding: 0.85rem 1.05rem;
+  margin: 0.7rem 0;
+}
+.example .ex-label {
+  font-size: 0.74rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--orange);
+  font-weight: 700;
+  margin-bottom: 0.35rem;
+}
+.example .ex-q {
+  font-weight: 600;
+  color: var(--blue);
+  margin-bottom: 0.4rem;
+}
+.example .ex-steps {
+  font-size: 0.95rem;
+}
+.example .ex-steps ol { padding-left: 1.4rem; }
+.example .ex-steps ol li { margin: 0.15rem 0; }
+.example .ans {
+  margin-top: 0.4rem;
+  padding-top: 0.4rem;
+  border-top: 1px dashed var(--border);
+  color: var(--green);
+  font-weight: 700;
+}
+
+/* ── Misc ── */
+ul.bullets { padding-left: 1.4rem; margin: 0.4rem 0 0.8rem; }
+ul.bullets li { margin: 0.2rem 0; }
+
+code {
+  background: #eef2f8;
+  padding: 0.05rem 0.35rem;
+  border-radius: 3px;
+  font-family: 'JetBrains Mono', 'Consolas', monospace;
+  font-size: 0.9em;
+  color: var(--blue);
+}
+
+footer.notes-footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  color: var(--muted);
+  font-size: 0.85rem;
+  border-top: 1px solid var(--border);
+  margin-top: 2rem;
+}
+footer.notes-footer a {
+  color: var(--blue);
+  font-weight: 600;
+  text-decoration: none;
+}
+footer.notes-footer a:hover { text-decoration: underline; }

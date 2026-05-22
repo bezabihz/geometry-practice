@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ch 3 Notes — Parallel &amp; Perpendicular Lines</title>
+<link rel="stylesheet" href="../notes.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div>
+    <div class="chapter-label">Chapter 3 · Detailed Notes</div>
+    <h1>Parallel &amp; Perpendicular Lines</h1>
+  </div>
+  <a href="../index.html">← Home</a>
+</header>
+
+<div class="layout">
+
+  <aside class="toc">
+    <div class="toc-title">Contents</div>
+    <ol>
+      <li><a href="#vocab">1. Vocabulary</a></li>
+      <li><a href="#angle-pairs">2. Transversal Angle Pairs</a></li>
+      <li><a href="#parallel-theorems">3. Parallel-Line Theorems</a></li>
+      <li><a href="#converses">4. Converses (Proving Parallel)</a></li>
+      <li><a href="#perpendicular">5. Perpendicular Lines</a></li>
+      <li><a href="#slopes">6. Slopes of Parallel &amp; Perpendicular</a></li>
+      <li><a href="#equations">7. Equations of Lines</a></li>
+      <li><a href="#examples">8. Worked Examples</a></li>
+      <li><a href="#pitfalls">9. Common Pitfalls</a></li>
+      <li><a href="#summary">10. Quick Reference</a></li>
+    </ol>
+  </aside>
+
+  <div class="content">
+
+    <div class="intro">
+      <h2>Chapter 3 — Parallel &amp; Perpendicular Lines</h2>
+      <p>A transversal cutting parallel lines creates eight angles with predictable relationships. Mastering these relationships — both directions: "if parallel, then…" and its converse "if these angles match, then parallel" — is the core skill of Chapter 3.</p>
+    </div>
+
+    <section class="notes-section" id="vocab">
+      <h2><span class="icon">1</span> Vocabulary</h2>
+      <dl class="vocab">
+        <div class="row"><dt>Parallel lines (∥)</dt><dd>Coplanar lines that <b>never intersect</b>. Same slope.</dd></div>
+        <div class="row"><dt>Skew lines</dt><dd>Lines that are <b>not coplanar</b>; they neither intersect nor are parallel.</dd></div>
+        <div class="row"><dt>Parallel planes</dt><dd>Planes that never intersect.</dd></div>
+        <div class="row"><dt>Transversal</dt><dd>A line that crosses two (or more) coplanar lines at distinct points.</dd></div>
+        <div class="row"><dt>Perpendicular (⊥)</dt><dd>Lines intersecting at a right angle.</dd></div>
+        <div class="row"><dt>Distance from a point to a line</dt><dd>The <b>length of the perpendicular segment</b> from the point to the line.</dd></div>
+      </dl>
+    </section>
+
+    <section class="notes-section" id="angle-pairs">
+      <h2><span class="icon">2</span> Transversal Angle Pairs</h2>
+      <p>When a transversal crosses two lines it forms <b>eight</b> angles. They are grouped into four named pairs.</p>
+
+      <table class="notes-table">
+        <tr><th>Pair</th><th>Position</th><th>If lines are ∥, then…</th></tr>
+        <tr><td><b>Corresponding</b></td><td>Same side of transversal, same vertical position (one above each line, one below each line).</td><td>Congruent</td></tr>
+        <tr><td><b>Alternate Interior</b></td><td>Between the two lines, on opposite sides of the transversal.</td><td>Congruent</td></tr>
+        <tr><td><b>Alternate Exterior</b></td><td>Outside the two lines, on opposite sides of the transversal.</td><td>Congruent</td></tr>
+        <tr><td><b>Consecutive Interior</b> (Co-interior, Same-Side Interior)</td><td>Between the two lines, on the same side of the transversal.</td><td>Supplementary (sum 180°)</td></tr>
+      </table>
+    </section>
+
+    <section class="notes-section" id="parallel-theorems">
+      <h2><span class="icon">3</span> Theorems — "If Parallel, Then…"</h2>
+
+      <div class="thm post">
+        <div class="label">Postulate 3-1</div>
+        <div class="name">Corresponding Angles Postulate</div>
+        <div class="stmt">If two parallel lines are cut by a transversal, then each pair of <b>corresponding angles</b> is <b>congruent</b>.</div>
+      </div>
+
+      <div class="thm">
+        <div class="label">Theorem 3-1</div>
+        <div class="name">Alternate Interior Angles Theorem</div>
+        <div class="stmt">If two parallel lines are cut by a transversal, then each pair of alternate interior angles is congruent.</div>
+      </div>
+
+      <div class="thm">
+        <div class="label">Theorem 3-2</div>
+        <div class="name">Consecutive Interior Angles Theorem</div>
+        <div class="stmt">If two parallel lines are cut by a transversal, then each pair of consecutive interior angles is <b>supplementary</b>.</div>
+      </div>
+
+      <div class="thm">
+        <div class="label">Theorem 3-3</div>
+        <div class="name">Alternate Exterior Angles Theorem</div>
+        <div class="stmt">If two parallel lines are cut by a transversal, then each pair of alternate exterior angles is congruent.</div>
+      </div>
+
+      <div class="thm">
+        <div class="label">Theorem 3-4</div>
+        <div class="name">Perpendicular Transversal Theorem</div>
+        <div class="stmt">If a transversal is perpendicular to one of two parallel lines, then it is perpendicular to the other.</div>
+      </div>
+    </section>
+
+    <section class="notes-section" id="converses">
+      <h2><span class="icon">4</span> Converses — "Then Parallel"</h2>
+      <p>These converses let you <b>prove</b> two lines are parallel.</p>
+
+      <div class="thm post">
+        <div class="label">Postulate 3-2</div>
+        <div class="name">Converse — Corresponding Angles</div>
+        <div class="stmt">If two coplanar lines are cut by a transversal so a pair of <b>corresponding angles is congruent</b>, then the lines are parallel.</div>
+      </div>
+
+      <div class="thm">
+        <div class="label">Theorem 3-5</div>
+        <div class="name">Converse — Alternate Interior</div>
+        <div class="stmt">If a pair of alternate interior angles is congruent, then the lines are parallel.</div>
+      </div>
+
+      <div class="thm">
+        <div class="label">Theorem 3-6</div>
+        <div class="name">Converse — Consecutive Interior</div>
+        <div class="stmt">If a pair of consecutive interior angles is supplementary, then the lines are parallel.</div>
+      </div>
+
+      <div class="thm">
+        <div class="label">Theorem 3-7</div>
+        <div class="name">Converse — Alternate Exterior</div>
+        <div class="stmt">If a pair of alternate exterior angles is congruent, then the lines are parallel.</div>
+      </div>
+
+      <div class="thm">
+        <div class="label">Theorem 3-8</div>
+        <div class="name">Transitive Property of Parallel Lines</div>
+        <div class="stmt">If <code>a ∥ b</code> and <code>b ∥ c</code>, then <code>a ∥ c</code>.</div>
+      </div>
+
+      <div class="thm">
+        <div class="label">Theorem 3-9</div>
+        <div class="name">Two Lines ⊥ Same Line ⇒ Parallel</div>
+        <div class="stmt">In a plane, two lines perpendicular to the same line are parallel to each other.</div>
+      </div>
+    </section>
+
+    <section class="notes-section" id="perpendicular">
+      <h2><span class="icon">5</span> Perpendicular Lines</h2>
+
+      <div class="thm">
+        <div class="label">Theorem 3-10</div>
+        <div class="name">Perpendicular Lines Form Congruent Adjacent Angles</div>
+        <div class="stmt">If two lines are perpendicular, then they form four congruent right angles.</div>
+      </div>
+
+      <div class="thm post">
+        <div class="label">Postulate 3-3</div>
+        <div class="name">Parallel Postulate (Euclid's 5th)</div>
+        <div class="stmt">Through a point <b>not</b> on a line, there is exactly <b>one</b> line parallel to the given line.</div>
+      </div>
+
+      <div class="thm post">
+        <div class="label">Postulate 3-4</div>
+        <div class="name">Perpendicular Postulate</div>
+        <div class="stmt">Through a point not on a line, there is exactly <b>one</b> line perpendicular to the given line.</div>
+      </div>
+
+      <div class="note"><b>Distance from a point to a line</b> is measured along the perpendicular segment from the point to the line. Parallel lines remain a <b>constant perpendicular distance</b> apart.</div>
+    </section>
+
+    <section class="notes-section" id="slopes">
+      <h2><span class="icon">6</span> Slopes — Parallel &amp; Perpendicular</h2>
+
+      <div class="formula"><b>m</b> = (y₂ − y₁) / (x₂ − x₁) = rise / run</div>
+
+      <table class="notes-table">
+        <tr><th>Relationship</th><th>Slope condition</th></tr>
+        <tr><td><b>Parallel</b> (non-vertical)</td><td><code>m₁ = m₂</code> — same slope</td></tr>
+        <tr><td><b>Perpendicular</b> (neither vertical)</td><td><code>m₁ · m₂ = −1</code> (slopes are <b>negative reciprocals</b>)</td></tr>
+        <tr><td><b>Vertical</b> line</td><td><code>x = c</code> · slope undefined</td></tr>
+        <tr><td><b>Horizontal</b> line</td><td><code>y = c</code> · slope = 0</td></tr>
+        <tr><td>Horizontal &amp; vertical</td><td>Always perpendicular to each other.</td></tr>
+      </table>
+
+      <div class="tip">Quick check for perpendicular: flip and negate. The perpendicular to slope <code>2/3</code> has slope <code>−3/2</code>.</div>
+    </section>
+
+    <section class="notes-section" id="equations">
+      <h2><span class="icon">7</span> Equations of Lines</h2>
+
+      <table class="notes-table">
+        <tr><th>Form</th><th>Equation</th><th>Use when…</th></tr>
+        <tr><td><b>Slope-intercept</b></td><td><code>y = mx + b</code></td><td>You know slope <i>m</i> and y-intercept <i>b</i>.</td></tr>
+        <tr><td><b>Point-slope</b></td><td><code>y − y₁ = m(x − x₁)</code></td><td>You know slope and any one point.</td></tr>
+        <tr><td><b>Standard</b></td><td><code>Ax + By = C</code></td><td>Integer coefficients; finding intercepts.</td></tr>
+        <tr><td><b>Horizontal</b></td><td><code>y = k</code></td><td>Slope = 0.</td></tr>
+        <tr><td><b>Vertical</b></td><td><code>x = h</code></td><td>Slope undefined.</td></tr>
+      </table>
+
+      <div class="example">
+        <div class="ex-label">Example · Writing a Parallel Line</div>
+        <div class="ex-q">Find the equation of the line through <code>(2, −1)</code> parallel to <code>y = 3x + 4</code>.</div>
+        <div class="ex-steps">
+          <ol>
+            <li>Parallel ⇒ same slope: <code>m = 3</code>.</li>
+            <li>Point-slope: <code>y − (−1) = 3(x − 2)</code> → <code>y + 1 = 3x − 6</code>.</li>
+            <li>Solve: <code>y = 3x − 7</code>.</li>
+          </ol>
+        </div>
+        <div class="ans">y = 3x − 7</div>
+      </div>
+
+      <div class="example">
+        <div class="ex-label">Example · Writing a Perpendicular Line</div>
+        <div class="ex-q">Find the line through <code>(4, 2)</code> perpendicular to <code>y = ½x − 3</code>.</div>
+        <div class="ex-steps">
+          <ol>
+            <li>Original slope <code>½</code> ⇒ perpendicular slope <code>−2</code>.</li>
+            <li>Point-slope: <code>y − 2 = −2(x − 4)</code>.</li>
+            <li>Simplify: <code>y = −2x + 10</code>.</li>
+          </ol>
+        </div>
+        <div class="ans">y = −2x + 10</div>
+      </div>
+    </section>
+
+    <section class="notes-section" id="examples">
+      <h2><span class="icon">8</span> Worked Examples</h2>
+
+      <div class="example">
+        <div class="ex-label">Example 1 · Find missing angles</div>
+        <div class="ex-q">Lines <i>ℓ</i> and <i>m</i> are parallel cut by transversal <i>t</i>. One angle measures 110°. Find the other seven.</div>
+        <div class="ex-steps">
+          <ol>
+            <li>Vertical to 110° ⇒ 110°.</li>
+            <li>Linear pair with 110° ⇒ 70°.</li>
+            <li>Corresponding angles on the second line repeat the same pattern (110°, 70°, 110°, 70°).</li>
+          </ol>
+        </div>
+        <div class="ans">Four angles 110°, four angles 70°.</div>
+      </div>
+
+      <div class="example">
+        <div class="ex-label">Example 2 · Solve for x given parallel lines</div>
+        <div class="ex-q">Co-interior angles measure <code>(2x + 30)°</code> and <code>(3x + 20)°</code>. Find x.</div>
+        <div class="ex-steps">
+          <ol>
+            <li>Co-interior ⇒ supplementary: <code>(2x+30) + (3x+20) = 180</code>.</li>
+            <li><code>5x + 50 = 180</code> → <code>5x = 130</code> → <code>x = 26</code>.</li>
+          </ol>
+        </div>
+        <div class="ans">x = 26</div>
+      </div>
+
+      <div class="example">
+        <div class="ex-label">Example 3 · Prove lines parallel</div>
+        <div class="ex-q">Show that the line through <code>(1, 2)</code> and <code>(4, 8)</code> is parallel to the line through <code>(0, −1)</code> and <code>(2, 3)</code>.</div>
+        <div class="ex-steps">
+          <ol>
+            <li>Slope 1: <code>(8 − 2)/(4 − 1) = 6/3 = 2</code>.</li>
+            <li>Slope 2: <code>(3 − (−1))/(2 − 0) = 4/2 = 2</code>.</li>
+            <li>Slopes equal ⇒ lines parallel.</li>
+          </ol>
+        </div>
+        <div class="ans">m₁ = m₂ = 2 ⇒ parallel ✓</div>
+      </div>
+    </section>
+
+    <section class="notes-section" id="pitfalls">
+      <h2><span class="icon">9</span> Common Pitfalls</h2>
+      <ul class="bullets">
+        <li>The angle-pair relationships <b>only hold when the lines are parallel</b>. Don't assume corresponding angles are congruent if you haven't been told (or shown) the lines are parallel.</li>
+        <li><b>Skew</b> ≠ parallel. Skew lines are non-coplanar and have no slope relationship in 2-D.</li>
+        <li><b>Co-interior (consecutive interior)</b> angles are <b>supplementary</b>, not congruent.</li>
+        <li>For perpendicular slopes, the product is <code>−1</code> (a sign flip and a reciprocal). Just flipping or just negating isn't enough.</li>
+        <li>Vertical lines have <b>undefined</b> slope — they are perpendicular to horizontal lines (slope 0). The product rule doesn't apply.</li>
+        <li>When labeling, write "<code>a ∥ b</code>" not "<code>a = b</code>".</li>
+      </ul>
+    </section>
+
+    <section class="notes-section" id="summary">
+      <h2><span class="icon">10</span> Quick Reference</h2>
+      <table class="notes-table">
+        <tr><th>Concept</th><th>Rule</th></tr>
+        <tr><td>Corresponding ∠s (∥ lines)</td><td>≅</td></tr>
+        <tr><td>Alternate Interior ∠s (∥)</td><td>≅</td></tr>
+        <tr><td>Alternate Exterior ∠s (∥)</td><td>≅</td></tr>
+        <tr><td>Consecutive Interior ∠s (∥)</td><td>Supplementary (sum 180°)</td></tr>
+        <tr><td>Linear Pair</td><td>Supplementary (always)</td></tr>
+        <tr><td>Vertical ∠s</td><td>Congruent (always)</td></tr>
+        <tr><td>Slope formula</td><td><code>m = (y₂−y₁)/(x₂−x₁)</code></td></tr>
+        <tr><td>Parallel slopes</td><td><code>m₁ = m₂</code></td></tr>
+        <tr><td>Perpendicular slopes</td><td><code>m₁ · m₂ = −1</code></td></tr>
+        <tr><td>Slope-intercept</td><td><code>y = mx + b</code></td></tr>
+        <tr><td>Point-slope</td><td><code>y − y₁ = m(x − x₁)</code></td></tr>
+        <tr><td>Parallel Postulate</td><td>Unique parallel through external point.</td></tr>
+        <tr><td>Perpendicular Postulate</td><td>Unique perpendicular through external point.</td></tr>
+        <tr><td>Two lines ⊥ same line</td><td>Are parallel to each other.</td></tr>
+        <tr><td>If <code>a ∥ b</code> &amp; <code>b ∥ c</code></td><td>Then <code>a ∥ c</code> (transitive).</td></tr>
+      </table>
+    </section>
+
+  </div>
+</div>
+
+<footer class="notes-footer">
+  Glencoe Geometry TX 2015 · Chapter 3 ·
+  <a href="../cheatsheets/ch03-cheatsheet.html">Cheatsheet</a> ·
+  <a href="../slides/ch03-parallel-perpendicular.html">Slides</a> ·
+  <a href="../quizzes/ch03-quiz.html">Quiz</a>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ch 6 Notes — Proportions &amp; Similarity</title>
+<link rel="stylesheet" href="../notes.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div>
+    <div class="chapter-label">Chapter 6 · Detailed Notes</div>
+    <h1>Proportions &amp; Similarity</h1>
+  </div>
+  <a href="../index.html">← Home</a>
+</header>
+
+<div class="layout">
+
+  <aside class="toc">
+    <div class="toc-title">Contents</div>
+    <ol>
+      <li><a href="#vocab">1. Vocabulary</a></li>
+      <li><a href="#props">2. Properties of Proportions</a></li>
+      <li><a href="#similar">3. Similar Polygons</a></li>
+      <li><a href="#triangle-sim">4. Similar Triangles (AA, SSS~, SAS~)</a></li>
+      <li><a href="#proportionality">5. Triangle Proportionality</a></li>
+      <li><a href="#anglebisect">6. Triangle Angle Bisector</a></li>
+      <li><a href="#dilations">7. Dilations &amp; Scale Factor</a></li>
+      <li><a href="#perimeter-area">8. Perimeter &amp; Area Ratios</a></li>
+      <li><a href="#examples">9. Worked Examples</a></li>
+      <li><a href="#pitfalls">10. Common Pitfalls</a></li>
+      <li><a href="#summary">11. Quick Reference</a></li>
+    </ol>
+  </aside>
+
+  <div class="content">
+
+    <div class="intro">
+      <h2>Chapter 6 — Proportions &amp; Similarity</h2>
+      <p>Similarity is congruence's flexible cousin: same shape, possibly different size. This chapter teaches how to set up proportions, recognize and prove similar triangles, and use the side-splitter and dilation tools.</p>
+    </div>
+
+    <section class="notes-section" id="vocab">
+      <h2><span class="icon">1</span> Vocabulary</h2>
+      <dl class="vocab">
+        <div class="row"><dt>Ratio</dt><dd>A comparison of two quantities by division, written <code>a : b</code> or <code>a/b</code> (b ≠ 0).</dd></div>
+        <div class="row"><dt>Proportion</dt><dd>An equation stating two ratios are equal: <code>a/b = c/d</code>.</dd></div>
+        <div class="row"><dt>Extremes / Means</dt><dd>In <code>a/b = c/d</code>: <i>a</i> and <i>d</i> are extremes; <i>b</i> and <i>c</i> are means.</dd></div>
+        <div class="row"><dt>Similar figures (∼)</dt><dd>Same shape, corresponding angles ≅, corresponding sides proportional.</dd></div>
+        <div class="row"><dt>Scale factor (k)</dt><dd>The constant ratio between corresponding sides of similar figures.</dd></div>
+        <div class="row"><dt>Dilation</dt><dd>A transformation producing a similar figure; a scaling about a center point.</dd></div>
+        <div class="row"><dt>Geometric mean</dt><dd>For positive numbers <i>a</i>, <i>b</i>: <code>x = √(ab)</code> — the positive value satisfying <code>a/x = x/b</code>.</dd></div>
+      </dl>
+    </section>
+
+    <section class="notes-section" id="props">
+      <h2><span class="icon">2</span> Properties of Proportions</h2>
+
+      <p>If <code>a/b = c/d</code> (with all denominators non-zero), then each of the following is also true:</p>
+
+      <table class="notes-table">
+        <tr><th>Property</th><th>Equivalent form</th></tr>
+        <tr><td><b>Cross-product</b></td><td><code>ad = bc</code></td></tr>
+        <tr><td><b>Reciprocal</b></td><td><code>b/a = d/c</code></td></tr>
+        <tr><td><b>Switching</b></td><td><code>a/c = b/d</code></td></tr>
+        <tr><td><b>Add-to-each-side</b></td><td><code>(a+b)/b = (c+d)/d</code></td></tr>
+        <tr><td><b>Sum of ratios</b></td><td>If <code>a/b = c/d = e/f</code>, then = <code>(a+c+e)/(b+d+f)</code>.</td></tr>
+      </table>
+
+      <div class="tip">When solving, <b>cross-multiply</b> only when both sides are single ratios. For <code>a/b = c/d + e/f</code>, simplify first.</div>
+    </section>
+
+    <section class="notes-section" id="similar">
+      <h2><span class="icon">3</span> Similar Polygons</h2>
+
+      <div class="thm def">
+        <div class="label">Definition</div>
+        <div class="name">Similar polygons</div>
+        <div class="stmt">Two polygons are similar (∼) if their corresponding <b>angles</b> are congruent <b>and</b> their corresponding <b>sides</b> are proportional.</div>
+      </div>
+
+      <div class="key">All <b>corresponding</b> sides share the same ratio — the <b>scale factor</b> <i>k</i>. If <i>ABCD</i> ∼ <i>EFGH</i> with scale factor 2/3, every side of <i>ABCD</i> is 2/3 the matching side of <i>EFGH</i>.</div>
+    </section>
+
+    <section class="notes-section" id="triangle-sim">
+      <h2><span class="icon">4</span> Proving Triangles Similar</h2>
+
+      <div class="thm post">
+        <div class="label">Postulate 6-1</div>
+        <div class="name">AA Similarity Postulate</div>
+        <div class="stmt">If two angles of one triangle are congruent to two angles of another, the triangles are similar.</div>
+        <div class="conv">By the angle-sum theorem, two pairs of congruent angles force the third pair, so all three angles match.</div>
+      </div>
+
+      <div class="thm">
+        <div class="label">Theorem 6-1</div>
+        <div class="name">SSS Similarity</div>
+        <div class="stmt">If the three pairs of corresponding sides of two triangles are proportional, the triangles are similar.</div>
+      </div>
+
+      <div class="thm">
+        <div class="label">Theorem 6-2</div>
+        <div class="name">SAS Similarity</div>
+        <div class="stmt">If two pairs of corresponding sides are proportional and the <b>included angles</b> are congruent, the triangles are similar.</div>
+      </div>
+
+      <div class="note">In similarity, the order of vertices encodes the correspondence just like with congruence: <code>△ABC ∼ △DEF</code> means A↔D, B↔E, C↔F.</div>
+    </section>
+
+    <section class="notes-section" id="proportionality">
+      <h2><span class="icon">5</span> Triangle Proportionality (Side-Splitter)</h2>
+
+      <div class="thm">
+        <div class="label">Theorem 6-3</div>
+        <div class="name">Triangle Proportionality Theorem (Side-Splitter)</div>
+        <div class="stmt">If a line parallel to one side of a triangle intersects the other two sides, it divides them <b>proportionally</b>.</div>
+        <div class="conv">If line ∥ <i>BC</i> meets <i>AB</i> at <i>D</i> and <i>AC</i> at <i>E</i>, then <code>AD/DB = AE/EC</code>.</div>
+      </div>
+
+      <div class="thm">
+        <div class="label">Theorem 6-4</div>
+        <div class="name">Converse — Side Splitter</div>
+        <div class="stmt">If a line divides two sides of a triangle proportionally, then the line is parallel to the third side.</div>
+      </div>
+
+      <div class="thm cor">
+        <div class="label">Corollary</div>
+        <div class="name">Three Parallel Lines &amp; Transversals</div>
+        <div class="stmt">If three or more parallel lines are cut by two transversals, they divide the transversals proportionally.</div>
+      </div>
+    </section>
+
+    <section class="notes-section" id="anglebisect">
+      <h2><span class="icon">6</span> Triangle Angle Bisector Theorem</h2>
+
+      <div class="thm">
+        <div class="label">Theorem 6-5</div>
+        <div class="name">Triangle Angle Bisector Theorem</div>
+        <div class="stmt">If a ray bisects an angle of a triangle, it divides the opposite side into segments <b>proportional</b> to the other two sides.</div>
+        <div class="conv">If <i>AD</i> bisects ∠A of △ABC and meets <i>BC</i> at <i>D</i>: <code>BD/DC = AB/AC</code>.</div>
+      </div>
+    </section>
+
+    <section class="notes-section" id="dilations">
+      <h2><span class="icon">7</span> Dilations &amp; Scale Factor</h2>
+
+      <div class="thm def">
+        <div class="label">Definition</div>
+        <div class="name">Dilation</div>
+        <div class="stmt">A transformation that produces a similar image. Defined by a <b>center</b> <i>C</i> and a non-zero <b>scale factor</b> <i>k</i>. Each point <i>P</i> maps to <i>P'</i> on ray <i>CP</i> so that <code>CP' = |k|·CP</code>.</div>
+      </div>
+
+      <table class="notes-table">
+        <tr><th>k</th><th>Effect</th></tr>
+        <tr><td>|k| &gt; 1</td><td>Enlargement</td></tr>
+        <tr><td>0 &lt; |k| &lt; 1</td><td>Reduction</td></tr>
+        <tr><td>|k| = 1</td><td>Congruent (identity if k=1)</td></tr>
+        <tr><td>k &lt; 0</td><td>Enlargement / reduction <b>through the center</b> (rotated 180°)</td></tr>
+      </table>
+
+      <h3>Dilation centered at origin</h3>
+      <div class="formula">(x, y) → (k·x, k·y)</div>
+
+      <p>Dilations preserve angle measures, parallel lines, and the shape of figures, but <b>not</b> distances (unless |k|=1).</p>
+    </section>
+
+    <section class="notes-section" id="perimeter-area">
+      <h2><span class="icon">8</span> Perimeter &amp; Area Ratios in Similar Figures</h2>
+
+      <div class="thm">
+        <div class="label">Theorem 6-6</div>
+        <div class="name">Perimeter &amp; Area Ratios</div>
+        <div class="stmt">If two similar polygons have scale factor <code>a/b</code>, then:</div>
+        <div class="conv">
+          <ul class="bullets">
+            <li>Ratio of <b>perimeters</b> = <code>a/b</code>.</li>
+            <li>Ratio of <b>areas</b> = <code>a²/b²</code>.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="key">Volume scaling (looking ahead to Ch 13): ratio of volumes = <code>a³/b³</code>. The exponent matches the dimension.</div>
+    </section>
+
+    <section class="notes-section" id="examples">
+      <h2><span class="icon">9</span> Worked Examples</h2>
+
+      <div class="example">
+        <div class="ex-label">Example 1 · Solve a proportion</div>
+        <div class="ex-q">Solve <code>x/12 = 15/20</code>.</div>
+        <div class="ex-steps">
+          <ol>
+            <li>Cross-multiply: <code>20x = 12·15 = 180</code>.</li>
+            <li><code>x = 9</code>.</li>
+          </ol>
+        </div>
+        <div class="ans">x = 9</div>
+      </div>
+
+      <div class="example">
+        <div class="ex-label">Example 2 · Similar triangles</div>
+        <div class="ex-q">△ABC ∼ △DEF with <code>AB = 6</code>, <code>BC = 8</code>, <code>DE = 9</code>. Find <code>EF</code>.</div>
+        <div class="ex-steps">
+          <ol>
+            <li>Scale factor: <code>DE/AB = 9/6 = 3/2</code>.</li>
+            <li><code>EF = (3/2)·BC = (3/2)·8 = 12</code>.</li>
+          </ol>
+        </div>
+        <div class="ans">EF = 12</div>
+      </div>
+
+      <div class="example">
+        <div class="ex-label">Example 3 · Side-splitter</div>
+        <div class="ex-q">In △ABC, DE ∥ BC with D on AB and E on AC. <code>AD = 4</code>, <code>DB = 6</code>, <code>AE = 5</code>. Find <code>EC</code>.</div>
+        <div class="ex-steps">
+          <ol>
+            <li>Side-splitter: <code>AD/DB = AE/EC</code> → <code>4/6 = 5/EC</code>.</li>
+            <li><code>EC = 5·6/4 = 7.5</code>.</li>
+          </ol>
+        </div>
+        <div class="ans">EC = 7.5</div>
+      </div>
+
+      <div class="example">
+        <div class="ex-label">Example 4 · Area ratio</div>
+        <div class="ex-q">Two similar squares have side ratio 3:5. Find the ratio of their areas.</div>
+        <div class="ex-steps">
+          <ol>
+            <li>Ratio of sides = 3/5.</li>
+            <li>Ratio of areas = (3/5)² = <b>9/25</b>.</li>
+          </ol>
+        </div>
+        <div class="ans">9 : 25</div>
+      </div>
+
+      <div class="example">
+        <div class="ex-label">Example 5 · Geometric mean</div>
+        <div class="ex-q">Find the geometric mean of 4 and 25.</div>
+        <div class="ex-steps">
+          <ol>
+            <li><code>x = √(4·25) = √100 = 10</code>.</li>
+          </ol>
+        </div>
+        <div class="ans">x = 10</div>
+      </div>
+    </section>
+
+    <section class="notes-section" id="pitfalls">
+      <h2><span class="icon">10</span> Common Pitfalls</h2>
+      <ul class="bullets">
+        <li>Set up corresponding parts <b>in the same order</b>. Don't pair <code>AB</code> with <code>EF</code> if <code>△ABC ∼ △DEF</code> — pair <code>AB</code> with <code>DE</code>.</li>
+        <li>Area ratio is <b>squared</b>, not the same as the linear ratio.</li>
+        <li>The side-splitter ratio is <code>AD/DB</code>, not <code>AD/AB</code>. Watch the denominators.</li>
+        <li>For SAS similarity, the angle must be the <b>included</b> angle (between the two proportional sides).</li>
+        <li>Two similar figures are <b>congruent only when the scale factor is 1</b>.</li>
+        <li>Geometric mean is always <b>positive</b>; use only the positive square root.</li>
+      </ul>
+    </section>
+
+    <section class="notes-section" id="summary">
+      <h2><span class="icon">11</span> Quick Reference</h2>
+      <table class="notes-table">
+        <tr><th>Concept</th><th>Statement</th></tr>
+        <tr><td>Cross-product</td><td><code>a/b = c/d ⇒ ad = bc</code></td></tr>
+        <tr><td>Geometric mean</td><td><code>x = √(ab)</code></td></tr>
+        <tr><td>Similar polygons</td><td>≅ angles &amp; proportional sides.</td></tr>
+        <tr><td>AA similarity</td><td>2 pairs of ≅ angles ⇒ similar.</td></tr>
+        <tr><td>SSS similarity</td><td>3 pairs proportional ⇒ similar.</td></tr>
+        <tr><td>SAS similarity</td><td>2 pairs proportional + included ∠ ≅.</td></tr>
+        <tr><td>Side-Splitter</td><td>Line ∥ side ⇒ divides other sides proportionally.</td></tr>
+        <tr><td>Triangle Angle Bisector</td><td><code>BD/DC = AB/AC</code></td></tr>
+        <tr><td>Dilation rule (center O)</td><td><code>(x,y) → (kx, ky)</code></td></tr>
+        <tr><td>Perimeter ratio</td><td>= scale factor a/b.</td></tr>
+        <tr><td>Area ratio</td><td>= (a/b)²</td></tr>
+        <tr><td>Volume ratio (preview)</td><td>= (a/b)³</td></tr>
+      </table>
+    </section>
+
+  </div>
+</div>
+
+<footer class="notes-footer">
+  Glencoe Geometry TX 2015 · Chapter 6 ·
+  <a href="../cheatsheets/ch06-cheatsheet.html">Cheatsheet</a> ·
+  <a href="../slides/ch06-proportions-similarity.html">Slides</a> ·
+  <a href="../quizzes/ch06-quiz.html">Quiz</a>
+</footer>
+
+</body>
+</html>

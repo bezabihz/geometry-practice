@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ch 5 Notes — Relationships in Triangles</title>
+<link rel="stylesheet" href="../notes.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div>
+    <div class="chapter-label">Chapter 5 · Detailed Notes</div>
+    <h1>Relationships in Triangles</h1>
+  </div>
+  <a href="../index.html">← Home</a>
+</header>
+
+<div class="layout">
+
+  <aside class="toc">
+    <div class="toc-title">Contents</div>
+    <ol>
+      <li><a href="#vocab">1. Vocabulary</a></li>
+      <li><a href="#perpbisect">2. Perpendicular Bisectors</a></li>
+      <li><a href="#anglebisect">3. Angle Bisectors</a></li>
+      <li><a href="#concurrency">4. Concurrent Lines &amp; Centers</a></li>
+      <li><a href="#medalt">5. Medians &amp; Altitudes</a></li>
+      <li><a href="#midseg">6. Midsegments</a></li>
+      <li><a href="#inequalities">7. Triangle Inequalities</a></li>
+      <li><a href="#hinge">8. Hinge Theorem</a></li>
+      <li><a href="#indirect">9. Indirect Proof</a></li>
+      <li><a href="#examples">10. Worked Examples</a></li>
+      <li><a href="#pitfalls">11. Common Pitfalls</a></li>
+      <li><a href="#summary">12. Quick Reference</a></li>
+    </ol>
+  </aside>
+
+  <div class="content">
+
+    <div class="intro">
+      <h2>Chapter 5 — Relationships in Triangles</h2>
+      <p>Every triangle hides four special points (centroid, incenter, circumcenter, orthocenter) and powerful inequalities that limit how its sides and angles relate. This chapter develops the special segments — perpendicular bisectors, angle bisectors, medians, altitudes — and the theorems that govern them.</p>
+    </div>
+
+    <section class="notes-section" id="vocab">
+      <h2><span class="icon">1</span> Vocabulary</h2>
+      <dl class="vocab">
+        <div class="row"><dt>Perpendicular bisector</dt><dd>A line/segment/ray that passes through the <b>midpoint</b> of a segment <b>perpendicular</b> to it.</dd></div>
+        <div class="row"><dt>Angle bisector</dt><dd>A ray that divides an angle into two congruent angles.</dd></div>
+        <div class="row"><dt>Median of a triangle</dt><dd>A segment from a <b>vertex</b> to the <b>midpoint of the opposite side</b>.</dd></div>
+        <div class="row"><dt>Altitude of a triangle</dt><dd>A segment from a <b>vertex perpendicular</b> to the line containing the opposite side. May fall outside the triangle (obtuse case).</dd></div>
+        <div class="row"><dt>Midsegment</dt><dd>A segment joining the midpoints of two sides of a triangle.</dd></div>
+        <div class="row"><dt>Concurrent lines</dt><dd>Three or more lines that meet at a single point — the <b>point of concurrency</b>.</dd></div>
+        <div class="row"><dt>Equidistant</dt><dd>The same distance from two or more objects.</dd></div>
+      </dl>
+    </section>
+
+    <section class="notes-section" id="perpbisect">
+      <h2><span class="icon">2</span> Perpendicular Bisector Theorems</h2>
+
+      <div class="thm">
+        <div class="label">Theorem 5-1</div>
+        <div class="name">Perpendicular Bisector Theorem</div>
+        <div class="stmt">If a point is on the perpendicular bisector of a segment, then it is <b>equidistant</b> from the endpoints of the segment.</div>
+      </div>
+
+      <div class="thm">
+        <div class="label">Theorem 5-2</div>
+        <div class="name">Converse — Perpendicular Bisector</div>
+        <div class="stmt">If a point is equidistant from the endpoints of a segment, then it lies on the perpendicular bisector of the segment.</div>
+      </div>
+
+      <div class="key">Together: the perpendicular bisector of <i>AB</i> is the <b>locus</b> (set) of all points equidistant from <i>A</i> and <i>B</i>.</div>
+    </section>
+
+    <section class="notes-section" id="anglebisect">
+      <h2><span class="icon">3</span> Angle Bisector Theorems</h2>
+
+      <div class="thm">
+        <div class="label">Theorem 5-3</div>
+        <div class="name">Angle Bisector Theorem</div>
+        <div class="stmt">If a point is on the bisector of an angle, then it is equidistant from the <b>two sides</b> of the angle.</div>
+      </div>
+
+      <div class="thm">
+        <div class="label">Theorem 5-4</div>
+        <div class="name">Converse — Angle Bisector</div>
+        <div class="stmt">If a point in the interior of an angle is equidistant from the sides, then it lies on the bisector.</div>
+      </div>
+
+      <div class="note">"Distance from a point to a line" always means the <b>perpendicular</b> distance. Drop perpendiculars when applying these theorems.</div>
+    </section>
+
+    <section class="notes-section" id="concurrency">
+      <h2><span class="icon">4</span> Points of Concurrency in a Triangle</h2>
+
+      <table class="notes-table">
+        <tr><th>Lines</th><th>Point of concurrency</th><th>Key property</th></tr>
+        <tr><td><b>Perpendicular bisectors of sides</b></td><td><b>Circumcenter</b></td><td>Equidistant from the three <b>vertices</b>. Center of the <b>circumscribed</b> circle.</td></tr>
+        <tr><td><b>Angle bisectors</b></td><td><b>Incenter</b></td><td>Equidistant from the three <b>sides</b>. Center of the <b>inscribed</b> circle.</td></tr>
+        <tr><td><b>Medians</b></td><td><b>Centroid</b></td><td>Center of mass. Divides each median in a <b>2:1</b> ratio (longer piece toward vertex).</td></tr>
+        <tr><td><b>Altitudes</b></td><td><b>Orthocenter</b></td><td>Lies inside acute ▵, on right ▵ (at right-angle vertex), outside obtuse ▵.</td></tr>
+      </table>
+
+      <div class="thm">
+        <div class="label">Theorem 5-5</div>
+        <div class="name">Circumcenter Theorem</div>
+        <div class="stmt">The perpendicular bisectors of the sides of a triangle intersect at a point equidistant from the three vertices.</div>
+      </div>
+
+      <div class="thm">
+        <div class="label">Theorem 5-6</div>
+        <div class="name">Incenter Theorem</div>
+        <div class="stmt">The angle bisectors of a triangle intersect at a point equidistant from the three sides.</div>
+      </div>
+
+      <div class="thm">
+        <div class="label">Theorem 5-7</div>
+        <div class="name">Centroid Theorem (2:1 Ratio)</div>
+        <div class="stmt">The medians of a triangle are concurrent at a point that is <b>two-thirds</b> the distance from each vertex to the midpoint of the opposite side. Equivalently, the centroid splits each median in a <b>2:1</b> ratio.</div>
+      </div>
+
+      <div class="thm">
+        <div class="label">Theorem 5-8</div>
+        <div class="name">Orthocenter Theorem</div>
+        <div class="stmt">The lines containing the altitudes of a triangle are concurrent.</div>
+      </div>
+
+      <div class="tip"><b>Mnemonic for "centers"</b>: <b>C</b>ircumcenter = <b>C</b>orners equidistant (vertices). <b>I</b>ncenter = <b>I</b>nside equidistant from sides. <b>C</b>entroid = <b>C</b>enter of mass (medians). <b>O</b>rthocenter = altitudes (perpendicular drops).</div>
+    </section>
+
+    <section class="notes-section" id="medalt">
+      <h2><span class="icon">5</span> Medians &amp; Altitudes — More Detail</h2>
+
+      <p>If <i>G</i> is the centroid of △ABC and <i>D</i>, <i>E</i>, <i>F</i> are the midpoints of the opposite sides:</p>
+      <div class="formula">AG = ⅔·AD,    GD = ⅓·AD    ⇒    AG : GD = 2 : 1</div>
+
+      <h3>Position of orthocenter</h3>
+      <ul class="bullets">
+        <li><b>Acute</b> triangle → orthocenter <i>inside</i>.</li>
+        <li><b>Right</b> triangle → orthocenter <i>at the right-angle vertex</i>.</li>
+        <li><b>Obtuse</b> triangle → orthocenter <i>outside</i>.</li>
+      </ul>
+
+      <div class="warn">A <b>median</b> goes to the <b>midpoint</b> of the opposite side. An <b>altitude</b> goes <b>perpendicular</b> to the opposite side (line). Don't confuse them — they coincide only in special triangles (e.g., isosceles vertex-to-base).</div>
+    </section>
+
+    <section class="notes-section" id="midseg">
+      <h2><span class="icon">6</span> Midsegment of a Triangle</h2>
+
+      <div class="thm">
+        <div class="label">Theorem 5-9</div>
+        <div class="name">Triangle Midsegment Theorem</div>
+        <div class="stmt">A segment joining the midpoints of two sides of a triangle is <b>parallel</b> to the third side and <b>half its length</b>.</div>
+      </div>
+
+      <div class="formula">midsegment = ½·(third side),     midsegment ∥ third side</div>
+
+      <p>A triangle has three midsegments; together they form a smaller triangle similar to the original, with sides ½ the length.</p>
+    </section>
+
+    <section class="notes-section" id="inequalities">
+      <h2><span class="icon">7</span> Triangle Inequalities</h2>
+
+      <div class="thm">
+        <div class="label">Theorem 5-10</div>
+        <div class="name">Triangle Inequality Theorem</div>
+        <div class="stmt">The sum of the lengths of any two sides of a triangle is <b>greater than</b> the length of the third side.</div>
+        <div class="conv"><b>Practical test:</b> For sides <code>a, b, c</code>: must have <code>a+b&gt;c</code>, <code>a+c&gt;b</code>, <code>b+c&gt;a</code>. (Equivalent to: <code>|a−b| &lt; c &lt; a+b</code>.)</div>
+      </div>
+
+      <div class="thm">
+        <div class="label">Theorem 5-11</div>
+        <div class="name">Side-Angle Inequality</div>
+        <div class="stmt">If one side of a triangle is <b>longer</b> than another, then the angle <b>opposite</b> the longer side is larger.</div>
+      </div>
+
+      <div class="thm">
+        <div class="label">Theorem 5-12</div>
+        <div class="name">Angle-Side Inequality (Converse of 5-11)</div>
+        <div class="stmt">If one angle of a triangle is <b>larger</b> than another, then the side <b>opposite</b> the larger angle is longer.</div>
+      </div>
+
+      <div class="thm">
+        <div class="label">Theorem 5-13</div>
+        <div class="name">Exterior Angle Inequality</div>
+        <div class="stmt">The measure of an exterior angle of a triangle is <b>greater than</b> the measure of <b>either</b> of its remote interior angles.</div>
+      </div>
+    </section>
+
+    <section class="notes-section" id="hinge">
+      <h2><span class="icon">8</span> Hinge Theorem &amp; Converse</h2>
+
+      <div class="thm">
+        <div class="label">Theorem 5-14</div>
+        <div class="name">Hinge Theorem (SAS Inequality)</div>
+        <div class="stmt">If two sides of one triangle are congruent to two sides of another, and the <b>included angles</b> are <b>not</b> congruent, then the triangle with the <b>larger included angle</b> has the <b>longer third side</b>.</div>
+      </div>
+
+      <div class="thm">
+        <div class="label">Theorem 5-15</div>
+        <div class="name">Converse of Hinge Theorem (SSS Inequality)</div>
+        <div class="stmt">If two sides of one triangle are congruent to two sides of another, and the <b>third sides</b> are not congruent, then the triangle with the <b>longer third side</b> has the <b>larger included angle</b>.</div>
+      </div>
+
+      <div class="key">Imagine a door hinge: the wider the angle, the farther apart the endpoints.</div>
+    </section>
+
+    <section class="notes-section" id="indirect">
+      <h2><span class="icon">9</span> Indirect Proof (Proof by Contradiction)</h2>
+      <p>Steps:</p>
+      <ol class="bullets" style="padding-left:1.6rem; list-style: decimal;">
+        <li><b>Assume the opposite</b> (negation) of what you want to prove.</li>
+        <li>Reason using known facts until you reach a <b>contradiction</b>.</li>
+        <li>Conclude that the original statement must be true.</li>
+      </ol>
+      <div class="note">Indirect proofs work well for inequalities or "not" statements that are awkward to prove directly.</div>
+    </section>
+
+    <section class="notes-section" id="examples">
+      <h2><span class="icon">10</span> Worked Examples</h2>
+
+      <div class="example">
+        <div class="ex-label">Example 1 · Triangle inequality</div>
+        <div class="ex-q">Can a triangle have sides 4, 6, and 11?</div>
+        <div class="ex-steps">
+          <ol>
+            <li>Check: <code>4 + 6 = 10</code>, which is <b>less than</b> 11. ✗</li>
+          </ol>
+        </div>
+        <div class="ans">No — the triangle inequality fails.</div>
+      </div>
+
+      <div class="example">
+        <div class="ex-label">Example 2 · Range of third side</div>
+        <div class="ex-q">Two sides of a triangle are 8 and 13. Give the range of possible lengths for the third side.</div>
+        <div class="ex-steps">
+          <ol>
+            <li><code>|13 − 8| &lt; x &lt; 13 + 8</code> → <code>5 &lt; x &lt; 21</code>.</li>
+          </ol>
+        </div>
+        <div class="ans">5 &lt; x &lt; 21</div>
+      </div>
+
+      <div class="example">
+        <div class="ex-label">Example 3 · Centroid 2:1 ratio</div>
+        <div class="ex-q">In △ABC, point G is the centroid. Median AM has length 18. Find AG and GM.</div>
+        <div class="ex-steps">
+          <ol>
+            <li>Centroid splits median 2:1 (vertex side : midpoint side).</li>
+            <li><code>AG = (2/3)(18) = 12</code>, <code>GM = (1/3)(18) = 6</code>.</li>
+          </ol>
+        </div>
+        <div class="ans">AG = 12,  GM = 6</div>
+      </div>
+
+      <div class="example">
+        <div class="ex-label">Example 4 · Midsegment</div>
+        <div class="ex-q">In △ABC, D and E are midpoints of AB and AC. If DE = 7, find BC.</div>
+        <div class="ex-steps">
+          <ol>
+            <li>Midsegment Theorem: <code>DE = ½·BC</code>.</li>
+            <li><code>BC = 2·7 = 14</code>.</li>
+          </ol>
+        </div>
+        <div class="ans">BC = 14</div>
+      </div>
+
+      <div class="example">
+        <div class="ex-label">Example 5 · Side-angle inequality</div>
+        <div class="ex-q">In △PQR, ∠P = 80°, ∠Q = 60°, ∠R = 40°. Rank the sides from shortest to longest.</div>
+        <div class="ex-steps">
+          <ol>
+            <li>Larger angle ⇒ longer opposite side.</li>
+            <li>∠R (40°) smallest → opposite side <code>PQ</code> shortest.</li>
+            <li>∠P (80°) largest → opposite side <code>QR</code> longest.</li>
+          </ol>
+        </div>
+        <div class="ans">PQ &lt; PR &lt; QR</div>
+      </div>
+    </section>
+
+    <section class="notes-section" id="pitfalls">
+      <h2><span class="icon">11</span> Common Pitfalls</h2>
+      <ul class="bullets">
+        <li>Median ≠ altitude (unless triangle is isosceles/equilateral and you're at the vertex angle).</li>
+        <li>The <b>circumcenter</b> is equidistant from <b>vertices</b>; the <b>incenter</b> from <b>sides</b>. Memorize which is which.</li>
+        <li>The centroid is the <b>2:1 split</b> with the <b>longer piece toward the vertex</b>. Don't reverse it.</li>
+        <li>Triangle inequality must hold for <b>all three pairs</b> — checking just one isn't enough.</li>
+        <li>The orthocenter can be <b>outside</b> the triangle. Always extend altitude lines if needed.</li>
+        <li>The Hinge Theorem requires <b>two pairs of congruent sides</b> — without that, the comparison doesn't apply.</li>
+      </ul>
+    </section>
+
+    <section class="notes-section" id="summary">
+      <h2><span class="icon">12</span> Quick Reference</h2>
+      <table class="notes-table">
+        <tr><th>Concept</th><th>Statement</th></tr>
+        <tr><td>Perp Bisector Thm</td><td>On perp bisector ⇔ equidistant from endpoints.</td></tr>
+        <tr><td>Angle Bisector Thm</td><td>On bisector ⇔ equidistant from sides.</td></tr>
+        <tr><td>Circumcenter</td><td>⊥ bisectors concur; equidistant from <b>vertices</b>.</td></tr>
+        <tr><td>Incenter</td><td>∠ bisectors concur; equidistant from <b>sides</b>.</td></tr>
+        <tr><td>Centroid</td><td>Medians concur; <b>2:1</b> ratio from vertex.</td></tr>
+        <tr><td>Orthocenter</td><td>Altitudes concur. Outside if obtuse, on if right.</td></tr>
+        <tr><td>Midsegment Thm</td><td>∥ to third side and ½ its length.</td></tr>
+        <tr><td>Triangle Inequality</td><td>Each side &lt; sum of the other two.</td></tr>
+        <tr><td>Range of 3rd side</td><td><code>|a−b| &lt; c &lt; a+b</code></td></tr>
+        <tr><td>Larger angle ↔ longer opposite side</td><td>Both directions.</td></tr>
+        <tr><td>Exterior ∠ Inequality</td><td>Ext &gt; either remote interior.</td></tr>
+        <tr><td>Hinge Theorem (SAS Ineq.)</td><td>Larger included angle ⇒ longer 3rd side.</td></tr>
+        <tr><td>Converse Hinge (SSS Ineq.)</td><td>Longer 3rd side ⇒ larger included angle.</td></tr>
+      </table>
+    </section>
+
+  </div>
+</div>
+
+<footer class="notes-footer">
+  Glencoe Geometry TX 2015 · Chapter 5 ·
+  <a href="../cheatsheets/ch05-cheatsheet.html">Cheatsheet</a> ·
+  <a href="../slides/ch05-relationships-triangles.html">Slides</a> ·
+  <a href="../quizzes/ch05-quiz.html">Quiz</a>
+</footer>
+
+</body>
+</html>

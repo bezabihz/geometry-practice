@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ch 1 Notes — Points, Lines, Planes &amp; Angles</title>
+<link rel="stylesheet" href="../notes.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div>
+    <div class="chapter-label">Chapter 1 · Detailed Notes</div>
+    <h1>Points, Lines, Planes &amp; Angles</h1>
+  </div>
+  <a href="../index.html">← Home</a>
+</header>
+
+<div class="layout">
+
+  <aside class="toc">
+    <div class="toc-title">Contents</div>
+    <ol>
+      <li><a href="#vocab">1. Vocabulary</a></li>
+      <li><a href="#postulates">2. Postulates</a></li>
+      <li><a href="#segments">3. Segments &amp; Midpoint</a></li>
+      <li><a href="#angles">4. Angles &amp; Measure</a></li>
+      <li><a href="#pairs">5. Angle Pair Theorems</a></li>
+      <li><a href="#coordinate">6. Distance &amp; Midpoint Formulas</a></li>
+      <li><a href="#examples">7. Worked Examples</a></li>
+      <li><a href="#pitfalls">8. Common Pitfalls</a></li>
+      <li><a href="#summary">9. Quick Reference</a></li>
+    </ol>
+  </aside>
+
+  <div class="content">
+
+    <div class="intro">
+      <h2>Chapter 1 — Foundations of Geometry</h2>
+      <p>Build a vocabulary of undefined terms, learn the postulates that govern points/lines/planes, and master the measurement of segments and angles. Every later chapter rests on these tools.</p>
+    </div>
+
+    <!-- ─── VOCABULARY ─── -->
+    <section class="notes-section" id="vocab">
+      <h2><span class="icon">1</span> Vocabulary &amp; Undefined Terms</h2>
+
+      <p>Three terms are <b>undefined</b> in Euclidean geometry — they are described, not defined, and every other definition is built from them.</p>
+
+      <dl class="vocab">
+        <div class="row"><dt>Point</dt> <dd>A specific location. Has <b>no size</b> (zero dimensions). Named with a capital letter (point <i>A</i>).</dd></div>
+        <div class="row"><dt>Line</dt> <dd>Extends infinitely in two directions. <b>One dimension</b>. Named by two points: <i>AB</i>↔ or by a lowercase letter <i>ℓ</i>.</dd></div>
+        <div class="row"><dt>Plane</dt> <dd>A flat surface extending infinitely in all directions. <b>Two dimensions</b>. Named with a script letter (plane <i>M</i>) or three non-collinear points.</dd></div>
+        <div class="row"><dt>Collinear points</dt> <dd>Points that lie on the <b>same line</b>.</dd></div>
+        <div class="row"><dt>Coplanar points</dt> <dd>Points that lie in the <b>same plane</b>. Any three points are coplanar; four points may or may not be.</dd></div>
+        <div class="row"><dt>Segment <i>AB</i></dt> <dd>The set of points <i>A</i>, <i>B</i>, and all points between them. Has <b>two endpoints</b> and finite length.</dd></div>
+        <div class="row"><dt>Ray <i>AB</i> →</dt> <dd>Starts at endpoint <i>A</i> and extends through <i>B</i> infinitely. <b>One endpoint</b>, one direction.</dd></div>
+        <div class="row"><dt>Opposite rays</dt> <dd>Two rays sharing the same endpoint that form a straight line (point together in opposite directions).</dd></div>
+        <div class="row"><dt>Angle</dt> <dd>Two rays sharing a common endpoint called the <b>vertex</b>. Measured in degrees (0° – 360°).</dd></div>
+        <div class="row"><dt>Congruent</dt> <dd>Figures that have the same size and shape. Segments are congruent when they have equal lengths; angles when they have equal measures. Symbol: <code>≅</code>.</dd></div>
+        <div class="row"><dt>Bisector</dt> <dd>A point, ray, line, or plane that divides a segment or angle into two congruent parts.</dd></div>
+      </dl>
+
+      <div class="note"><b>Equal vs Congruent.</b> Use <i>equal</i> for <b>measures</b> (<code>AB = 7</code>, <code>m∠1 = 30°</code>) and <i>congruent</i> for <b>figures</b> (<code>AB ≅ CD</code>, <code>∠1 ≅ ∠2</code>).</div>
+    </section>
+
+    <!-- ─── POSTULATES ─── -->
+    <section class="notes-section" id="postulates">
+      <h2><span class="icon">2</span> Postulates of Points, Lines &amp; Planes</h2>
+      <p>A <b>postulate</b> (or <b>axiom</b>) is a statement accepted without proof. These are the building blocks of every later theorem.</p>
+
+      <div class="thm post">
+        <div class="label">Postulate 1-1</div>
+        <div class="name">Two-Point Line Postulate</div>
+        <div class="stmt">Through any two distinct points there is exactly <b>one</b> line.</div>
+      </div>
+
+      <div class="thm post">
+        <div class="label">Postulate 1-2</div>
+        <div class="name">Line Intersection Postulate</div>
+        <div class="stmt">If two distinct lines intersect, they intersect in exactly <b>one point</b>.</div>
+      </div>
+
+      <div class="thm post">
+        <div class="label">Postulate 1-3</div>
+        <div class="name">Plane Intersection Postulate</div>
+        <div class="stmt">If two distinct planes intersect, their intersection is exactly <b>one line</b>.</div>
+      </div>
+
+      <div class="thm post">
+        <div class="label">Postulate 1-4</div>
+        <div class="name">Three-Point Plane Postulate</div>
+        <div class="stmt">Through any three <b>non-collinear</b> points there is exactly one plane.</div>
+      </div>
+
+      <div class="thm post">
+        <div class="label">Postulate 1-5</div>
+        <div class="name">Ruler Postulate</div>
+        <div class="stmt">The points on a line can be paired one-to-one with the real numbers. The <b>distance</b> between two points equals the absolute value of the difference of their coordinates: <code>AB = |a − b|</code>.</div>
+      </div>
+
+      <div class="thm post">
+        <div class="label">Postulate 1-6</div>
+        <div class="name">Segment Addition Postulate</div>
+        <div class="stmt">If <i>B</i> is <b>between</b> <i>A</i> and <i>C</i> on a line, then <code>AB + BC = AC</code>. Conversely, if <code>AB + BC = AC</code>, then <i>B</i> lies between <i>A</i> and <i>C</i>.</div>
+      </div>
+
+      <div class="thm post">
+        <div class="label">Postulate 1-7</div>
+        <div class="name">Protractor Postulate</div>
+        <div class="stmt">Given a ray <i>OA</i>, every other ray from <i>O</i> on one side of <i>OA</i> can be paired with a number 0–180. The measure of an angle is the <b>positive difference</b> of these two numbers.</div>
+      </div>
+
+      <div class="thm post">
+        <div class="label">Postulate 1-8</div>
+        <div class="name">Angle Addition Postulate</div>
+        <div class="stmt">If <i>D</i> lies in the interior of ∠<i>ABC</i>, then <code>m∠ABD + m∠DBC = m∠ABC</code>.</div>
+      </div>
+    </section>
+
+    <!-- ─── SEGMENTS & MIDPOINT ─── -->
+    <section class="notes-section" id="segments">
+      <h2><span class="icon">3</span> Segments, Midpoint &amp; Bisectors</h2>
+
+      <div class="thm def">
+        <div class="label">Definition</div>
+        <div class="name">Midpoint</div>
+        <div class="stmt">A point <i>M</i> is the midpoint of <i>AB</i> if it is on <i>AB</i> and <code>AM = MB</code>. Equivalently, <code>AM = MB = ½·AB</code>.</div>
+      </div>
+
+      <div class="thm">
+        <div class="label">Theorem 1-1</div>
+        <div class="name">Midpoint Theorem</div>
+        <div class="stmt">If <i>M</i> is the midpoint of <i>AB</i>, then <code>AM ≅ MB</code> and each equals <code>½·AB</code>.</div>
+      </div>
+
+      <div class="thm def">
+        <div class="label">Definition</div>
+        <div class="name">Segment bisector</div>
+        <div class="stmt">A point, line, ray, segment, or plane that intersects a segment at its midpoint, dividing it into two congruent halves.</div>
+      </div>
+
+      <div class="tip">Setting up midpoint equations: write <code>AM = MB</code> as an algebraic equation, solve for the variable, and substitute back. Then verify the lengths sum to <code>AC</code>.</div>
+    </section>
+
+    <!-- ─── ANGLES ─── -->
+    <section class="notes-section" id="angles">
+      <h2><span class="icon">4</span> Angles &amp; Their Measure</h2>
+
+      <table class="notes-table">
+        <tr><th>Angle type</th><th>Measure</th><th>Example</th></tr>
+        <tr><td><b>Acute</b></td><td>0° &lt; θ &lt; 90°</td><td>45°, 89°</td></tr>
+        <tr><td><b>Right</b></td><td>θ = 90°</td><td>Square corner</td></tr>
+        <tr><td><b>Obtuse</b></td><td>90° &lt; θ &lt; 180°</td><td>120°, 175°</td></tr>
+        <tr><td><b>Straight</b></td><td>θ = 180°</td><td>A line at the vertex</td></tr>
+        <tr><td><b>Reflex</b></td><td>180° &lt; θ &lt; 360°</td><td>270° (outside angle)</td></tr>
+      </table>
+
+      <div class="thm def">
+        <div class="label">Definition</div>
+        <div class="name">Angle bisector</div>
+        <div class="stmt">A ray that divides an angle into two congruent angles. If <i>BD</i> bisects ∠<i>ABC</i>, then <code>m∠ABD = m∠DBC = ½·m∠ABC</code>.</div>
+      </div>
+
+      <div class="thm def">
+        <div class="label">Definition</div>
+        <div class="name">Perpendicular (⊥) lines</div>
+        <div class="stmt">Two lines/rays/segments that intersect to form a right angle (and therefore four right angles).</div>
+      </div>
+    </section>
+
+    <!-- ─── ANGLE PAIR THEOREMS ─── -->
+    <section class="notes-section" id="pairs">
+      <h2><span class="icon">5</span> Angle Pair Relationships &amp; Theorems</h2>
+
+      <h3>Angle pairs (definitions)</h3>
+      <dl class="vocab">
+        <div class="row"><dt>Adjacent angles</dt><dd>Share a common vertex and side, but no interior points.</dd></div>
+        <div class="row"><dt>Vertical angles</dt><dd>Two non-adjacent angles formed by two intersecting lines (opposite each other at the vertex).</dd></div>
+        <div class="row"><dt>Linear pair</dt><dd>Two adjacent angles whose non-common sides form a straight line. A linear pair is <b>always supplementary</b>.</dd></div>
+        <div class="row"><dt>Complementary angles</dt><dd>Two angles whose measures sum to <b>90°</b>.</dd></div>
+        <div class="row"><dt>Supplementary angles</dt><dd>Two angles whose measures sum to <b>180°</b>.</dd></div>
+      </dl>
+
+      <h3>Theorems on angle pairs</h3>
+
+      <div class="thm">
+        <div class="label">Theorem 1-2</div>
+        <div class="name">Vertical Angles Theorem</div>
+        <div class="stmt">Vertical angles are <b>congruent</b>.</div>
+        <div class="conv"><b>Proof sketch:</b> ∠1 and ∠2 form a linear pair → <code>m∠1+m∠2=180°</code>. ∠2 and ∠3 also form a linear pair → <code>m∠2+m∠3=180°</code>. Subtracting gives <code>m∠1=m∠3</code>.</div>
+      </div>
+
+      <div class="thm">
+        <div class="label">Theorem 1-3</div>
+        <div class="name">Congruent Supplements Theorem</div>
+        <div class="stmt">If two angles are supplementary to the <b>same</b> angle (or to congruent angles), then they are congruent to each other.</div>
+      </div>
+
+      <div class="thm">
+        <div class="label">Theorem 1-4</div>
+        <div class="name">Congruent Complements Theorem</div>
+        <div class="stmt">If two angles are complementary to the <b>same</b> angle (or to congruent angles), then they are congruent.</div>
+      </div>
+
+      <div class="thm">
+        <div class="label">Theorem 1-5</div>
+        <div class="name">Right Angles Theorem</div>
+        <div class="stmt">All right angles are congruent.</div>
+      </div>
+
+      <div class="thm">
+        <div class="label">Theorem 1-6</div>
+        <div class="name">Perpendicular Right-Angle Theorem</div>
+        <div class="stmt">If two lines are perpendicular, then they form four right angles.</div>
+      </div>
+
+      <div class="thm">
+        <div class="label">Theorem 1-7</div>
+        <div class="name">Linear Pair Postulate (sometimes a theorem)</div>
+        <div class="stmt">The angles in a linear pair are supplementary: their measures sum to 180°.</div>
+      </div>
+
+      <div class="key">Vertical angles are <b>always congruent</b>, but a linear pair is <b>always supplementary</b>. Don't confuse the two — vertical pairs are <b>opposite</b>, linear pairs are <b>adjacent and form a line</b>.</div>
+    </section>
+
+    <!-- ─── COORDINATE GEOMETRY ─── -->
+    <section class="notes-section" id="coordinate">
+      <h2><span class="icon">6</span> Coordinate Geometry — Distance &amp; Midpoint</h2>
+
+      <h3>Distance Formula (from Pythagorean Theorem)</h3>
+      <div class="formula"><b>d</b> = √[(x₂ − x₁)² + (y₂ − y₁)²]</div>
+      <p>Derived by treating the segment between (x₁,y₁) and (x₂,y₂) as the hypotenuse of a right triangle whose legs are <code>Δx</code> and <code>Δy</code>.</p>
+
+      <h3>Midpoint Formula</h3>
+      <div class="formula"><b>M</b> = ((x₁ + x₂)/2 , (y₁ + y₂)/2)</div>
+      <p>The midpoint of a segment is the <b>average</b> of the endpoints' coordinates.</p>
+
+      <h3>Number-line distance</h3>
+      <div class="formula"><b>AB</b> = |a − b|</div>
+      <p>From the Ruler Postulate. Always non-negative — distance has no sign.</p>
+
+      <div class="note">When asked to find an endpoint given a midpoint, solve <code>(x_end) = 2(x_mid) − x_other</code>. The midpoint formula <i>rearranged</i>.</div>
+    </section>
+
+    <!-- ─── WORKED EXAMPLES ─── -->
+    <section class="notes-section" id="examples">
+      <h2><span class="icon">7</span> Worked Examples</h2>
+
+      <div class="example">
+        <div class="ex-label">Example 1 · Segment Addition</div>
+        <div class="ex-q">B is between A and C. <code>AB = 2x+1</code>, <code>BC = 3x−4</code>, <code>AC = 22</code>. Find x and BC.</div>
+        <div class="ex-steps">
+          <ol>
+            <li>By Segment Addition: <code>AB + BC = AC</code> → <code>(2x+1) + (3x−4) = 22</code>.</li>
+            <li>Combine: <code>5x − 3 = 22</code> → <code>5x = 25</code> → <code>x = 5</code>.</li>
+            <li>Substitute: <code>BC = 3(5) − 4 = 11</code>.</li>
+          </ol>
+        </div>
+        <div class="ans">x = 5,  BC = 11</div>
+      </div>
+
+      <div class="example">
+        <div class="ex-label">Example 2 · Midpoint &amp; Distance</div>
+        <div class="ex-q">Find the midpoint and length of segment <i>PQ</i> with <code>P(−3, 4)</code> and <code>Q(5, −2)</code>.</div>
+        <div class="ex-steps">
+          <ol>
+            <li>Midpoint: <code>M = ((−3+5)/2, (4+(−2))/2) = (1, 1)</code>.</li>
+            <li>Distance: <code>d = √[(5−(−3))² + (−2−4)²] = √[64 + 36] = √100 = 10</code>.</li>
+          </ol>
+        </div>
+        <div class="ans">M = (1, 1),  PQ = 10</div>
+      </div>
+
+      <div class="example">
+        <div class="ex-label">Example 3 · Vertical Angles</div>
+        <div class="ex-q">Two lines intersect. One angle measures <code>(4x + 10)°</code>; its vertical pair measures <code>(6x − 20)°</code>. Find x.</div>
+        <div class="ex-steps">
+          <ol>
+            <li>Vertical angles are congruent → <code>4x + 10 = 6x − 20</code>.</li>
+            <li>Solve: <code>30 = 2x</code> → <code>x = 15</code>.</li>
+            <li>Check: both angles = <code>4(15)+10 = 70°</code> ✓.</li>
+          </ol>
+        </div>
+        <div class="ans">x = 15° (each angle 70°)</div>
+      </div>
+
+      <div class="example">
+        <div class="ex-label">Example 4 · Angle Bisector</div>
+        <div class="ex-q">Ray <i>BD</i> bisects ∠<i>ABC</i>. If <code>m∠ABD = (5x − 3)°</code> and <code>m∠DBC = (3x + 11)°</code>, find <code>m∠ABC</code>.</div>
+        <div class="ex-steps">
+          <ol>
+            <li>Bisector → halves are equal: <code>5x − 3 = 3x + 11</code> → <code>2x = 14</code> → <code>x = 7</code>.</li>
+            <li>Each half: <code>5(7) − 3 = 32°</code>.</li>
+            <li>Whole angle: <code>2 · 32 = 64°</code>.</li>
+          </ol>
+        </div>
+        <div class="ans">m∠ABC = 64°</div>
+      </div>
+    </section>
+
+    <!-- ─── COMMON PITFALLS ─── -->
+    <section class="notes-section" id="pitfalls">
+      <h2><span class="icon">8</span> Common Pitfalls</h2>
+      <ul class="bullets">
+        <li><b>Drawing a picture is not a proof.</b> Diagrams can mislead; rely on given information.</li>
+        <li>Watch for "<b>B is between A and C</b>" — only then does <code>AB + BC = AC</code>.</li>
+        <li>Don't write <code>AB = CD</code> when you mean <code>AB ≅ CD</code> (or vice versa). Equality is for measures; congruence for figures.</li>
+        <li>Distance is always <b>positive</b>. The expression under the square root in the distance formula is never negative because each term is squared.</li>
+        <li><b>Vertical</b> ≠ "up and down." Vertical angles are <b>across</b> from each other at an intersection.</li>
+        <li>Complementary sums to <b>90°</b> (C → corner); Supplementary sums to <b>180°</b> (S → straight).</li>
+      </ul>
+    </section>
+
+    <!-- ─── QUICK REFERENCE ─── -->
+    <section class="notes-section" id="summary">
+      <h2><span class="icon">9</span> Quick Reference</h2>
+      <table class="notes-table">
+        <tr><th>Concept</th><th>Statement / Formula</th></tr>
+        <tr><td>Segment Addition</td><td>B between A and C ⇒ <code>AB + BC = AC</code></td></tr>
+        <tr><td>Midpoint Theorem</td><td><code>AM = MB = ½·AB</code></td></tr>
+        <tr><td>Angle Addition</td><td>D in interior of ∠ABC ⇒ <code>m∠ABD + m∠DBC = m∠ABC</code></td></tr>
+        <tr><td>Vertical Angles</td><td>Vertical angles are congruent.</td></tr>
+        <tr><td>Linear Pair</td><td>Sum to 180° (supplementary).</td></tr>
+        <tr><td>Complementary</td><td>Two angles sum to 90°.</td></tr>
+        <tr><td>Supplementary</td><td>Two angles sum to 180°.</td></tr>
+        <tr><td>Congruent Supplements</td><td>Two ∠s supplementary to the same ∠ ⇒ congruent.</td></tr>
+        <tr><td>Congruent Complements</td><td>Two ∠s complementary to the same ∠ ⇒ congruent.</td></tr>
+        <tr><td>Distance Formula</td><td><code>d = √[(x₂−x₁)² + (y₂−y₁)²]</code></td></tr>
+        <tr><td>Midpoint Formula</td><td><code>M = ((x₁+x₂)/2, (y₁+y₂)/2)</code></td></tr>
+        <tr><td>Number Line Distance</td><td><code>AB = |a − b|</code></td></tr>
+      </table>
+    </section>
+
+  </div>
+</div>
+
+<footer class="notes-footer">
+  Glencoe Geometry TX 2015 · Chapter 1 ·
+  <a href="../cheatsheets/ch01-cheatsheet.html">Cheatsheet</a> ·
+  <a href="../slides/ch01-points-lines-planes.html">Slides</a> ·
+  <a href="../quizzes/ch01-quiz.html">Quiz</a>
+</footer>
+
+</body>
+</html>

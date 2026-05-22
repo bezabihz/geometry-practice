@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ch 9 Notes — Transformations</title>
+<link rel="stylesheet" href="../notes.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div>
+    <div class="chapter-label">Chapter 9 · Detailed Notes</div>
+    <h1>Transformations</h1>
+  </div>
+  <a href="../index.html">← Home</a>
+</header>
+
+<div class="layout">
+
+  <aside class="toc">
+    <div class="toc-title">Contents</div>
+    <ol>
+      <li><a href="#vocab">1. Vocabulary</a></li>
+      <li><a href="#translations">2. Translations</a></li>
+      <li><a href="#reflections">3. Reflections</a></li>
+      <li><a href="#rotations">4. Rotations</a></li>
+      <li><a href="#dilations">5. Dilations</a></li>
+      <li><a href="#compositions">6. Compositions &amp; Glide Reflections</a></li>
+      <li><a href="#symmetry">7. Symmetry</a></li>
+      <li><a href="#tessellations">8. Tessellations</a></li>
+      <li><a href="#examples">9. Worked Examples</a></li>
+      <li><a href="#pitfalls">10. Common Pitfalls</a></li>
+      <li><a href="#summary">11. Quick Reference</a></li>
+    </ol>
+  </aside>
+
+  <div class="content">
+
+    <div class="intro">
+      <h2>Chapter 9 — Transformations</h2>
+      <p>Transformations map points in the plane to new points. The three <b>rigid motions</b> — translation, reflection, rotation — preserve shape and size. The fourth main transformation, dilation, preserves shape but scales size. Compositions chain them together.</p>
+    </div>
+
+    <section class="notes-section" id="vocab">
+      <h2><span class="icon">1</span> Vocabulary</h2>
+      <dl class="vocab">
+        <div class="row"><dt>Transformation</dt><dd>A function that maps each point of the plane to exactly one image point.</dd></div>
+        <div class="row"><dt>Preimage / Image</dt><dd>Original figure / transformed figure. Use prime notation: <code>P → P'</code>.</dd></div>
+        <div class="row"><dt>Isometry (rigid motion)</dt><dd>A transformation that preserves <b>distance</b> (and therefore size and shape). Translation, reflection, rotation, glide reflection.</dd></div>
+        <div class="row"><dt>Orientation</dt><dd>The order of vertices going around a figure (CW vs CCW). Direct isometries preserve orientation; indirect isometries reverse it.</dd></div>
+        <div class="row"><dt>Composition</dt><dd>Performing one transformation followed by another.</dd></div>
+        <div class="row"><dt>Invariant point</dt><dd>A point unchanged by a transformation (a <b>fixed point</b>).</dd></div>
+      </dl>
+
+      <table class="notes-table">
+        <tr><th>Transformation</th><th>Preserves distance?</th><th>Preserves orientation?</th></tr>
+        <tr><td>Translation</td><td>Yes</td><td>Yes</td></tr>
+        <tr><td>Rotation</td><td>Yes</td><td>Yes</td></tr>
+        <tr><td>Reflection</td><td>Yes</td><td>No (reverses)</td></tr>
+        <tr><td>Glide Reflection</td><td>Yes</td><td>No</td></tr>
+        <tr><td>Dilation</td><td>No (unless k=±1)</td><td>Yes if k&gt;0, No if k&lt;0</td></tr>
+      </table>
+    </section>
+
+    <section class="notes-section" id="translations">
+      <h2><span class="icon">2</span> Translations</h2>
+
+      <div class="thm def">
+        <div class="label">Definition</div>
+        <div class="name">Translation</div>
+        <div class="stmt">A rigid motion that slides every point of a figure the same distance in the same direction.</div>
+      </div>
+
+      <div class="formula">(x, y) → (x + a, y + b)</div>
+
+      <p>The vector <code>⟨a, b⟩</code> describes the translation. No fixed points (unless the translation is by the zero vector).</p>
+    </section>
+
+    <section class="notes-section" id="reflections">
+      <h2><span class="icon">3</span> Reflections</h2>
+
+      <div class="thm def">
+        <div class="label">Definition</div>
+        <div class="name">Reflection</div>
+        <div class="stmt">A rigid motion that maps each point to its mirror image across a line (the <b>line of reflection</b>). The line of reflection is the perpendicular bisector of every segment joining a preimage to its image.</div>
+      </div>
+
+      <table class="notes-table">
+        <tr><th>Line of reflection</th><th>Rule</th></tr>
+        <tr><td>x-axis</td><td><code>(x, y) → (x, −y)</code></td></tr>
+        <tr><td>y-axis</td><td><code>(x, y) → (−x, y)</code></td></tr>
+        <tr><td>line y = x</td><td><code>(x, y) → (y, x)</code></td></tr>
+        <tr><td>line y = −x</td><td><code>(x, y) → (−y, −x)</code></td></tr>
+        <tr><td>horizontal line y = k</td><td><code>(x, y) → (x, 2k − y)</code></td></tr>
+        <tr><td>vertical line x = h</td><td><code>(x, y) → (2h − x, y)</code></td></tr>
+      </table>
+
+      <div class="key">A reflection is an <b>indirect</b> isometry — it reverses orientation (CW ↔ CCW).</div>
+    </section>
+
+    <section class="notes-section" id="rotations">
+      <h2><span class="icon">4</span> Rotations</h2>
+
+      <div class="thm def">
+        <div class="label">Definition</div>
+        <div class="name">Rotation</div>
+        <div class="stmt">A rigid motion that turns every point of a figure through the same angle about a fixed point (the <b>center of rotation</b>). Positive angles rotate counterclockwise (CCW).</div>
+      </div>
+
+      <table class="notes-table">
+        <tr><th>Angle (CCW about origin)</th><th>Rule</th></tr>
+        <tr><td>90°</td><td><code>(x, y) → (−y, x)</code></td></tr>
+        <tr><td>180°</td><td><code>(x, y) → (−x, −y)</code></td></tr>
+        <tr><td>270°  (or −90°)</td><td><code>(x, y) → (y, −x)</code></td></tr>
+        <tr><td>360°</td><td><code>(x, y) → (x, y)</code> (identity)</td></tr>
+      </table>
+
+      <div class="note">A 180° rotation about the origin is also a <b>point reflection</b> through the origin.</div>
+    </section>
+
+    <section class="notes-section" id="dilations">
+      <h2><span class="icon">5</span> Dilations</h2>
+
+      <div class="thm def">
+        <div class="label">Definition</div>
+        <div class="name">Dilation</div>
+        <div class="stmt">A transformation defined by a center <i>C</i> and a non-zero scale factor <i>k</i>. Each point <i>P</i> maps to <i>P'</i> on ray <i>CP</i> with <code>CP' = |k|·CP</code>.</div>
+      </div>
+
+      <div class="formula">Center origin:  (x, y) → (k·x, k·y)</div>
+
+      <ul class="bullets">
+        <li><code>|k| &gt; 1</code> ⇒ enlargement.</li>
+        <li><code>0 &lt; |k| &lt; 1</code> ⇒ reduction.</li>
+        <li><code>k &lt; 0</code> ⇒ image is on the opposite side of the center (rotated 180°).</li>
+      </ul>
+
+      <p>Dilations preserve angle measures, ratios, and parallel lines, but <b>not</b> distances (so not isometries).</p>
+    </section>
+
+    <section class="notes-section" id="compositions">
+      <h2><span class="icon">6</span> Compositions &amp; Glide Reflections</h2>
+
+      <p>To compose, apply the first transformation, then the second to its image.</p>
+
+      <div class="thm">
+        <div class="label">Theorem 9-1</div>
+        <div class="name">Two Reflections = Translation or Rotation</div>
+        <div class="stmt">A composition of two reflections is either:
+          <ul class="bullets">
+            <li>A <b>translation</b> (if the two lines are parallel) — distance = 2·(distance between lines).</li>
+            <li>A <b>rotation</b> (if the lines intersect) — center is the intersection, angle = 2·(angle between lines).</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="thm def">
+        <div class="label">Definition</div>
+        <div class="name">Glide Reflection</div>
+        <div class="stmt">The composition of a reflection across a line and a translation in the direction of that line. The order doesn't matter.</div>
+      </div>
+
+      <div class="key">There are <b>exactly four</b> rigid motions in the plane: translation, rotation, reflection, glide reflection.</div>
+    </section>
+
+    <section class="notes-section" id="symmetry">
+      <h2><span class="icon">7</span> Symmetry</h2>
+
+      <dl class="vocab">
+        <div class="row"><dt>Line symmetry (reflectional)</dt><dd>A figure has line symmetry if it can be reflected over a line and map to itself. The line is a <b>line of symmetry</b>.</dd></div>
+        <div class="row"><dt>Rotational symmetry</dt><dd>A figure has rotational symmetry if it maps to itself under a rotation of less than 360°. The smallest such angle is the <b>angle of symmetry</b>; <code>order = 360° / angle</code>.</dd></div>
+        <div class="row"><dt>Point symmetry</dt><dd>A figure has point symmetry if it maps to itself under a 180° rotation about some center (a special case of rotational symmetry).</dd></div>
+      </dl>
+
+      <table class="notes-table">
+        <tr><th>Figure</th><th>Lines of symmetry</th><th>Rotational symmetry</th></tr>
+        <tr><td>Equilateral △</td><td>3</td><td>Order 3 (120°)</td></tr>
+        <tr><td>Square</td><td>4</td><td>Order 4 (90°)</td></tr>
+        <tr><td>Regular pentagon</td><td>5</td><td>Order 5 (72°)</td></tr>
+        <tr><td>Regular hexagon</td><td>6</td><td>Order 6 (60°)</td></tr>
+        <tr><td>Circle</td><td>Infinite</td><td>Any angle</td></tr>
+      </table>
+    </section>
+
+    <section class="notes-section" id="tessellations">
+      <h2><span class="icon">8</span> Tessellations</h2>
+      <p>A <b>tessellation</b> is a pattern of polygons that covers a plane without gaps or overlaps. A polygon <b>tessellates</b> if multiples of its interior angle measure sum to 360° at each vertex.</p>
+
+      <ul class="bullets">
+        <li><b>Regular tessellations</b> use only one regular polygon: triangles (60° × 6), squares (90° × 4), hexagons (120° × 3).</li>
+        <li><b>Semi-regular tessellations</b> use two or more regular polygons with the same arrangement at each vertex.</li>
+      </ul>
+    </section>
+
+    <section class="notes-section" id="examples">
+      <h2><span class="icon">9</span> Worked Examples</h2>
+
+      <div class="example">
+        <div class="ex-label">Example 1 · Translation</div>
+        <div class="ex-q">Translate △ABC with vertices A(2,3), B(4,−1), C(−1,5) by the vector ⟨3, −2⟩.</div>
+        <div class="ex-steps">
+          <ol>
+            <li>Add 3 to x, subtract 2 from y for each vertex.</li>
+            <li>A' = (5, 1), B' = (7, −3), C' = (2, 3).</li>
+          </ol>
+        </div>
+        <div class="ans">A'(5,1) · B'(7,−3) · C'(2,3)</div>
+      </div>
+
+      <div class="example">
+        <div class="ex-label">Example 2 · Reflection across y = x</div>
+        <div class="ex-q">Reflect P(−2, 5) across the line y = x.</div>
+        <div class="ex-steps">
+          <ol>
+            <li>Swap x and y: <code>P' = (5, −2)</code>.</li>
+          </ol>
+        </div>
+        <div class="ans">P' = (5, −2)</div>
+      </div>
+
+      <div class="example">
+        <div class="ex-label">Example 3 · Rotation 90° CCW</div>
+        <div class="ex-q">Rotate Q(3, −4) by 90° CCW about the origin.</div>
+        <div class="ex-steps">
+          <ol>
+            <li>Rule: <code>(x, y) → (−y, x)</code>.</li>
+            <li>Q' = <code>(4, 3)</code>.</li>
+          </ol>
+        </div>
+        <div class="ans">Q' = (4, 3)</div>
+      </div>
+
+      <div class="example">
+        <div class="ex-label">Example 4 · Dilation</div>
+        <div class="ex-q">Dilate point R(6, −4) by scale factor k = ½ about the origin.</div>
+        <div class="ex-steps">
+          <ol>
+            <li>Multiply each coordinate by ½: <code>R' = (3, −2)</code>.</li>
+          </ol>
+        </div>
+        <div class="ans">R' = (3, −2)</div>
+      </div>
+
+      <div class="example">
+        <div class="ex-label">Example 5 · Composition</div>
+        <div class="ex-q">Reflect (2, 3) across the x-axis, then translate by ⟨1, 4⟩.</div>
+        <div class="ex-steps">
+          <ol>
+            <li>Reflect: (2, 3) → (2, −3).</li>
+            <li>Translate: (2, −3) → (3, 1).</li>
+          </ol>
+        </div>
+        <div class="ans">(3, 1)</div>
+      </div>
+    </section>
+
+    <section class="notes-section" id="pitfalls">
+      <h2><span class="icon">10</span> Common Pitfalls</h2>
+      <ul class="bullets">
+        <li>Reflections <b>reverse</b> orientation; rotations and translations preserve it.</li>
+        <li>Rotate <b>counterclockwise</b> by default unless told otherwise. A clockwise 90° rotation is the same as a CCW 270° rotation.</li>
+        <li>Dilation is <b>not</b> an isometry unless |k|=1.</li>
+        <li>For reflections across <code>y = x</code>, swap coordinates; for <code>y = −x</code>, swap and negate both.</li>
+        <li>Compositions are generally <b>not</b> commutative: reflect-then-translate ≠ translate-then-reflect (in some cases).</li>
+        <li>The scale factor of a dilation can be <b>negative</b> — the image is on the opposite side of the center.</li>
+      </ul>
+    </section>
+
+    <section class="notes-section" id="summary">
+      <h2><span class="icon">11</span> Quick Reference</h2>
+      <table class="notes-table">
+        <tr><th>Transformation</th><th>Rule</th></tr>
+        <tr><td>Translation by ⟨a, b⟩</td><td><code>(x, y) → (x+a, y+b)</code></td></tr>
+        <tr><td>Reflect x-axis</td><td><code>(x, y) → (x, −y)</code></td></tr>
+        <tr><td>Reflect y-axis</td><td><code>(x, y) → (−x, y)</code></td></tr>
+        <tr><td>Reflect y = x</td><td><code>(x, y) → (y, x)</code></td></tr>
+        <tr><td>Reflect y = −x</td><td><code>(x, y) → (−y, −x)</code></td></tr>
+        <tr><td>Rotate 90° CCW</td><td><code>(x, y) → (−y, x)</code></td></tr>
+        <tr><td>Rotate 180°</td><td><code>(x, y) → (−x, −y)</code></td></tr>
+        <tr><td>Rotate 270° CCW</td><td><code>(x, y) → (y, −x)</code></td></tr>
+        <tr><td>Dilation (origin), factor k</td><td><code>(x, y) → (kx, ky)</code></td></tr>
+        <tr><td>Two ⊥ reflections</td><td>180° rotation about the intersection.</td></tr>
+        <tr><td>Two parallel reflections</td><td>Translation of 2× distance between lines.</td></tr>
+        <tr><td>Order of rotational symmetry</td><td><code>360° / angle</code></td></tr>
+      </table>
+    </section>
+
+  </div>
+</div>
+
+<footer class="notes-footer">
+  Glencoe Geometry TX 2015 · Chapter 9 ·
+  <a href="../cheatsheets/ch09-cheatsheet.html">Cheatsheet</a> ·
+  <a href="../slides/ch09-transformations.html">Slides</a> ·
+  <a href="../quizzes/ch09-quiz.html">Quiz</a>
+</footer>
+
+</body>
+</html>

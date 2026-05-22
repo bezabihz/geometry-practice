@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ch 2 Notes — Reasoning &amp; Proof</title>
+<link rel="stylesheet" href="../notes.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div>
+    <div class="chapter-label">Chapter 2 · Detailed Notes</div>
+    <h1>Reasoning &amp; Proof</h1>
+  </div>
+  <a href="../index.html">← Home</a>
+</header>
+
+<div class="layout">
+
+  <aside class="toc">
+    <div class="toc-title">Contents</div>
+    <ol>
+      <li><a href="#vocab">1. Vocabulary</a></li>
+      <li><a href="#inductive">2. Inductive Reasoning</a></li>
+      <li><a href="#conditional">3. Conditional Statements</a></li>
+      <li><a href="#biconditional">4. Biconditionals &amp; Definitions</a></li>
+      <li><a href="#deductive">5. Deductive Reasoning</a></li>
+      <li><a href="#algebra">6. Properties of Equality</a></li>
+      <li><a href="#congruence">7. Properties of Congruence</a></li>
+      <li><a href="#proofs">8. Two-Column Proofs</a></li>
+      <li><a href="#examples">9. Worked Examples</a></li>
+      <li><a href="#pitfalls">10. Common Pitfalls</a></li>
+      <li><a href="#summary">11. Quick Reference</a></li>
+    </ol>
+  </aside>
+
+  <div class="content">
+
+    <div class="intro">
+      <h2>Chapter 2 — The Logic of Geometry</h2>
+      <p>This chapter teaches you to argue rigorously. You will learn how to spot a pattern, write a precise conditional, recognize its converse and contrapositive, chain statements together using the laws of logic, and produce formal two-column proofs.</p>
+    </div>
+
+    <section class="notes-section" id="vocab">
+      <h2><span class="icon">1</span> Vocabulary</h2>
+      <dl class="vocab">
+        <div class="row"><dt>Conjecture</dt><dd>An educated guess based on observation. May be true or false.</dd></div>
+        <div class="row"><dt>Counterexample</dt><dd>A single example that proves a conjecture <b>false</b>.</dd></div>
+        <div class="row"><dt>Conditional</dt><dd>An "if–then" statement: <i>If p, then q.</i> Notation: <code>p → q</code>.</dd></div>
+        <div class="row"><dt>Hypothesis</dt><dd>The "if" part of a conditional (<code>p</code>).</dd></div>
+        <div class="row"><dt>Conclusion</dt><dd>The "then" part of a conditional (<code>q</code>).</dd></div>
+        <div class="row"><dt>Truth value</dt><dd>Either <b>true</b> (T) or <b>false</b> (F).</dd></div>
+        <div class="row"><dt>Negation (~p)</dt><dd>The opposite truth value of <i>p</i>. If <i>p</i> is true, ~p is false.</dd></div>
+        <div class="row"><dt>Biconditional</dt><dd>"<i>p</i> if and only if <i>q</i>": <code>p ↔ q</code>. True only when <i>p</i> and <i>q</i> have the same truth value.</dd></div>
+        <div class="row"><dt>Theorem</dt><dd>A statement that has been proven.</dd></div>
+        <div class="row"><dt>Postulate / Axiom</dt><dd>A statement accepted without proof.</dd></div>
+        <div class="row"><dt>Proof</dt><dd>A logical argument that establishes a statement as true using definitions, postulates, theorems, and given information.</dd></div>
+      </dl>
+    </section>
+
+    <section class="notes-section" id="inductive">
+      <h2><span class="icon">2</span> Inductive Reasoning</h2>
+      <p><b>Inductive reasoning</b> = drawing a general conclusion from specific examples (pattern → rule). It can <i>suggest</i> truth but never <b>prove</b> truth.</p>
+
+      <div class="note"><b>Pattern → conjecture → counterexample search.</b> The strength of an inductive argument depends on how many varied cases support it, but one counterexample destroys it.</div>
+
+      <div class="example">
+        <div class="ex-label">Example · Pattern</div>
+        <div class="ex-q">Find the next term: 2, 5, 10, 17, 26, __</div>
+        <div class="ex-steps">
+          <ol>
+            <li>Differences: 3, 5, 7, 9 — arithmetic with difference 2.</li>
+            <li>Next difference = 11; next term = 26 + 11 = <b>37</b>.</li>
+            <li>Closed form: <code>aₙ = n² + 1</code>.</li>
+          </ol>
+        </div>
+        <div class="ans">Next term = 37</div>
+      </div>
+    </section>
+
+    <section class="notes-section" id="conditional">
+      <h2><span class="icon">3</span> Conditional Statements &amp; Related Forms</h2>
+
+      <p>From any conditional <code>p → q</code> we can write three related statements:</p>
+      <table class="notes-table">
+        <tr><th>Form</th><th>Notation</th><th>Statement</th></tr>
+        <tr><td><b>Conditional</b></td><td>p → q</td><td>If <i>p</i>, then <i>q</i>.</td></tr>
+        <tr><td><b>Converse</b></td><td>q → p</td><td>If <i>q</i>, then <i>p</i>. (Swap)</td></tr>
+        <tr><td><b>Inverse</b></td><td>~p → ~q</td><td>If <b>not</b> <i>p</i>, then <b>not</b> <i>q</i>. (Negate)</td></tr>
+        <tr><td><b>Contrapositive</b></td><td>~q → ~p</td><td>If <b>not</b> <i>q</i>, then <b>not</b> <i>p</i>. (Swap &amp; Negate)</td></tr>
+      </table>
+
+      <div class="thm">
+        <div class="label">Logical Equivalences</div>
+        <div class="name">Key Pairs</div>
+        <div class="stmt"><b>A conditional is logically equivalent to its contrapositive.</b> The <b>converse</b> is logically equivalent to the <b>inverse</b>. Equivalent statements share the same truth value in every case.</div>
+      </div>
+
+      <div class="warn">A true conditional does <b>not</b> guarantee its converse is true. Example: "If it's a square, then it's a rectangle" is true, but "If it's a rectangle, then it's a square" is false.</div>
+    </section>
+
+    <section class="notes-section" id="biconditional">
+      <h2><span class="icon">4</span> Biconditional Statements &amp; Definitions</h2>
+
+      <div class="thm def">
+        <div class="label">Definition</div>
+        <div class="name">Biconditional</div>
+        <div class="stmt">"<i>p</i> if and only if <i>q</i>" (written <code>p ↔ q</code>) means both <code>p → q</code> AND <code>q → p</code> are true.</div>
+      </div>
+
+      <div class="key">A good <b>definition</b> can be written as a true biconditional. Every definition you've learned (midpoint, angle bisector, perpendicular, etc.) works both directions.</div>
+
+      <p>Example: "<i>An angle is a right angle</i> ↔ <i>its measure is 90°</i>." Both directions are true; this is a valid definition.</p>
+    </section>
+
+    <section class="notes-section" id="deductive">
+      <h2><span class="icon">5</span> Deductive Reasoning &amp; Laws of Logic</h2>
+
+      <p><b>Deductive reasoning</b> = using definitions, postulates, and previously-proven theorems to draw a guaranteed conclusion. Unlike inductive reasoning, deduction <b>proves</b> truth.</p>
+
+      <div class="thm">
+        <div class="label">Law of Detachment</div>
+        <div class="name">(Modus Ponens)</div>
+        <div class="stmt">If <code>p → q</code> is true and <code>p</code> is true, then <code>q</code> is true.</div>
+      </div>
+
+      <div class="thm">
+        <div class="label">Law of Syllogism</div>
+        <div class="name">(Transitivity of Implication)</div>
+        <div class="stmt">If <code>p → q</code> and <code>q → r</code> are both true, then <code>p → r</code> is true.</div>
+      </div>
+
+      <div class="thm">
+        <div class="label">Law of Contrapositive</div>
+        <div class="name">(Modus Tollens)</div>
+        <div class="stmt">If <code>p → q</code> is true and <code>q</code> is false, then <code>p</code> is false.</div>
+      </div>
+
+      <div class="warn">Two classic <b>invalid</b> arguments to avoid:
+        <ul class="bullets">
+          <li><b>Affirming the consequent:</b> <code>p → q</code> is true and <code>q</code> is true, therefore <code>p</code> is true. (Invalid.)</li>
+          <li><b>Denying the antecedent:</b> <code>p → q</code> is true and <code>p</code> is false, therefore <code>q</code> is false. (Invalid.)</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="notes-section" id="algebra">
+      <h2><span class="icon">6</span> Properties of Equality (Algebraic Reasoning)</h2>
+
+      <p>These are justified steps you can cite in proofs. Let <i>a</i>, <i>b</i>, <i>c</i> be real numbers.</p>
+
+      <table class="notes-table">
+        <tr><th>Property</th><th>Statement</th></tr>
+        <tr><td><b>Reflexive</b></td><td><code>a = a</code></td></tr>
+        <tr><td><b>Symmetric</b></td><td>If <code>a = b</code>, then <code>b = a</code>.</td></tr>
+        <tr><td><b>Transitive</b></td><td>If <code>a = b</code> and <code>b = c</code>, then <code>a = c</code>.</td></tr>
+        <tr><td><b>Addition</b></td><td>If <code>a = b</code>, then <code>a + c = b + c</code>.</td></tr>
+        <tr><td><b>Subtraction</b></td><td>If <code>a = b</code>, then <code>a − c = b − c</code>.</td></tr>
+        <tr><td><b>Multiplication</b></td><td>If <code>a = b</code>, then <code>ac = bc</code>.</td></tr>
+        <tr><td><b>Division</b></td><td>If <code>a = b</code> and <code>c ≠ 0</code>, then <code>a/c = b/c</code>.</td></tr>
+        <tr><td><b>Substitution</b></td><td>If <code>a = b</code>, you may replace <i>a</i> with <i>b</i> in any expression.</td></tr>
+        <tr><td><b>Distributive</b></td><td><code>a(b + c) = ab + ac</code></td></tr>
+      </table>
+    </section>
+
+    <section class="notes-section" id="congruence">
+      <h2><span class="icon">7</span> Properties of Congruence</h2>
+
+      <p>Congruence of segments/angles follows the same three structural properties as equality:</p>
+
+      <div class="thm prop">
+        <div class="label">Theorem 2-1</div>
+        <div class="name">Reflexive Property of Congruence</div>
+        <div class="stmt"><code>AB ≅ AB</code>;  <code>∠A ≅ ∠A</code>.</div>
+      </div>
+      <div class="thm prop">
+        <div class="label">Theorem 2-2</div>
+        <div class="name">Symmetric Property of Congruence</div>
+        <div class="stmt">If <code>AB ≅ CD</code>, then <code>CD ≅ AB</code>.</div>
+      </div>
+      <div class="thm prop">
+        <div class="label">Theorem 2-3</div>
+        <div class="name">Transitive Property of Congruence</div>
+        <div class="stmt">If <code>AB ≅ CD</code> and <code>CD ≅ EF</code>, then <code>AB ≅ EF</code>.</div>
+      </div>
+
+      <div class="note">In a two-column proof, use the <b>Reflexive</b> property whenever a shared side or shared angle appears in two figures being compared — it's nearly always a step in CPCTC-style proofs.</div>
+    </section>
+
+    <section class="notes-section" id="proofs">
+      <h2><span class="icon">8</span> Two-Column &amp; Paragraph Proofs</h2>
+
+      <p>A <b>two-column proof</b> has numbered <b>Statements</b> on the left and matching <b>Reasons</b> on the right. Every statement must be a given, definition, postulate, theorem, or property.</p>
+
+      <h3>Anatomy of a proof</h3>
+      <ol class="bullets" style="padding-left:1.6rem; list-style: decimal;">
+        <li>Start with what is <b>Given</b>.</li>
+        <li>End with what is to be <b>Proven</b>.</li>
+        <li>Each step has a justification (definition, postulate, theorem, property).</li>
+        <li>The diagram is a starting point — only state what's given or proven, never what merely "looks true."</li>
+      </ol>
+
+      <h3>Theorems proven in Chapter 2</h3>
+
+      <div class="thm">
+        <div class="label">Theorem 2-4</div>
+        <div class="name">Congruent Supplements Theorem</div>
+        <div class="stmt">If two angles are supplementary to the same angle (or to congruent angles), then the two angles are congruent.</div>
+      </div>
+      <div class="thm">
+        <div class="label">Theorem 2-5</div>
+        <div class="name">Congruent Complements Theorem</div>
+        <div class="stmt">If two angles are complementary to the same angle (or to congruent angles), then the two angles are congruent.</div>
+      </div>
+      <div class="thm">
+        <div class="label">Theorem 2-6</div>
+        <div class="name">All Right Angles Congruent</div>
+        <div class="stmt">All right angles are congruent.</div>
+      </div>
+      <div class="thm">
+        <div class="label">Theorem 2-7</div>
+        <div class="name">Perpendicular ⇒ Four Right Angles</div>
+        <div class="stmt">If two lines are perpendicular, then they form four right angles.</div>
+      </div>
+      <div class="thm">
+        <div class="label">Theorem 2-8</div>
+        <div class="name">Vertical Angles Theorem</div>
+        <div class="stmt">Vertical angles are congruent.</div>
+      </div>
+    </section>
+
+    <section class="notes-section" id="examples">
+      <h2><span class="icon">9</span> Worked Examples</h2>
+
+      <div class="example">
+        <div class="ex-label">Example 1 · Conditional Forms</div>
+        <div class="ex-q">Write the converse, inverse, and contrapositive of: "If two angles are vertical, then they are congruent."</div>
+        <div class="ex-steps">
+          <ol>
+            <li><b>Converse:</b> If two angles are congruent, then they are vertical. (<i>False</i> — counterexample: any congruent non-vertical pair.)</li>
+            <li><b>Inverse:</b> If two angles are <b>not</b> vertical, then they are <b>not</b> congruent. (<i>False</i> — same counterexample.)</li>
+            <li><b>Contrapositive:</b> If two angles are <b>not</b> congruent, then they are <b>not</b> vertical. (<i>True</i> — equivalent to original.)</li>
+          </ol>
+        </div>
+      </div>
+
+      <div class="example">
+        <div class="ex-label">Example 2 · Law of Syllogism</div>
+        <div class="ex-q">Given: "If it rains, then the field is wet." and "If the field is wet, then practice is cancelled." Conclude?</div>
+        <div class="ex-steps">
+          <ol>
+            <li>p: rain · q: field wet · r: practice cancelled.</li>
+            <li>p → q and q → r are given.</li>
+            <li>By the Law of Syllogism: <b>p → r</b>: "If it rains, then practice is cancelled."</li>
+          </ol>
+        </div>
+      </div>
+
+      <div class="example">
+        <div class="ex-label">Example 3 · Two-column proof</div>
+        <div class="ex-q">Given <code>m∠1 + m∠2 = 90°</code> and <code>m∠2 = 60°</code>. Prove <code>m∠1 = 30°</code>.</div>
+        <div class="ex-steps">
+          <table class="notes-table" style="margin-top:0.4rem;">
+            <tr><th style="width:42%;">Statements</th><th>Reasons</th></tr>
+            <tr><td>1. m∠1 + m∠2 = 90°</td><td>Given</td></tr>
+            <tr><td>2. m∠2 = 60°</td><td>Given</td></tr>
+            <tr><td>3. m∠1 + 60° = 90°</td><td>Substitution Property</td></tr>
+            <tr><td>4. m∠1 = 30°</td><td>Subtraction Property of Equality</td></tr>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="notes-section" id="pitfalls">
+      <h2><span class="icon">10</span> Common Pitfalls</h2>
+      <ul class="bullets">
+        <li>"<b>True</b>" for the original conditional does <b>not</b> make the converse true. Test each one.</li>
+        <li>Don't confuse <b>inductive</b> (pattern → guess) with <b>deductive</b> (rules → guaranteed conclusion).</li>
+        <li>Every step in a proof needs a <b>reason</b>. "By the diagram" is never a reason.</li>
+        <li>"Given" only justifies the literal text of the hypothesis — anything else needs to be derived.</li>
+        <li><b>Substitution</b> replaces one expression with an equal one. <b>Transitive</b> chains <code>a=b=c</code> ⇒ <code>a=c</code>. They're related but distinct reasons.</li>
+        <li>A biconditional is true <b>only</b> when both directions are true — if either direction fails, the biconditional is false.</li>
+      </ul>
+    </section>
+
+    <section class="notes-section" id="summary">
+      <h2><span class="icon">11</span> Quick Reference</h2>
+      <table class="notes-table">
+        <tr><th>Concept</th><th>Statement</th></tr>
+        <tr><td>Conditional</td><td><code>p → q</code> — false only when <i>p</i> true and <i>q</i> false.</td></tr>
+        <tr><td>Converse</td><td><code>q → p</code> — equivalent to inverse, not to original.</td></tr>
+        <tr><td>Contrapositive</td><td><code>~q → ~p</code> — <b>equivalent</b> to original.</td></tr>
+        <tr><td>Biconditional</td><td><code>p ↔ q</code> — true when both <i>p</i> and <i>q</i> have same truth value.</td></tr>
+        <tr><td>Law of Detachment</td><td><code>p → q</code> + <code>p</code> ⇒ <code>q</code>.</td></tr>
+        <tr><td>Law of Syllogism</td><td><code>p → q</code> + <code>q → r</code> ⇒ <code>p → r</code>.</td></tr>
+        <tr><td>Reflexive</td><td><code>a = a</code>; <code>AB ≅ AB</code>.</td></tr>
+        <tr><td>Symmetric</td><td><code>a = b</code> ⇒ <code>b = a</code>.</td></tr>
+        <tr><td>Transitive</td><td><code>a=b, b=c</code> ⇒ <code>a=c</code>.</td></tr>
+        <tr><td>Substitution</td><td>If <code>a = b</code>, then <i>a</i> may replace <i>b</i> in any expression.</td></tr>
+        <tr><td>Vertical Angles (Thm 2-8)</td><td>Vertical ∠s are congruent.</td></tr>
+        <tr><td>Congruent Supplements (2-4)</td><td>∠s supplementary to same ∠ ⇒ congruent.</td></tr>
+        <tr><td>Congruent Complements (2-5)</td><td>∠s complementary to same ∠ ⇒ congruent.</td></tr>
+        <tr><td>Right Angles (2-6, 2-7)</td><td>All right ∠s congruent; ⊥ lines ⇒ 4 right ∠s.</td></tr>
+      </table>
+    </section>
+
+  </div>
+</div>
+
+<footer class="notes-footer">
+  Glencoe Geometry TX 2015 · Chapter 2 ·
+  <a href="../cheatsheets/ch02-cheatsheet.html">Cheatsheet</a> ·
+  <a href="../slides/ch02-reasoning-proof.html">Slides</a> ·
+  <a href="../quizzes/ch02-quiz.html">Quiz</a>
+</footer>
+
+</body>
+</html>

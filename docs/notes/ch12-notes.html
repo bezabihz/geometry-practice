@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ch 12 Notes — Surface Area</title>
+<link rel="stylesheet" href="../notes.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div>
+    <div class="chapter-label">Chapter 12 · Detailed Notes</div>
+    <h1>Surface Area</h1>
+  </div>
+  <a href="../index.html">← Home</a>
+</header>
+
+<div class="layout">
+
+  <aside class="toc">
+    <div class="toc-title">Contents</div>
+    <ol>
+      <li><a href="#vocab">1. Vocabulary &amp; Solids</a></li>
+      <li><a href="#nets">2. Nets &amp; Euler's Formula</a></li>
+      <li><a href="#prism">3. Prisms</a></li>
+      <li><a href="#cylinder">4. Cylinders</a></li>
+      <li><a href="#pyramid">5. Pyramids</a></li>
+      <li><a href="#cone">6. Cones</a></li>
+      <li><a href="#sphere">7. Spheres</a></li>
+      <li><a href="#ratios">8. Surface Area of Similar Solids</a></li>
+      <li><a href="#examples">9. Worked Examples</a></li>
+      <li><a href="#pitfalls">10. Common Pitfalls</a></li>
+      <li><a href="#summary">11. Quick Reference</a></li>
+    </ol>
+  </aside>
+
+  <div class="content">
+
+    <div class="intro">
+      <h2>Chapter 12 — Surface Area</h2>
+      <p>Surface area is the total area of every face of a 3-D solid. For solids with curved surfaces (cylinders, cones, spheres) the formulas come from "unrolling" the surface into flat pieces.</p>
+    </div>
+
+    <section class="notes-section" id="vocab">
+      <h2><span class="icon">1</span> Vocabulary &amp; Solid Types</h2>
+      <dl class="vocab">
+        <div class="row"><dt>Polyhedron</dt><dd>A 3-D solid bounded by flat polygonal <b>faces</b>. Edges where faces meet; vertices where edges meet.</dd></div>
+        <div class="row"><dt>Prism</dt><dd>A polyhedron with two parallel congruent <b>bases</b> and <b>parallelogram</b> lateral faces. Right prism: lateral faces are rectangles.</dd></div>
+        <div class="row"><dt>Cylinder</dt><dd>Two parallel congruent <b>circular bases</b> connected by a curved surface.</dd></div>
+        <div class="row"><dt>Pyramid</dt><dd>A polyhedron with one polygonal base and triangular lateral faces meeting at the <b>apex</b>.</dd></div>
+        <div class="row"><dt>Cone</dt><dd>A solid with a circular base and a single apex connected by a curved surface.</dd></div>
+        <div class="row"><dt>Sphere</dt><dd>The set of points in space at a fixed distance (<b>radius</b>) from a center.</dd></div>
+        <div class="row"><dt>Lateral surface area (L.A.)</dt><dd>The area of the sides only — does <b>not</b> include the bases.</dd></div>
+        <div class="row"><dt>Total surface area (S.A.)</dt><dd>Lateral area + area of the base(s).</dd></div>
+        <div class="row"><dt>Slant height (ℓ)</dt><dd>The slant distance from the base edge to the apex (for cones/pyramids). Different from the vertical height <i>h</i>.</dd></div>
+      </dl>
+    </section>
+
+    <section class="notes-section" id="nets">
+      <h2><span class="icon">2</span> Nets &amp; Euler's Formula</h2>
+      <p>A <b>net</b> is the unfolded 2-D pattern that wraps to form a solid. Computing surface area from a net is straightforward: find the area of each polygon piece and sum.</p>
+
+      <div class="thm">
+        <div class="label">Theorem 12-1</div>
+        <div class="name">Euler's Formula for Polyhedra</div>
+        <div class="stmt">For any convex polyhedron with <i>V</i> vertices, <i>E</i> edges, and <i>F</i> faces: <code>V − E + F = 2</code>.</div>
+      </div>
+    </section>
+
+    <section class="notes-section" id="prism">
+      <h2><span class="icon">3</span> Prisms</h2>
+
+      <div class="thm">
+        <div class="label">Theorem 12-2</div>
+        <div class="name">Lateral &amp; Total Surface Area of a Right Prism</div>
+        <div class="stmt">For a right prism with base perimeter <i>P</i>, base area <i>B</i>, and height <i>h</i>:</div>
+      </div>
+      <div class="formula">L.A. = P · h</div>
+      <div class="formula">S.A. = P · h + 2B</div>
+
+      <p>Reason: the lateral faces unroll into one big rectangle of width <i>P</i> and height <i>h</i>. Add the two congruent bases.</p>
+    </section>
+
+    <section class="notes-section" id="cylinder">
+      <h2><span class="icon">4</span> Cylinders</h2>
+
+      <div class="thm">
+        <div class="label">Theorem 12-3</div>
+        <div class="name">Surface Area of a Right Cylinder</div>
+        <div class="stmt">For a right cylinder with radius <i>r</i> and height <i>h</i>:</div>
+      </div>
+      <div class="formula">L.A. = 2πr · h</div>
+      <div class="formula">S.A. = 2πr · h + 2πr²</div>
+
+      <p>The lateral surface unrolls into a rectangle whose width is the circumference (<code>2πr</code>) and whose height is <i>h</i>.</p>
+    </section>
+
+    <section class="notes-section" id="pyramid">
+      <h2><span class="icon">5</span> Pyramids</h2>
+
+      <div class="thm">
+        <div class="label">Theorem 12-4</div>
+        <div class="name">Lateral &amp; Total Surface Area of a Regular Pyramid</div>
+        <div class="stmt">For a regular pyramid with base perimeter <i>P</i>, slant height <i>ℓ</i>, and base area <i>B</i>:</div>
+      </div>
+      <div class="formula">L.A. = ½ · P · ℓ</div>
+      <div class="formula">S.A. = ½ P · ℓ + B</div>
+
+      <p>The lateral faces are congruent isosceles triangles each with base = side of polygon and height = slant height.</p>
+
+      <p>The slant height, vertical height, and apothem form a <b>right triangle</b>:</p>
+      <div class="formula">ℓ² = h² + a²    (a = apothem)</div>
+    </section>
+
+    <section class="notes-section" id="cone">
+      <h2><span class="icon">6</span> Cones</h2>
+
+      <div class="thm">
+        <div class="label">Theorem 12-5</div>
+        <div class="name">Surface Area of a Right Cone</div>
+        <div class="stmt">For a right cone with radius <i>r</i> and slant height <i>ℓ</i>:</div>
+      </div>
+      <div class="formula">L.A. = π · r · ℓ</div>
+      <div class="formula">S.A. = π r ℓ + π r²</div>
+
+      <p>The lateral surface unrolls into a sector of a circle with radius <i>ℓ</i>. The slant, vertical height, and radius form a right triangle:</p>
+      <div class="formula">ℓ² = r² + h²</div>
+    </section>
+
+    <section class="notes-section" id="sphere">
+      <h2><span class="icon">7</span> Spheres</h2>
+
+      <div class="thm">
+        <div class="label">Theorem 12-6</div>
+        <div class="name">Surface Area of a Sphere</div>
+        <div class="stmt">The surface area of a sphere with radius <i>r</i>:</div>
+      </div>
+      <div class="formula">S.A. = 4 π r²</div>
+
+      <p>For a <b>hemisphere</b>, total surface = ½ sphere + circular base = <code>2πr² + πr² = 3πr²</code>.</p>
+    </section>
+
+    <section class="notes-section" id="ratios">
+      <h2><span class="icon">8</span> Surface Area of Similar Solids</h2>
+
+      <div class="thm">
+        <div class="label">Theorem 12-7</div>
+        <div class="name">Ratios for Similar Solids</div>
+        <div class="stmt">If two solids are similar with scale factor <code>a/b</code>:
+          <ul class="bullets">
+            <li>Ratio of corresponding lengths = <code>a/b</code>.</li>
+            <li>Ratio of surface areas = <code>a²/b²</code>.</li>
+            <li>Ratio of volumes = <code>a³/b³</code> (covered in Ch 13).</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="notes-section" id="examples">
+      <h2><span class="icon">9</span> Worked Examples</h2>
+
+      <div class="example">
+        <div class="ex-label">Example 1 · Rectangular prism</div>
+        <div class="ex-q">A rectangular prism has dimensions 4 × 5 × 7. Find S.A.</div>
+        <div class="ex-steps">
+          <ol>
+            <li>Two of each face: <code>2(4·5) + 2(5·7) + 2(4·7) = 40 + 70 + 56 = 166</code>.</li>
+          </ol>
+        </div>
+        <div class="ans">S.A. = 166</div>
+      </div>
+
+      <div class="example">
+        <div class="ex-label">Example 2 · Cylinder</div>
+        <div class="ex-q">A cylinder has r = 3 and h = 8. Find S.A. (in terms of π).</div>
+        <div class="ex-steps">
+          <ol>
+            <li>L.A. = <code>2π·3·8 = 48π</code>.</li>
+            <li>2 bases: <code>2π·3² = 18π</code>.</li>
+            <li>S.A. = <code>48π + 18π = 66π</code>.</li>
+          </ol>
+        </div>
+        <div class="ans">S.A. = 66π</div>
+      </div>
+
+      <div class="example">
+        <div class="ex-label">Example 3 · Square pyramid</div>
+        <div class="ex-q">A square pyramid has base side 6 and slant height 10. Find S.A.</div>
+        <div class="ex-steps">
+          <ol>
+            <li>P = 24, B = 36.</li>
+            <li>L.A. = <code>½ · 24 · 10 = 120</code>.</li>
+            <li>S.A. = <code>120 + 36 = 156</code>.</li>
+          </ol>
+        </div>
+        <div class="ans">S.A. = 156</div>
+      </div>
+
+      <div class="example">
+        <div class="ex-label">Example 4 · Cone</div>
+        <div class="ex-q">A cone has r = 5 and h = 12. Find the slant height, then S.A.</div>
+        <div class="ex-steps">
+          <ol>
+            <li>Slant: <code>ℓ = √(5² + 12²) = √169 = 13</code>.</li>
+            <li>L.A. = <code>π·5·13 = 65π</code>.</li>
+            <li>Base: <code>π·25 = 25π</code>.</li>
+            <li>S.A. = <code>65π + 25π = 90π</code>.</li>
+          </ol>
+        </div>
+        <div class="ans">S.A. = 90π ≈ 282.7</div>
+      </div>
+
+      <div class="example">
+        <div class="ex-label">Example 5 · Sphere</div>
+        <div class="ex-q">Sphere with diameter 10. Find S.A.</div>
+        <div class="ex-steps">
+          <ol>
+            <li>r = 5. <code>S.A. = 4π·5² = 100π ≈ 314.16</code>.</li>
+          </ol>
+        </div>
+        <div class="ans">S.A. = 100π</div>
+      </div>
+
+      <div class="example">
+        <div class="ex-label">Example 6 · Similar solids</div>
+        <div class="ex-q">Two similar cones have radii 4 and 6. If the smaller has S.A. = 80π, find the larger.</div>
+        <div class="ex-steps">
+          <ol>
+            <li>Linear ratio = 4/6 = 2/3 ⇒ S.A. ratio = 4/9.</li>
+            <li><code>80π / SA_large = 4/9</code> → <code>SA_large = 80π · 9/4 = 180π</code>.</li>
+          </ol>
+        </div>
+        <div class="ans">SA_large = 180π</div>
+      </div>
+    </section>
+
+    <section class="notes-section" id="pitfalls">
+      <h2><span class="icon">10</span> Common Pitfalls</h2>
+      <ul class="bullets">
+        <li><b>Slant height</b> (ℓ) ≠ vertical height (h). Use <code>ℓ² = h² + (a or r)²</code> to convert.</li>
+        <li><b>Lateral</b> area excludes the bases; <b>total</b> surface area includes them. Read which is requested.</li>
+        <li>A cylinder has <b>two</b> circular bases; a cone has <b>one</b>.</li>
+        <li>For pyramids, multiply lateral by <code>½ · P · ℓ</code> only when the pyramid is <b>regular</b>. Otherwise sum individual triangle areas.</li>
+        <li>Sphere uses <code>4πr²</code>, not <code>πr²</code> (which is a great-circle cross-section).</li>
+        <li>Square units! S.A. has dimensions of length², not length³ (that's volume).</li>
+        <li>S.A. ratio of similar solids is the <b>square</b> of the linear ratio.</li>
+      </ul>
+    </section>
+
+    <section class="notes-section" id="summary">
+      <h2><span class="icon">11</span> Quick Reference</h2>
+      <table class="notes-table">
+        <tr><th>Solid</th><th>Lateral Area</th><th>Total Surface Area</th></tr>
+        <tr><td>Right prism</td><td><code>P · h</code></td><td><code>P · h + 2B</code></td></tr>
+        <tr><td>Right cylinder</td><td><code>2π r h</code></td><td><code>2π r h + 2π r²</code></td></tr>
+        <tr><td>Regular pyramid</td><td><code>½ P · ℓ</code></td><td><code>½ P · ℓ + B</code></td></tr>
+        <tr><td>Right cone</td><td><code>π r ℓ</code></td><td><code>π r ℓ + π r²</code></td></tr>
+        <tr><td>Sphere</td><td>—</td><td><code>4 π r²</code></td></tr>
+        <tr><td>Hemisphere</td><td>—</td><td><code>3 π r²</code></td></tr>
+        <tr><td>Euler's formula</td><td colspan="2"><code>V − E + F = 2</code></td></tr>
+        <tr><td>Cone slant</td><td colspan="2"><code>ℓ² = r² + h²</code></td></tr>
+        <tr><td>Pyramid slant</td><td colspan="2"><code>ℓ² = a² + h²</code> (apothem a)</td></tr>
+        <tr><td>Similar S.A. ratio</td><td colspan="2"><code>(a/b)²</code></td></tr>
+      </table>
+    </section>
+
+  </div>
+</div>
+
+<footer class="notes-footer">
+  Glencoe Geometry TX 2015 · Chapter 12 ·
+  <a href="../cheatsheets/ch12-cheatsheet.html">Cheatsheet</a> ·
+  <a href="../slides/ch12-surface-area.html">Slides</a> ·
+  <a href="../quizzes/ch12-quiz.html">Quiz</a>
+</footer>
+
+</body>
+</html>

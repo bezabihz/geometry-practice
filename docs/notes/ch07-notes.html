@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ch 7 Notes — Right Triangles &amp; Trigonometry</title>
+<link rel="stylesheet" href="../notes.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div>
+    <div class="chapter-label">Chapter 7 · Detailed Notes</div>
+    <h1>Right Triangles &amp; Trigonometry</h1>
+  </div>
+  <a href="../index.html">← Home</a>
+</header>
+
+<div class="layout">
+
+  <aside class="toc">
+    <div class="toc-title">Contents</div>
+    <ol>
+      <li><a href="#vocab">1. Vocabulary</a></li>
+      <li><a href="#geomean">2. Geometric Mean in Right ▵s</a></li>
+      <li><a href="#pythag">3. Pythagorean Theorem &amp; Converse</a></li>
+      <li><a href="#triples">4. Pythagorean Triples &amp; Classification</a></li>
+      <li><a href="#special">5. Special Right Triangles</a></li>
+      <li><a href="#trig">6. Trigonometric Ratios</a></li>
+      <li><a href="#solving">7. Solving Right Triangles</a></li>
+      <li><a href="#applications">8. Elevation &amp; Depression</a></li>
+      <li><a href="#laws">9. Law of Sines &amp; Cosines</a></li>
+      <li><a href="#examples">10. Worked Examples</a></li>
+      <li><a href="#pitfalls">11. Common Pitfalls</a></li>
+      <li><a href="#summary">12. Quick Reference</a></li>
+    </ol>
+  </aside>
+
+  <div class="content">
+
+    <div class="intro">
+      <h2>Chapter 7 — Right Triangles &amp; Trigonometry</h2>
+      <p>Right triangles unlock a powerful toolkit: the Pythagorean Theorem, the two special right triangles, and the trigonometric ratios sine, cosine, and tangent. Together they let you find any missing side or angle from limited information.</p>
+    </div>
+
+    <section class="notes-section" id="vocab">
+      <h2><span class="icon">1</span> Vocabulary</h2>
+      <dl class="vocab">
+        <div class="row"><dt>Hypotenuse</dt><dd>The side <b>opposite the right angle</b> — always the longest side of a right triangle.</dd></div>
+        <div class="row"><dt>Legs</dt><dd>The two sides forming the right angle.</dd></div>
+        <div class="row"><dt>Adjacent side</dt><dd>The leg <b>next to</b> the reference acute angle (not the hypotenuse).</dd></div>
+        <div class="row"><dt>Opposite side</dt><dd>The leg <b>across from</b> the reference acute angle.</dd></div>
+        <div class="row"><dt>Angle of elevation</dt><dd>The angle from the horizontal <b>up</b> to a line of sight.</dd></div>
+        <div class="row"><dt>Angle of depression</dt><dd>The angle from the horizontal <b>down</b> to a line of sight.</dd></div>
+        <div class="row"><dt>Geometric mean</dt><dd>The positive value <code>x</code> with <code>a/x = x/b</code>, i.e. <code>x = √(ab)</code>.</dd></div>
+      </dl>
+    </section>
+
+    <section class="notes-section" id="geomean">
+      <h2><span class="icon">2</span> Geometric Mean &amp; Right-Triangle Altitudes</h2>
+
+      <div class="thm">
+        <div class="label">Theorem 7-1</div>
+        <div class="name">Right-Triangle Altitude → 3 Similar Triangles</div>
+        <div class="stmt">The altitude drawn from the right-angle vertex to the hypotenuse divides the right triangle into two triangles, each <b>similar</b> to the original and to each other.</div>
+      </div>
+
+      <p>Let the altitude <i>h</i> divide the hypotenuse into segments <i>p</i> (adjacent to leg <i>a</i>) and <i>q</i> (adjacent to leg <i>b</i>), so <code>p + q = c</code>.</p>
+
+      <div class="thm">
+        <div class="label">Theorem 7-2</div>
+        <div class="name">Geometric Mean (Altitude)</div>
+        <div class="stmt">The altitude to the hypotenuse is the geometric mean of the two segments it creates: <code>h = √(p · q)</code>.</div>
+      </div>
+
+      <div class="thm">
+        <div class="label">Theorem 7-3</div>
+        <div class="name">Geometric Mean (Leg)</div>
+        <div class="stmt">Each leg is the geometric mean of the hypotenuse and the segment of the hypotenuse adjacent to that leg: <code>a = √(c · p)</code>, <code>b = √(c · q)</code>.</div>
+      </div>
+    </section>
+
+    <section class="notes-section" id="pythag">
+      <h2><span class="icon">3</span> Pythagorean Theorem &amp; Its Converse</h2>
+
+      <div class="thm">
+        <div class="label">Theorem 7-4</div>
+        <div class="name">Pythagorean Theorem</div>
+        <div class="stmt">In a right triangle, the square of the hypotenuse equals the sum of the squares of the legs.</div>
+      </div>
+      <div class="formula"><b>a² + b² = c²</b>   (where <i>c</i> is the hypotenuse)</div>
+
+      <div class="thm">
+        <div class="label">Theorem 7-5</div>
+        <div class="name">Converse of the Pythagorean Theorem</div>
+        <div class="stmt">If <code>a² + b² = c²</code> for the three sides of a triangle (with <i>c</i> the longest), then the triangle is a right triangle.</div>
+      </div>
+    </section>
+
+    <section class="notes-section" id="triples">
+      <h2><span class="icon">4</span> Pythagorean Triples &amp; Triangle Classification</h2>
+
+      <p>Whole-number side lengths that satisfy <code>a² + b² = c²</code>. Memorize the common ones — they appear constantly on tests.</p>
+      <ul class="bullets">
+        <li><b>3 – 4 – 5</b> &nbsp;(and 6-8-10, 9-12-15, …)</li>
+        <li><b>5 – 12 – 13</b></li>
+        <li><b>8 – 15 – 17</b></li>
+        <li><b>7 – 24 – 25</b></li>
+        <li><b>20 – 21 – 29</b></li>
+      </ul>
+
+      <div class="thm">
+        <div class="label">Theorem 7-6</div>
+        <div class="name">Triangle Classification by Sides</div>
+        <div class="stmt">Let <i>c</i> be the longest side of a triangle with sides <i>a, b, c</i>:
+          <ul class="bullets">
+            <li><code>c² = a² + b²</code> → <b>Right</b> triangle.</li>
+            <li><code>c² &gt; a² + b²</code> → <b>Obtuse</b> triangle.</li>
+            <li><code>c² &lt; a² + b²</code> → <b>Acute</b> triangle.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="notes-section" id="special">
+      <h2><span class="icon">5</span> Special Right Triangles</h2>
+
+      <div class="thm">
+        <div class="label">Theorem 7-7</div>
+        <div class="name">45°–45°–90° Triangle</div>
+        <div class="stmt">In a 45°-45°-90° (isosceles right) triangle, the hypotenuse is <b>√2 times</b> the length of each leg.</div>
+      </div>
+      <div class="formula">leg : leg : hyp = <b>1 : 1 : √2</b></div>
+
+      <div class="thm">
+        <div class="label">Theorem 7-8</div>
+        <div class="name">30°–60°–90° Triangle</div>
+        <div class="stmt">In a 30°-60°-90° triangle: hypotenuse is <b>2× shorter leg</b>; longer leg is <b>√3 × shorter leg</b>.</div>
+      </div>
+      <div class="formula">short : long : hyp = <b>1 : √3 : 2</b></div>
+
+      <div class="key">Map the side to the <b>angle opposite</b> it: 30° → 1 (shortest), 60° → √3, 90° → 2 (hypotenuse).</div>
+    </section>
+
+    <section class="notes-section" id="trig">
+      <h2><span class="icon">6</span> Trigonometric Ratios (SOH-CAH-TOA)</h2>
+
+      <p>For an acute angle <i>θ</i> in a right triangle:</p>
+      <div class="formula"><b>sin θ</b> = Opposite / Hypotenuse</div>
+      <div class="formula"><b>cos θ</b> = Adjacent / Hypotenuse</div>
+      <div class="formula"><b>tan θ</b> = Opposite / Adjacent</div>
+
+      <p>Reciprocal ratios (less common at this level):</p>
+      <div class="formula">csc θ = 1/sin θ ,    sec θ = 1/cos θ ,    cot θ = 1/tan θ</div>
+
+      <h3>Inverse trig — finding the angle</h3>
+      <p>To find an angle when you know the ratio, use the inverse function on your calculator:</p>
+      <div class="formula">θ = sin⁻¹(opp/hyp) ,    θ = cos⁻¹(adj/hyp) ,    θ = tan⁻¹(opp/adj)</div>
+
+      <div class="warn">Make sure your calculator is in <b>DEGREE</b> mode (not radian) for geometry problems.</div>
+    </section>
+
+    <section class="notes-section" id="solving">
+      <h2><span class="icon">7</span> Solving a Right Triangle</h2>
+      <p><b>Solving a triangle</b> means finding all unknown sides and angles. In a right triangle, you need either:</p>
+      <ul class="bullets">
+        <li>Two side lengths → use Pythagorean &amp; inverse trig, or</li>
+        <li>One side &amp; one acute angle → use sin / cos / tan.</li>
+      </ul>
+    </section>
+
+    <section class="notes-section" id="applications">
+      <h2><span class="icon">8</span> Angles of Elevation &amp; Depression</h2>
+
+      <p>The angle of elevation from point <i>A</i> to point <i>B</i> equals the angle of depression from <i>B</i> down to <i>A</i> — they are <b>alternate interior angles</b> formed by the line of sight and the two horizontals.</p>
+
+      <div class="note">When setting up a problem, draw a horizontal at the eye/ground line and label the line of sight. The angle is always measured from the horizontal.</div>
+    </section>
+
+    <section class="notes-section" id="laws">
+      <h2><span class="icon">9</span> Law of Sines &amp; Law of Cosines</h2>
+      <p>For triangles that aren't right triangles:</p>
+
+      <div class="thm">
+        <div class="label">Theorem 7-9</div>
+        <div class="name">Law of Sines</div>
+        <div class="stmt">In any triangle, <code>sin A / a = sin B / b = sin C / c</code>.</div>
+        <div class="conv">Use when you know <b>AAS, ASA, or SSA</b> (two angles + a side, or two sides + a non-included angle).</div>
+      </div>
+
+      <div class="thm">
+        <div class="label">Theorem 7-10</div>
+        <div class="name">Law of Cosines</div>
+        <div class="stmt">In any triangle, <code>c² = a² + b² − 2ab·cos C</code> (and the cyclic versions for <i>a</i>, <i>b</i>).</div>
+        <div class="conv">Use when you know <b>SAS</b> (two sides + included angle) or <b>SSS</b> (all three sides, to find an angle).</div>
+      </div>
+
+      <div class="key">If C = 90°, then cos C = 0, and the Law of Cosines reduces to the Pythagorean Theorem.</div>
+    </section>
+
+    <section class="notes-section" id="examples">
+      <h2><span class="icon">10</span> Worked Examples</h2>
+
+      <div class="example">
+        <div class="ex-label">Example 1 · Pythagorean Theorem</div>
+        <div class="ex-q">Right triangle legs 9 and 12. Find the hypotenuse.</div>
+        <div class="ex-steps">
+          <ol>
+            <li><code>c² = 81 + 144 = 225</code>.</li>
+            <li><code>c = 15</code> (a 3-4-5 triple scaled by 3).</li>
+          </ol>
+        </div>
+        <div class="ans">c = 15</div>
+      </div>
+
+      <div class="example">
+        <div class="ex-label">Example 2 · 45-45-90</div>
+        <div class="ex-q">An isosceles right triangle has a leg of 8. Find the hypotenuse.</div>
+        <div class="ex-steps">
+          <ol>
+            <li>Ratio 1 : 1 : √2 ⇒ hypotenuse = <code>8√2 ≈ 11.31</code>.</li>
+          </ol>
+        </div>
+        <div class="ans">8√2</div>
+      </div>
+
+      <div class="example">
+        <div class="ex-label">Example 3 · 30-60-90</div>
+        <div class="ex-q">In a 30-60-90 triangle, the shorter leg is 5. Find the other two sides.</div>
+        <div class="ex-steps">
+          <ol>
+            <li>Hypotenuse = <code>2·5 = 10</code>.</li>
+            <li>Longer leg = <code>5√3 ≈ 8.66</code>.</li>
+          </ol>
+        </div>
+        <div class="ans">10 and 5√3</div>
+      </div>
+
+      <div class="example">
+        <div class="ex-label">Example 4 · Trig ratio</div>
+        <div class="ex-q">Find x: opposite leg 7, angle 35°, find the hypotenuse.</div>
+        <div class="ex-steps">
+          <ol>
+            <li>Want hypotenuse given opposite &amp; angle ⇒ use sin: <code>sin 35° = 7/h</code>.</li>
+            <li><code>h = 7/sin 35° ≈ 7/0.5736 ≈ 12.20</code>.</li>
+          </ol>
+        </div>
+        <div class="ans">h ≈ 12.20</div>
+      </div>
+
+      <div class="example">
+        <div class="ex-label">Example 5 · Inverse trig</div>
+        <div class="ex-q">Right triangle with legs 5 and 12. Find the angle opposite the leg of length 5.</div>
+        <div class="ex-steps">
+          <ol>
+            <li>Opposite = 5, Adjacent = 12 ⇒ tan θ = 5/12.</li>
+            <li>θ = tan⁻¹(5/12) ≈ <b>22.6°</b>.</li>
+          </ol>
+        </div>
+        <div class="ans">θ ≈ 22.6°</div>
+      </div>
+
+      <div class="example">
+        <div class="ex-label">Example 6 · Law of Cosines</div>
+        <div class="ex-q">In △ABC, a = 7, b = 9, C = 60°. Find c.</div>
+        <div class="ex-steps">
+          <ol>
+            <li><code>c² = 7² + 9² − 2(7)(9)cos 60° = 49 + 81 − 126(½) = 130 − 63 = 67</code>.</li>
+            <li><code>c = √67 ≈ 8.19</code>.</li>
+          </ol>
+        </div>
+        <div class="ans">c ≈ 8.19</div>
+      </div>
+    </section>
+
+    <section class="notes-section" id="pitfalls">
+      <h2><span class="icon">11</span> Common Pitfalls</h2>
+      <ul class="bullets">
+        <li>The Pythagorean Theorem only applies to <b>right</b> triangles. For other triangles use the Law of Cosines.</li>
+        <li>The hypotenuse is the side <b>across from</b> the right angle, always the longest.</li>
+        <li>Identify opposite and adjacent <b>relative to the reference angle</b>, not in a fixed way.</li>
+        <li>"Adjacent" never refers to the hypotenuse, even though the hypotenuse touches the angle.</li>
+        <li>Mixing up <b>sin</b> and <b>cos</b>: sin uses opposite, cos uses adjacent. Memorize <b>SOH-CAH-TOA</b>.</li>
+        <li>Calculator mode must be <b>DEG</b> for geometry. Radian mode gives wildly wrong answers.</li>
+        <li>In the 30-60-90 ratio, the "1" goes with the 30° angle (shortest), not the right angle.</li>
+        <li>Angle of elevation up = angle of depression down (alternate interior angles); they have the same measure.</li>
+      </ul>
+    </section>
+
+    <section class="notes-section" id="summary">
+      <h2><span class="icon">12</span> Quick Reference</h2>
+      <table class="notes-table">
+        <tr><th>Concept</th><th>Formula / Statement</th></tr>
+        <tr><td>Pythagorean Theorem</td><td><code>a² + b² = c²</code></td></tr>
+        <tr><td>Converse</td><td>If <code>a²+b²=c²</code> ⇒ right triangle.</td></tr>
+        <tr><td>Classify by sides</td><td>c² &gt; a²+b² obtuse · = right · &lt; acute</td></tr>
+        <tr><td>45-45-90</td><td>leg : leg : hyp = 1 : 1 : √2</td></tr>
+        <tr><td>30-60-90</td><td>short : long : hyp = 1 : √3 : 2</td></tr>
+        <tr><td>sin θ</td><td>opp / hyp</td></tr>
+        <tr><td>cos θ</td><td>adj / hyp</td></tr>
+        <tr><td>tan θ</td><td>opp / adj</td></tr>
+        <tr><td>Altitude geom. mean</td><td><code>h = √(pq)</code></td></tr>
+        <tr><td>Leg geom. mean</td><td><code>a = √(c·p)</code></td></tr>
+        <tr><td>Law of Sines</td><td><code>sin A/a = sin B/b = sin C/c</code></td></tr>
+        <tr><td>Law of Cosines</td><td><code>c² = a²+b² − 2ab·cos C</code></td></tr>
+      </table>
+    </section>
+
+  </div>
+</div>
+
+<footer class="notes-footer">
+  Glencoe Geometry TX 2015 · Chapter 7 ·
+  <a href="../cheatsheets/ch07-cheatsheet.html">Cheatsheet</a> ·
+  <a href="../slides/ch07-right-triangles-trig.html">Slides</a> ·
+  <a href="../quizzes/ch07-quiz.html">Quiz</a>
+</footer>
+
+</body>
+</html>

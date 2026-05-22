@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ch 8 Notes — Quadrilaterals</title>
+<link rel="stylesheet" href="../notes.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div>
+    <div class="chapter-label">Chapter 8 · Detailed Notes</div>
+    <h1>Quadrilaterals</h1>
+  </div>
+  <a href="../index.html">← Home</a>
+</header>
+
+<div class="layout">
+
+  <aside class="toc">
+    <div class="toc-title">Contents</div>
+    <ol>
+      <li><a href="#vocab">1. Vocabulary &amp; Hierarchy</a></li>
+      <li><a href="#angle-sums">2. Polygon Angle Sums</a></li>
+      <li><a href="#parallelogram">3. Parallelogram Properties</a></li>
+      <li><a href="#prove-parallel">4. Proving a Parallelogram</a></li>
+      <li><a href="#rectangle">5. Rectangle</a></li>
+      <li><a href="#rhombus">6. Rhombus</a></li>
+      <li><a href="#square">7. Square</a></li>
+      <li><a href="#trapezoid">8. Trapezoid &amp; Midsegment</a></li>
+      <li><a href="#kite">9. Kite</a></li>
+      <li><a href="#examples">10. Worked Examples</a></li>
+      <li><a href="#pitfalls">11. Common Pitfalls</a></li>
+      <li><a href="#summary">12. Quick Reference</a></li>
+    </ol>
+  </aside>
+
+  <div class="content">
+
+    <div class="intro">
+      <h2>Chapter 8 — Quadrilaterals</h2>
+      <p>Quadrilaterals come in a family tree: a square is a rectangle <i>and</i> a rhombus, both of which are parallelograms. Knowing each shape's defining properties lets you classify figures, set up algebraic equations, and write proofs.</p>
+    </div>
+
+    <section class="notes-section" id="vocab">
+      <h2><span class="icon">1</span> Vocabulary &amp; Hierarchy</h2>
+
+      <dl class="vocab">
+        <div class="row"><dt>Polygon</dt><dd>A closed plane figure made of straight line segments.</dd></div>
+        <div class="row"><dt>Quadrilateral</dt><dd>A 4-sided polygon.</dd></div>
+        <div class="row"><dt>Parallelogram</dt><dd>A quadrilateral with <b>both pairs of opposite sides parallel</b>.</dd></div>
+        <div class="row"><dt>Rectangle</dt><dd>A parallelogram with <b>four right angles</b>.</dd></div>
+        <div class="row"><dt>Rhombus</dt><dd>A parallelogram with <b>four congruent sides</b>.</dd></div>
+        <div class="row"><dt>Square</dt><dd>A parallelogram that is <b>both</b> a rectangle and a rhombus.</dd></div>
+        <div class="row"><dt>Trapezoid</dt><dd>A quadrilateral with <b>exactly one</b> pair of parallel sides (the bases).</dd></div>
+        <div class="row"><dt>Isosceles trapezoid</dt><dd>A trapezoid with congruent legs.</dd></div>
+        <div class="row"><dt>Kite</dt><dd>A quadrilateral with <b>two pairs of consecutive congruent sides</b> and no parallel sides.</dd></div>
+        <div class="row"><dt>Diagonal</dt><dd>A segment connecting two non-adjacent vertices.</dd></div>
+      </dl>
+
+      <div class="key">Hierarchy: Square ⊂ Rectangle ⊂ Parallelogram ⊂ Quadrilateral. Also Square ⊂ Rhombus ⊂ Parallelogram.</div>
+    </section>
+
+    <section class="notes-section" id="angle-sums">
+      <h2><span class="icon">2</span> Polygon Angle Sums</h2>
+
+      <div class="thm">
+        <div class="label">Theorem 8-1</div>
+        <div class="name">Polygon Interior Angle Sum</div>
+        <div class="stmt">The sum of the interior angles of a convex polygon with <i>n</i> sides is <code>(n − 2) · 180°</code>.</div>
+      </div>
+      <div class="formula">Sum of interior ∠s = <b>(n − 2) · 180°</b></div>
+      <p>Each interior angle of a <b>regular</b> polygon = <code>(n − 2)·180° / n</code>.</p>
+
+      <div class="thm">
+        <div class="label">Theorem 8-2</div>
+        <div class="name">Polygon Exterior Angle Sum</div>
+        <div class="stmt">The sum of the measures of the exterior angles (one at each vertex) of any convex polygon is <b>360°</b>.</div>
+      </div>
+      <p>Each exterior angle of a regular polygon = <code>360° / n</code>.</p>
+
+      <table class="notes-table">
+        <tr><th>n</th><th>Polygon</th><th>Interior sum</th><th>Each interior (regular)</th></tr>
+        <tr><td>3</td><td>Triangle</td><td>180°</td><td>60°</td></tr>
+        <tr><td>4</td><td>Quadrilateral</td><td>360°</td><td>90°</td></tr>
+        <tr><td>5</td><td>Pentagon</td><td>540°</td><td>108°</td></tr>
+        <tr><td>6</td><td>Hexagon</td><td>720°</td><td>120°</td></tr>
+        <tr><td>8</td><td>Octagon</td><td>1080°</td><td>135°</td></tr>
+        <tr><td>10</td><td>Decagon</td><td>1440°</td><td>144°</td></tr>
+      </table>
+    </section>
+
+    <section class="notes-section" id="parallelogram">
+      <h2><span class="icon">3</span> Properties of a Parallelogram</h2>
+
+      <p>If <code>ABCD</code> is a parallelogram, then:</p>
+
+      <div class="thm">
+        <div class="label">Theorem 8-3</div>
+        <div class="name">Opposite Sides ≅</div>
+        <div class="stmt">Opposite sides of a parallelogram are congruent.</div>
+      </div>
+      <div class="thm">
+        <div class="label">Theorem 8-4</div>
+        <div class="name">Opposite Angles ≅</div>
+        <div class="stmt">Opposite angles of a parallelogram are congruent.</div>
+      </div>
+      <div class="thm">
+        <div class="label">Theorem 8-5</div>
+        <div class="name">Consecutive Angles Supplementary</div>
+        <div class="stmt">Consecutive (adjacent) angles of a parallelogram are supplementary.</div>
+      </div>
+      <div class="thm">
+        <div class="label">Theorem 8-6</div>
+        <div class="name">Diagonals Bisect Each Other</div>
+        <div class="stmt">The diagonals of a parallelogram bisect each other.</div>
+      </div>
+    </section>
+
+    <section class="notes-section" id="prove-parallel">
+      <h2><span class="icon">4</span> Proving a Quadrilateral is a Parallelogram</h2>
+
+      <p>To prove a quadrilateral is a parallelogram, show <b>any one</b> of the following:</p>
+      <ul class="bullets">
+        <li><b>Theorem 8-7:</b> Both pairs of opposite sides are congruent.</li>
+        <li><b>Theorem 8-8:</b> Both pairs of opposite angles are congruent.</li>
+        <li><b>Theorem 8-9:</b> One pair of opposite sides is <b>both parallel and congruent</b>.</li>
+        <li><b>Theorem 8-10:</b> Diagonals bisect each other.</li>
+        <li><b>Definition:</b> Both pairs of opposite sides are parallel.</li>
+      </ul>
+    </section>
+
+    <section class="notes-section" id="rectangle">
+      <h2><span class="icon">5</span> Rectangle</h2>
+      <p>A rectangle has all the properties of a parallelogram <b>plus</b>:</p>
+
+      <div class="thm">
+        <div class="label">Theorem 8-11</div>
+        <div class="name">Rectangle — Four Right Angles</div>
+        <div class="stmt">A parallelogram is a rectangle iff it has four right angles (equivalently, one right angle, since opposite ∠s are congruent and consecutive ∠s are supplementary).</div>
+      </div>
+
+      <div class="thm">
+        <div class="label">Theorem 8-12</div>
+        <div class="name">Rectangle Diagonals</div>
+        <div class="stmt">The diagonals of a rectangle are <b>congruent</b>.</div>
+      </div>
+
+      <div class="thm">
+        <div class="label">Theorem 8-13</div>
+        <div class="name">Converse — Diagonals</div>
+        <div class="stmt">If a parallelogram has congruent diagonals, then it is a rectangle.</div>
+      </div>
+    </section>
+
+    <section class="notes-section" id="rhombus">
+      <h2><span class="icon">6</span> Rhombus</h2>
+      <p>A rhombus is a parallelogram with all sides ≅. Special diagonal properties:</p>
+
+      <div class="thm">
+        <div class="label">Theorem 8-14</div>
+        <div class="name">Rhombus Diagonals — Perpendicular</div>
+        <div class="stmt">The diagonals of a rhombus are <b>perpendicular</b>.</div>
+      </div>
+
+      <div class="thm">
+        <div class="label">Theorem 8-15</div>
+        <div class="name">Rhombus Diagonals — Bisect Angles</div>
+        <div class="stmt">Each diagonal of a rhombus <b>bisects</b> two opposite angles.</div>
+      </div>
+
+      <div class="thm">
+        <div class="label">Theorem 8-16</div>
+        <div class="name">Converse Tests</div>
+        <div class="stmt">If a parallelogram has perpendicular diagonals OR has a diagonal that bisects opposite angles, then it is a rhombus.</div>
+      </div>
+    </section>
+
+    <section class="notes-section" id="square">
+      <h2><span class="icon">7</span> Square</h2>
+      <p>A square is <b>both</b> a rectangle and a rhombus. It has every property of both:</p>
+      <ul class="bullets">
+        <li>4 right angles · 4 congruent sides.</li>
+        <li>Diagonals are <b>congruent</b>, <b>perpendicular</b>, <b>bisect each other</b>, and <b>bisect the corner angles</b>.</li>
+        <li>Each diagonal splits the square into <b>two 45-45-90</b> right triangles.</li>
+      </ul>
+    </section>
+
+    <section class="notes-section" id="trapezoid">
+      <h2><span class="icon">8</span> Trapezoid &amp; Midsegment</h2>
+
+      <div class="thm def">
+        <div class="label">Definition</div>
+        <div class="name">Trapezoid</div>
+        <div class="stmt">A quadrilateral with exactly one pair of parallel sides (the <b>bases</b>). The non-parallel sides are the <b>legs</b>.</div>
+      </div>
+
+      <div class="thm">
+        <div class="label">Theorem 8-17</div>
+        <div class="name">Isosceles Trapezoid — Base Angles</div>
+        <div class="stmt">In an isosceles trapezoid, each pair of <b>base angles</b> is congruent.</div>
+      </div>
+
+      <div class="thm">
+        <div class="label">Theorem 8-18</div>
+        <div class="name">Isosceles Trapezoid — Diagonals</div>
+        <div class="stmt">The diagonals of an isosceles trapezoid are <b>congruent</b>.</div>
+      </div>
+
+      <div class="thm">
+        <div class="label">Theorem 8-19</div>
+        <div class="name">Trapezoid Midsegment Theorem</div>
+        <div class="stmt">The midsegment of a trapezoid (joining the midpoints of the legs) is <b>parallel</b> to the bases and its length is the <b>average</b> of the two bases.</div>
+      </div>
+      <div class="formula">midsegment = <b>(b₁ + b₂) / 2</b></div>
+    </section>
+
+    <section class="notes-section" id="kite">
+      <h2><span class="icon">9</span> Kite</h2>
+
+      <div class="thm">
+        <div class="label">Theorem 8-20</div>
+        <div class="name">Kite — Diagonals Perpendicular</div>
+        <div class="stmt">The diagonals of a kite are perpendicular.</div>
+      </div>
+
+      <div class="thm">
+        <div class="label">Theorem 8-21</div>
+        <div class="name">Kite — One Diagonal Bisects the Other</div>
+        <div class="stmt">Exactly one diagonal of a kite bisects the other. The diagonal connecting the vertices between equal pairs is the perpendicular bisector of the other diagonal.</div>
+      </div>
+
+      <div class="thm">
+        <div class="label">Theorem 8-22</div>
+        <div class="name">Kite — One Pair of Angles ≅</div>
+        <div class="stmt">Exactly one pair of opposite angles in a kite is congruent (the two between the unequal sides).</div>
+      </div>
+    </section>
+
+    <section class="notes-section" id="examples">
+      <h2><span class="icon">10</span> Worked Examples</h2>
+
+      <div class="example">
+        <div class="ex-label">Example 1 · Interior sum</div>
+        <div class="ex-q">Find the sum of the interior angles of a 12-gon. Then find each interior angle if it is regular.</div>
+        <div class="ex-steps">
+          <ol>
+            <li>Sum = <code>(12 − 2)·180° = 1800°</code>.</li>
+            <li>Each interior = <code>1800° / 12 = 150°</code>.</li>
+          </ol>
+        </div>
+        <div class="ans">Sum 1800°; each 150°</div>
+      </div>
+
+      <div class="example">
+        <div class="ex-label">Example 2 · Parallelogram algebra</div>
+        <div class="ex-q">In parallelogram <i>ABCD</i>, <code>AB = 3x + 4</code>, <code>CD = 5x − 8</code>. Find x and AB.</div>
+        <div class="ex-steps">
+          <ol>
+            <li>Opposite sides ≅ ⇒ <code>3x + 4 = 5x − 8</code> → <code>12 = 2x</code> → <code>x = 6</code>.</li>
+            <li><code>AB = 3(6) + 4 = 22</code>.</li>
+          </ol>
+        </div>
+        <div class="ans">x = 6, AB = 22</div>
+      </div>
+
+      <div class="example">
+        <div class="ex-label">Example 3 · Trapezoid midsegment</div>
+        <div class="ex-q">The bases of a trapezoid are 14 and 22. Find the midsegment.</div>
+        <div class="ex-steps">
+          <ol>
+            <li><code>m = (14 + 22)/2 = 18</code>.</li>
+          </ol>
+        </div>
+        <div class="ans">m = 18</div>
+      </div>
+
+      <div class="example">
+        <div class="ex-label">Example 4 · Classify by diagonals</div>
+        <div class="ex-q">A parallelogram has diagonals that are perpendicular but not congruent. Classify it.</div>
+        <div class="ex-steps">
+          <ol>
+            <li>Perpendicular diagonals ⇒ rhombus.</li>
+            <li>Not congruent ⇒ not a rectangle, so not a square.</li>
+          </ol>
+        </div>
+        <div class="ans">Rhombus (not a square).</div>
+      </div>
+    </section>
+
+    <section class="notes-section" id="pitfalls">
+      <h2><span class="icon">11</span> Common Pitfalls</h2>
+      <ul class="bullets">
+        <li>A <b>rhombus</b> has perpendicular diagonals; a <b>rectangle</b> has congruent diagonals; a <b>square</b> has both.</li>
+        <li><b>Every</b> square is a rectangle and a rhombus, but not every rectangle/rhombus is a square.</li>
+        <li>A <b>trapezoid</b> has exactly one pair of parallel sides (some textbooks allow "at least one" — Glencoe uses "exactly one").</li>
+        <li>A <b>kite</b> has two distinct pairs of consecutive ≅ sides — not opposite sides. (Two opposite-pairs would be a rhombus.)</li>
+        <li>"Consecutive angles supplementary" is for parallelograms. For an isosceles trapezoid, only the <b>same-leg</b> co-interior angles are supplementary (because the bases are parallel).</li>
+        <li>The exterior angle <b>sum</b> of any convex polygon is always 360° regardless of the number of sides.</li>
+      </ul>
+    </section>
+
+    <section class="notes-section" id="summary">
+      <h2><span class="icon">12</span> Quick Reference</h2>
+      <table class="notes-table">
+        <tr><th>Concept</th><th>Statement</th></tr>
+        <tr><td>Interior sum</td><td><code>(n − 2)·180°</code></td></tr>
+        <tr><td>Exterior sum</td><td>360°</td></tr>
+        <tr><td>Parallelogram</td><td>Opp sides ∥ &amp; ≅, opp ∠s ≅, consec ∠s suppl, diags bisect.</td></tr>
+        <tr><td>Rectangle</td><td>Parallelogram + 4 right ∠s + ≅ diagonals.</td></tr>
+        <tr><td>Rhombus</td><td>Parallelogram + 4 ≅ sides + ⊥ diagonals + diag bisects opp ∠s.</td></tr>
+        <tr><td>Square</td><td>Rectangle &amp; Rhombus.</td></tr>
+        <tr><td>Trapezoid</td><td>Exactly one pair of ∥ sides.</td></tr>
+        <tr><td>Isosceles trapezoid</td><td>≅ legs, ≅ base ∠s, ≅ diagonals.</td></tr>
+        <tr><td>Trapezoid midsegment</td><td>= (b₁ + b₂)/2; ∥ bases.</td></tr>
+        <tr><td>Kite</td><td>2 pairs consec ≅ sides, ⊥ diagonals, 1 diag bisects other.</td></tr>
+      </table>
+    </section>
+
+  </div>
+</div>
+
+<footer class="notes-footer">
+  Glencoe Geometry TX 2015 · Chapter 8 ·
+  <a href="../cheatsheets/ch08-cheatsheet.html">Cheatsheet</a> ·
+  <a href="../slides/ch08-quadrilaterals.html">Slides</a> ·
+  <a href="../quizzes/ch08-quiz.html">Quiz</a>
+</footer>
+
+</body>
+</html>

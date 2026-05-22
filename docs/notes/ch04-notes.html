@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ch 4 Notes — Congruent Triangles</title>
+<link rel="stylesheet" href="../notes.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div>
+    <div class="chapter-label">Chapter 4 · Detailed Notes</div>
+    <h1>Congruent Triangles</h1>
+  </div>
+  <a href="../index.html">← Home</a>
+</header>
+
+<div class="layout">
+
+  <aside class="toc">
+    <div class="toc-title">Contents</div>
+    <ol>
+      <li><a href="#vocab">1. Vocabulary &amp; Classifications</a></li>
+      <li><a href="#angle-thms">2. Triangle Angle Theorems</a></li>
+      <li><a href="#congruence-def">3. Congruent Polygons</a></li>
+      <li><a href="#postulates">4. Triangle Congruence Postulates</a></li>
+      <li><a href="#cpctc">5. CPCTC</a></li>
+      <li><a href="#isosceles">6. Isosceles &amp; Equilateral</a></li>
+      <li><a href="#right-tri">7. Right-Triangle Congruence (HL)</a></li>
+      <li><a href="#examples">8. Worked Examples</a></li>
+      <li><a href="#pitfalls">9. Common Pitfalls</a></li>
+      <li><a href="#summary">10. Quick Reference</a></li>
+    </ol>
+  </aside>
+
+  <div class="content">
+
+    <div class="intro">
+      <h2>Chapter 4 — Congruent Triangles</h2>
+      <p>This chapter introduces the five shortcuts that prove two triangles congruent (SSS, SAS, ASA, AAS, HL) and the strategy of using congruence to prove parts equal (CPCTC). Every later chapter — quadrilaterals, similarity, circles — rests on these tools.</p>
+    </div>
+
+    <section class="notes-section" id="vocab">
+      <h2><span class="icon">1</span> Vocabulary &amp; Classifications</h2>
+
+      <h3>By angles</h3>
+      <dl class="vocab">
+        <div class="row"><dt>Acute</dt><dd>All three angles less than 90°.</dd></div>
+        <div class="row"><dt>Equiangular</dt><dd>All three angles 60° (special case of acute).</dd></div>
+        <div class="row"><dt>Right</dt><dd>Exactly one 90° angle.</dd></div>
+        <div class="row"><dt>Obtuse</dt><dd>Exactly one angle greater than 90°.</dd></div>
+      </dl>
+
+      <h3>By sides</h3>
+      <dl class="vocab">
+        <div class="row"><dt>Scalene</dt><dd>No congruent sides.</dd></div>
+        <div class="row"><dt>Isosceles</dt><dd>At least two congruent sides (the legs); the third side is the base.</dd></div>
+        <div class="row"><dt>Equilateral</dt><dd>All three sides congruent (and therefore equilateral ⇔ equiangular).</dd></div>
+      </dl>
+
+      <h3>Key parts of a triangle</h3>
+      <dl class="vocab">
+        <div class="row"><dt>Vertex</dt><dd>The corner point.</dd></div>
+        <div class="row"><dt>Included side</dt><dd>The side <b>between</b> two angles.</dd></div>
+        <div class="row"><dt>Included angle</dt><dd>The angle <b>between</b> two sides.</dd></div>
+        <div class="row"><dt>Opposite side / angle</dt><dd>The side and angle that do <i>not</i> share a vertex/endpoint.</dd></div>
+      </dl>
+    </section>
+
+    <section class="notes-section" id="angle-thms">
+      <h2><span class="icon">2</span> Triangle Angle Theorems</h2>
+
+      <div class="thm">
+        <div class="label">Theorem 4-1</div>
+        <div class="name">Triangle Angle-Sum Theorem</div>
+        <div class="stmt">The sum of the measures of the interior angles of a triangle is <b>180°</b>.</div>
+      </div>
+
+      <div class="thm">
+        <div class="label">Theorem 4-2</div>
+        <div class="name">Exterior Angle Theorem</div>
+        <div class="stmt">The measure of an <b>exterior angle</b> of a triangle equals the sum of the two <b>remote (non-adjacent) interior angles</b>.</div>
+        <div class="conv"><b>Why:</b> Exterior + adjacent interior = 180°. The three interior angles also sum to 180°. Subtracting gives ext = sum of the other two interiors.</div>
+      </div>
+
+      <div class="thm cor">
+        <div class="label">Corollary</div>
+        <div class="name">Third-Angle Theorem (4-3)</div>
+        <div class="stmt">If two angles of one triangle are congruent to two angles of another, the third angles are congruent. (Because both pairs sum to 180°.)</div>
+      </div>
+
+      <div class="thm cor">
+        <div class="label">Corollary</div>
+        <div class="name">Acute Angles of a Right Triangle</div>
+        <div class="stmt">The two acute angles of a right triangle are <b>complementary</b> (sum to 90°).</div>
+      </div>
+
+      <div class="thm cor">
+        <div class="label">Corollary</div>
+        <div class="name">Equiangular Triangle</div>
+        <div class="stmt">Each angle of an equiangular triangle measures <b>60°</b>.</div>
+      </div>
+    </section>
+
+    <section class="notes-section" id="congruence-def">
+      <h2><span class="icon">3</span> Congruent Polygons</h2>
+
+      <div class="thm def">
+        <div class="label">Definition</div>
+        <div class="name">Congruent polygons</div>
+        <div class="stmt">Two polygons are congruent if their <b>corresponding sides</b> are congruent <b>and</b> their <b>corresponding angles</b> are congruent.</div>
+      </div>
+
+      <div class="key">When you write <code>△ABC ≅ △DEF</code>, the order of letters matters: A↔D, B↔E, C↔F. Same goes for the corresponding sides: <code>AB ≅ DE</code>, <code>BC ≅ EF</code>, <code>CA ≅ FD</code>.</div>
+    </section>
+
+    <section class="notes-section" id="postulates">
+      <h2><span class="icon">4</span> Triangle Congruence Postulates &amp; Theorems</h2>
+
+      <p>Instead of proving all six pairs (3 sides + 3 angles), you only need <b>three</b> of the right pieces.</p>
+
+      <div class="thm post">
+        <div class="label">Postulate 4-1</div>
+        <div class="name">SSS — Side-Side-Side</div>
+        <div class="stmt">If three sides of one triangle are congruent to three sides of another, the triangles are congruent.</div>
+      </div>
+
+      <div class="thm post">
+        <div class="label">Postulate 4-2</div>
+        <div class="name">SAS — Side-Angle-Side</div>
+        <div class="stmt">If two sides and the <b>included angle</b> of one triangle are congruent to the corresponding parts of another, the triangles are congruent.</div>
+      </div>
+
+      <div class="thm post">
+        <div class="label">Postulate 4-3</div>
+        <div class="name">ASA — Angle-Side-Angle</div>
+        <div class="stmt">If two angles and the <b>included side</b> of one triangle are congruent to the corresponding parts of another, the triangles are congruent.</div>
+      </div>
+
+      <div class="thm">
+        <div class="label">Theorem 4-4</div>
+        <div class="name">AAS — Angle-Angle-Side</div>
+        <div class="stmt">If two angles and a <b>non-included side</b> of one triangle are congruent to the corresponding parts of another, the triangles are congruent.</div>
+        <div class="conv"><b>Why it works:</b> Two pairs of congruent angles force the third pair congruent (Third Angle Thm); then ASA applies.</div>
+      </div>
+
+      <div class="warn"><b>SSA and AAA do NOT prove congruence.</b>
+        <ul class="bullets">
+          <li><b>SSA</b> ("the ambiguous case") can produce two different triangles.</li>
+          <li><b>AAA</b> proves only <i>similar</i> triangles (same shape, possibly different size).</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="notes-section" id="cpctc">
+      <h2><span class="icon">5</span> CPCTC — Corresponding Parts of Congruent Triangles are Congruent</h2>
+
+      <div class="thm">
+        <div class="label">Theorem</div>
+        <div class="name">CPCTC</div>
+        <div class="stmt">Once two triangles are proven congruent, <b>every</b> pair of corresponding parts — sides and angles — is congruent.</div>
+      </div>
+
+      <div class="key"><b>Strategy:</b> To prove two segments or two angles congruent, find a pair of congruent triangles containing them. Prove the triangles ≅ first, then cite CPCTC for the specific parts.</div>
+    </section>
+
+    <section class="notes-section" id="isosceles">
+      <h2><span class="icon">6</span> Isosceles &amp; Equilateral Triangles</h2>
+
+      <div class="thm">
+        <div class="label">Theorem 4-5</div>
+        <div class="name">Isosceles Triangle Theorem (Base Angles Theorem)</div>
+        <div class="stmt">If two <b>sides</b> of a triangle are congruent, then the <b>angles opposite</b> those sides are congruent.</div>
+      </div>
+
+      <div class="thm">
+        <div class="label">Theorem 4-6</div>
+        <div class="name">Converse of Isosceles Triangle Theorem</div>
+        <div class="stmt">If two <b>angles</b> of a triangle are congruent, then the <b>sides opposite</b> those angles are congruent.</div>
+      </div>
+
+      <div class="thm">
+        <div class="label">Theorem 4-7</div>
+        <div class="name">Bisector of Vertex Angle</div>
+        <div class="stmt">The bisector of the vertex angle of an isosceles triangle is the <b>perpendicular bisector</b> of the base.</div>
+      </div>
+
+      <div class="thm cor">
+        <div class="label">Corollary</div>
+        <div class="name">Equilateral ⇔ Equiangular</div>
+        <div class="stmt">A triangle is equilateral if and only if it is equiangular (all 60°).</div>
+      </div>
+    </section>
+
+    <section class="notes-section" id="right-tri">
+      <h2><span class="icon">7</span> Right Triangle Congruence — HL</h2>
+
+      <div class="thm">
+        <div class="label">Theorem 4-8</div>
+        <div class="name">HL — Hypotenuse-Leg Theorem</div>
+        <div class="stmt">If the <b>hypotenuse</b> and a <b>leg</b> of one right triangle are congruent to the hypotenuse and a leg of another right triangle, the triangles are congruent.</div>
+      </div>
+
+      <div class="note">HL is the only "SSA-like" rule that works — but it requires the right angle <b>and</b> the matched side be the hypotenuse. Outside of right triangles, SSA is invalid.</div>
+    </section>
+
+    <section class="notes-section" id="examples">
+      <h2><span class="icon">8</span> Worked Examples</h2>
+
+      <div class="example">
+        <div class="ex-label">Example 1 · Choose a congruence rule</div>
+        <div class="ex-q">In △ABC and △DEF, you know <code>AB ≅ DE</code>, <code>∠A ≅ ∠D</code>, and <code>AC ≅ DF</code>. Which rule proves the triangles congruent?</div>
+        <div class="ex-steps">
+          <ol>
+            <li>You have <b>side</b>, <b>angle between</b>, <b>side</b>.</li>
+            <li>That's <b>SAS</b> (the angle is <i>included</i> between the two sides).</li>
+          </ol>
+        </div>
+        <div class="ans">SAS</div>
+      </div>
+
+      <div class="example">
+        <div class="ex-label">Example 2 · Exterior angle</div>
+        <div class="ex-q">In △ABC, ∠A = 40°, ∠B = 65°. Find the exterior angle at <i>C</i>.</div>
+        <div class="ex-steps">
+          <ol>
+            <li>Exterior ∠ at C = sum of remote interiors = <code>40 + 65 = 105°</code>.</li>
+          </ol>
+        </div>
+        <div class="ans">105°</div>
+      </div>
+
+      <div class="example">
+        <div class="ex-label">Example 3 · Isosceles triangle</div>
+        <div class="ex-q">In isosceles △ABC, <code>AB ≅ AC</code>. ∠B = 50°. Find ∠A.</div>
+        <div class="ex-steps">
+          <ol>
+            <li>Base angles theorem: ∠B ≅ ∠C ⇒ ∠C = 50°.</li>
+            <li>Angle sum: ∠A = 180 − 50 − 50 = <b>80°</b>.</li>
+          </ol>
+        </div>
+        <div class="ans">∠A = 80°</div>
+      </div>
+
+      <div class="example">
+        <div class="ex-label">Example 4 · CPCTC chain</div>
+        <div class="ex-q">In the diagram, <code>AB ≅ AD</code> and <code>BC ≅ DC</code>. Prove <code>∠B ≅ ∠D</code>.</div>
+        <div class="ex-steps">
+          <table class="notes-table" style="margin-top:.4rem;">
+            <tr><th>Statements</th><th>Reasons</th></tr>
+            <tr><td>1. AB ≅ AD, BC ≅ DC</td><td>Given</td></tr>
+            <tr><td>2. AC ≅ AC</td><td>Reflexive Property</td></tr>
+            <tr><td>3. △ABC ≅ △ADC</td><td>SSS</td></tr>
+            <tr><td>4. ∠B ≅ ∠D</td><td>CPCTC</td></tr>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="notes-section" id="pitfalls">
+      <h2><span class="icon">9</span> Common Pitfalls</h2>
+      <ul class="bullets">
+        <li><b>SSA</b> is not a congruence rule (only HL works in right triangles).</li>
+        <li><b>AAA</b> proves similarity, not congruence.</li>
+        <li>The order of vertices in <code>△ABC ≅ △DEF</code> tells you the correspondence — don't randomize.</li>
+        <li>For SAS, the angle must be <b>between</b> the two sides; for ASA, the side must be <b>between</b> the two angles.</li>
+        <li>To use CPCTC, you must <b>first prove the triangles congruent</b>. CPCTC cannot be your first step.</li>
+        <li>Be wary of "<b>vertical angles</b>" and "<b>shared sides</b>" in diagrams — they are common implicit givens worth stating.</li>
+        <li>An "<b>included</b>" part touches both of the other two parts being cited.</li>
+      </ul>
+    </section>
+
+    <section class="notes-section" id="summary">
+      <h2><span class="icon">10</span> Quick Reference</h2>
+      <table class="notes-table">
+        <tr><th>Rule / Theorem</th><th>Condition</th></tr>
+        <tr><td><b>SSS</b></td><td>3 pairs of sides congruent.</td></tr>
+        <tr><td><b>SAS</b></td><td>2 sides + included angle.</td></tr>
+        <tr><td><b>ASA</b></td><td>2 angles + included side.</td></tr>
+        <tr><td><b>AAS</b></td><td>2 angles + non-included side.</td></tr>
+        <tr><td><b>HL</b> (right ▵s only)</td><td>Hypotenuse + leg.</td></tr>
+        <tr><td><b>SSA / AAA</b></td><td>NOT valid for congruence.</td></tr>
+        <tr><td>Triangle Angle Sum</td><td>Interior angles sum to 180°.</td></tr>
+        <tr><td>Exterior Angle</td><td>= Sum of 2 remote interiors.</td></tr>
+        <tr><td>Right Triangle Acute ∠s</td><td>Complementary (90°).</td></tr>
+        <tr><td>Isosceles Base Angles</td><td>Sides ≅ ⇒ opposite ∠s ≅.</td></tr>
+        <tr><td>Converse of Isos.</td><td>∠s ≅ ⇒ opposite sides ≅.</td></tr>
+        <tr><td>Equilateral ⇔ Equiangular</td><td>All sides ≅ ⇔ all ∠s 60°.</td></tr>
+        <tr><td>CPCTC</td><td>After ≅: every corresponding part is ≅.</td></tr>
+      </table>
+    </section>
+
+  </div>
+</div>
+
+<footer class="notes-footer">
+  Glencoe Geometry TX 2015 · Chapter 4 ·
+  <a href="../cheatsheets/ch04-cheatsheet.html">Cheatsheet</a> ·
+  <a href="../slides/ch04-congruent-triangles.html">Slides</a> ·
+  <a href="../quizzes/ch04-quiz.html">Quiz</a>
+</footer>
+
+</body>
+</html>

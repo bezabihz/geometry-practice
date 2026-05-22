@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ch 10 Notes — Circles</title>
+<link rel="stylesheet" href="../notes.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div>
+    <div class="chapter-label">Chapter 10 · Detailed Notes</div>
+    <h1>Circles</h1>
+  </div>
+  <a href="../index.html">← Home</a>
+</header>
+
+<div class="layout">
+
+  <aside class="toc">
+    <div class="toc-title">Contents</div>
+    <ol>
+      <li><a href="#vocab">1. Vocabulary</a></li>
+      <li><a href="#arcs">2. Arcs &amp; Central Angles</a></li>
+      <li><a href="#chords">3. Chord Theorems</a></li>
+      <li><a href="#inscribed">4. Inscribed Angles</a></li>
+      <li><a href="#tangents">5. Tangents</a></li>
+      <li><a href="#angle-formed">6. Angles Formed by Lines</a></li>
+      <li><a href="#segments">7. Segment Lengths (Power of a Point)</a></li>
+      <li><a href="#equations">8. Equations of Circles</a></li>
+      <li><a href="#examples">9. Worked Examples</a></li>
+      <li><a href="#pitfalls">10. Common Pitfalls</a></li>
+      <li><a href="#summary">11. Quick Reference</a></li>
+    </ol>
+  </aside>
+
+  <div class="content">
+
+    <div class="intro">
+      <h2>Chapter 10 — Circles</h2>
+      <p>A circle's geometry is governed by where lines cross it: as a tangent, a chord, or a secant. The central- and inscribed-angle theorems and the segment relationships ("power of a point") let you find any missing arc, angle, or length.</p>
+    </div>
+
+    <section class="notes-section" id="vocab">
+      <h2><span class="icon">1</span> Vocabulary</h2>
+      <dl class="vocab">
+        <div class="row"><dt>Circle</dt><dd>The set of all points in a plane equidistant from a given <b>center</b> point. The constant distance is the <b>radius</b>.</dd></div>
+        <div class="row"><dt>Chord</dt><dd>A segment whose endpoints lie on the circle.</dd></div>
+        <div class="row"><dt>Diameter</dt><dd>A chord passing through the center. Length = 2·radius.</dd></div>
+        <div class="row"><dt>Secant</dt><dd>A line that intersects the circle in <b>two</b> points.</dd></div>
+        <div class="row"><dt>Tangent</dt><dd>A line that intersects the circle at <b>exactly one</b> point (the <b>point of tangency</b>).</dd></div>
+        <div class="row"><dt>Arc</dt><dd>A portion of the circle between two points. <b>Minor arc</b> &lt; 180°, <b>major arc</b> &gt; 180°, <b>semicircle</b> = 180°.</dd></div>
+        <div class="row"><dt>Central angle</dt><dd>An angle whose vertex is the center of the circle.</dd></div>
+        <div class="row"><dt>Inscribed angle</dt><dd>An angle whose vertex is on the circle, formed by two chords.</dd></div>
+        <div class="row"><dt>Intercepted arc</dt><dd>The arc that lies in the interior of an inscribed angle (or between the sides of a central angle).</dd></div>
+        <div class="row"><dt>Congruent circles</dt><dd>Circles with the same radius.</dd></div>
+      </dl>
+    </section>
+
+    <section class="notes-section" id="arcs">
+      <h2><span class="icon">2</span> Arcs &amp; Central Angles</h2>
+
+      <div class="thm post">
+        <div class="label">Postulate 10-1</div>
+        <div class="name">Arc Addition Postulate</div>
+        <div class="stmt">The measure of an arc formed by two adjacent arcs equals the sum of their measures.</div>
+      </div>
+
+      <div class="thm">
+        <div class="label">Theorem 10-1</div>
+        <div class="name">Central Angle = Intercepted Arc</div>
+        <div class="stmt">In a circle, the measure of a central angle equals the measure of its intercepted arc.</div>
+      </div>
+
+      <p>Length and measure are different:</p>
+      <div class="formula">arc length = (arc measure / 360°) · 2πr</div>
+
+      <div class="thm">
+        <div class="label">Theorem 10-2</div>
+        <div class="name">Congruent Arcs &amp; Chords</div>
+        <div class="stmt">In the same circle (or congruent circles), two arcs are congruent if and only if their corresponding chords are congruent.</div>
+      </div>
+    </section>
+
+    <section class="notes-section" id="chords">
+      <h2><span class="icon">3</span> Chord Theorems</h2>
+
+      <div class="thm">
+        <div class="label">Theorem 10-3</div>
+        <div class="name">Perpendicular Diameter Bisects Chord</div>
+        <div class="stmt">If a diameter (or radius) is perpendicular to a chord, then it bisects the chord and its arc.</div>
+      </div>
+
+      <div class="thm">
+        <div class="label">Theorem 10-4</div>
+        <div class="name">Bisecting Chord ⇒ Perpendicular</div>
+        <div class="stmt">The perpendicular bisector of a chord passes through the center of the circle.</div>
+      </div>
+
+      <div class="thm">
+        <div class="label">Theorem 10-5</div>
+        <div class="name">Equidistant Chords are Congruent</div>
+        <div class="stmt">In the same circle (or congruent circles), two chords are congruent if and only if they are equidistant from the center.</div>
+      </div>
+    </section>
+
+    <section class="notes-section" id="inscribed">
+      <h2><span class="icon">4</span> Inscribed Angle Theorems</h2>
+
+      <div class="thm">
+        <div class="label">Theorem 10-6</div>
+        <div class="name">Inscribed Angle Theorem</div>
+        <div class="stmt">An inscribed angle is <b>half</b> the measure of its intercepted arc.</div>
+      </div>
+      <div class="formula">m∠inscribed = ½ · m(intercepted arc)</div>
+
+      <div class="thm cor">
+        <div class="label">Corollary 10-6a</div>
+        <div class="name">Same Arc ⇒ Same Inscribed Angles</div>
+        <div class="stmt">Inscribed angles that intercept the same arc (or congruent arcs) are congruent.</div>
+      </div>
+
+      <div class="thm cor">
+        <div class="label">Corollary 10-6b</div>
+        <div class="name">Inscribed Angle in a Semicircle</div>
+        <div class="stmt">An angle inscribed in a semicircle is a <b>right angle</b>. (Its intercepted arc is 180°; half of 180° is 90°.)</div>
+      </div>
+
+      <div class="thm cor">
+        <div class="label">Corollary 10-6c</div>
+        <div class="name">Cyclic Quadrilateral</div>
+        <div class="stmt">If a quadrilateral is <b>inscribed in a circle</b>, then its opposite angles are <b>supplementary</b>.</div>
+      </div>
+    </section>
+
+    <section class="notes-section" id="tangents">
+      <h2><span class="icon">5</span> Tangents</h2>
+
+      <div class="thm">
+        <div class="label">Theorem 10-7</div>
+        <div class="name">Tangent ⊥ Radius</div>
+        <div class="stmt">A line is tangent to a circle if and only if it is <b>perpendicular to the radius</b> at the point of tangency.</div>
+      </div>
+
+      <div class="thm">
+        <div class="label">Theorem 10-8</div>
+        <div class="name">Two Tangent Segments from External Point</div>
+        <div class="stmt">If two segments from the same external point are tangent to a circle, then they are <b>congruent</b>.</div>
+      </div>
+
+      <div class="key">From an external point, you can draw exactly two tangent lines to a circle, and the segments to the points of tangency are equal in length.</div>
+    </section>
+
+    <section class="notes-section" id="angle-formed">
+      <h2><span class="icon">6</span> Angles Formed by Chords, Secants &amp; Tangents</h2>
+
+      <table class="notes-table">
+        <tr><th>Vertex location</th><th>Angle measure</th></tr>
+        <tr><td>At the <b>center</b></td><td>= intercepted arc</td></tr>
+        <tr><td>On the <b>circle</b> (inscribed)</td><td>= ½ · intercepted arc</td></tr>
+        <tr><td>On the <b>circle</b> (tangent-chord)</td><td>= ½ · intercepted arc</td></tr>
+        <tr><td><b>Inside</b> the circle (2 chords)</td><td>= ½ · (sum of intercepted arcs)</td></tr>
+        <tr><td><b>Outside</b> the circle (2 secants, secant-tangent, or 2 tangents)</td><td>= ½ · (far arc − near arc)</td></tr>
+      </table>
+
+      <div class="thm">
+        <div class="label">Theorem 10-9</div>
+        <div class="name">Tangent-Chord Angle</div>
+        <div class="stmt">If a tangent and a chord meet at the point of tangency, the angle equals half the intercepted arc.</div>
+      </div>
+
+      <div class="thm">
+        <div class="label">Theorem 10-10</div>
+        <div class="name">Two Chords Inside</div>
+        <div class="stmt">If two chords intersect inside a circle, each angle equals half the sum of the two intercepted arcs.</div>
+      </div>
+
+      <div class="thm">
+        <div class="label">Theorem 10-11</div>
+        <div class="name">External Angles</div>
+        <div class="stmt">The angle formed outside the circle by two secants, a secant and a tangent, or two tangents equals half the <b>positive difference</b> of the two intercepted arcs.</div>
+      </div>
+    </section>
+
+    <section class="notes-section" id="segments">
+      <h2><span class="icon">7</span> Segment Lengths — Power of a Point</h2>
+
+      <div class="thm">
+        <div class="label">Theorem 10-12</div>
+        <div class="name">Two Chords (Inside)</div>
+        <div class="stmt">If two chords intersect inside a circle, the product of the lengths of one chord's segments equals the product of the other's: <code>a·b = c·d</code>.</div>
+      </div>
+
+      <div class="thm">
+        <div class="label">Theorem 10-13</div>
+        <div class="name">Two Secants (Outside)</div>
+        <div class="stmt">If two secants from an external point cross the circle, the product (outside · whole) is the same for each: <code>a(a + b) = c(c + d)</code>.</div>
+      </div>
+
+      <div class="thm">
+        <div class="label">Theorem 10-14</div>
+        <div class="name">Secant–Tangent (Outside)</div>
+        <div class="stmt">If a secant and a tangent share an external endpoint, then <code>(tangent)² = (outer secant) · (whole secant)</code>: <code>t² = a(a + b)</code>.</div>
+      </div>
+    </section>
+
+    <section class="notes-section" id="equations">
+      <h2><span class="icon">8</span> Equations of Circles</h2>
+
+      <div class="thm">
+        <div class="label">Theorem 10-15</div>
+        <div class="name">Standard-Form Equation</div>
+        <div class="stmt">A circle with center <code>(h, k)</code> and radius <code>r</code> has equation:</div>
+      </div>
+      <div class="formula">(x − h)² + (y − k)² = r²</div>
+
+      <p>To put a general equation <code>x² + y² + Dx + Ey + F = 0</code> in standard form, <b>complete the square</b> in <i>x</i> and in <i>y</i>.</p>
+
+      <p>Circle centered at origin:</p>
+      <div class="formula">x² + y² = r²</div>
+    </section>
+
+    <section class="notes-section" id="examples">
+      <h2><span class="icon">9</span> Worked Examples</h2>
+
+      <div class="example">
+        <div class="ex-label">Example 1 · Central / inscribed</div>
+        <div class="ex-q">Arc AB measures 80°. Find the inscribed angle that intercepts AB.</div>
+        <div class="ex-steps">
+          <ol>
+            <li>Inscribed = ½·arc = <code>½·80° = 40°</code>.</li>
+          </ol>
+        </div>
+        <div class="ans">40°</div>
+      </div>
+
+      <div class="example">
+        <div class="ex-label">Example 2 · Cyclic quadrilateral</div>
+        <div class="ex-q">ABCD is inscribed in a circle. ∠A = 95°. Find ∠C.</div>
+        <div class="ex-steps">
+          <ol>
+            <li>Opposite ∠s supplementary: <code>∠C = 180° − 95° = 85°</code>.</li>
+          </ol>
+        </div>
+        <div class="ans">∠C = 85°</div>
+      </div>
+
+      <div class="example">
+        <div class="ex-label">Example 3 · Two intersecting chords</div>
+        <div class="ex-q">Chords AB and CD cross at P inside the circle. <code>AP = 6</code>, <code>PB = 8</code>, <code>CP = 4</code>. Find <code>PD</code>.</div>
+        <div class="ex-steps">
+          <ol>
+            <li><code>AP·PB = CP·PD</code> ⇒ <code>6·8 = 4·PD</code>.</li>
+            <li><code>PD = 48/4 = 12</code>.</li>
+          </ol>
+        </div>
+        <div class="ans">PD = 12</div>
+      </div>
+
+      <div class="example">
+        <div class="ex-label">Example 4 · External angle (two secants)</div>
+        <div class="ex-q">From point P outside the circle, two secants intercept arcs of 110° and 40°. Find the angle at P.</div>
+        <div class="ex-steps">
+          <ol>
+            <li>Angle = ½·(far − near) = <code>½·(110 − 40) = 35°</code>.</li>
+          </ol>
+        </div>
+        <div class="ans">35°</div>
+      </div>
+
+      <div class="example">
+        <div class="ex-label">Example 5 · Equation of a circle</div>
+        <div class="ex-q">Write the equation of the circle with center (−3, 2) and radius 5.</div>
+        <div class="ex-steps">
+          <ol>
+            <li>Use standard form: <code>(x − (−3))² + (y − 2)² = 5²</code>.</li>
+            <li><code>(x + 3)² + (y − 2)² = 25</code>.</li>
+          </ol>
+        </div>
+        <div class="ans">(x + 3)² + (y − 2)² = 25</div>
+      </div>
+
+      <div class="example">
+        <div class="ex-label">Example 6 · Complete the square</div>
+        <div class="ex-q">Find the center and radius of <code>x² + y² − 6x + 8y − 11 = 0</code>.</div>
+        <div class="ex-steps">
+          <ol>
+            <li>Group: <code>(x² − 6x) + (y² + 8y) = 11</code>.</li>
+            <li>Complete: <code>(x − 3)² − 9 + (y + 4)² − 16 = 11</code>.</li>
+            <li><code>(x − 3)² + (y + 4)² = 36</code> ⇒ center (3, −4), <code>r = 6</code>.</li>
+          </ol>
+        </div>
+        <div class="ans">Center (3, −4), radius 6.</div>
+      </div>
+    </section>
+
+    <section class="notes-section" id="pitfalls">
+      <h2><span class="icon">10</span> Common Pitfalls</h2>
+      <ul class="bullets">
+        <li><b>Arc measure</b> (degrees) ≠ <b>arc length</b> (distance). Arc length = (m/360°)·2πr.</li>
+        <li>The inscribed-angle rule uses the <b>intercepted arc</b>, not the arc near the vertex.</li>
+        <li>Inside the circle: <b>sum</b> of intercepted arcs, then halve. Outside the circle: <b>difference</b>, then halve.</li>
+        <li>Power of a point (chords): <b>each chord's two pieces multiplied</b>. For secants from an external point, use <b>outside · whole</b>.</li>
+        <li>Tangent-secant: square the tangent. Don't multiply tangent by itself only once.</li>
+        <li>When completing the square, remember to <b>add the same amount to both sides</b> of the equation.</li>
+        <li>An inscribed angle in a <b>semicircle</b> is always <b>90°</b> — a classic exam pattern.</li>
+      </ul>
+    </section>
+
+    <section class="notes-section" id="summary">
+      <h2><span class="icon">11</span> Quick Reference</h2>
+      <table class="notes-table">
+        <tr><th>Concept</th><th>Statement / Formula</th></tr>
+        <tr><td>Central angle</td><td>= intercepted arc</td></tr>
+        <tr><td>Inscribed angle</td><td>= ½ · intercepted arc</td></tr>
+        <tr><td>Inscribed in semicircle</td><td>= 90°</td></tr>
+        <tr><td>Cyclic quadrilateral</td><td>Opposite ∠s sum to 180°.</td></tr>
+        <tr><td>Tangent ⊥ radius</td><td>At point of tangency.</td></tr>
+        <tr><td>2 tangents from external pt</td><td>Congruent segments.</td></tr>
+        <tr><td>Tangent-chord angle</td><td>= ½ · intercepted arc</td></tr>
+        <tr><td>Two chords cross (interior)</td><td>angle = ½(arc + arc); products: a·b = c·d</td></tr>
+        <tr><td>External 2 secants</td><td>angle = ½(far − near); a(a+b) = c(c+d)</td></tr>
+        <tr><td>External secant + tangent</td><td>t² = a(a+b)</td></tr>
+        <tr><td>Arc length</td><td>= (m/360°)·2πr</td></tr>
+        <tr><td>Circle equation</td><td><code>(x − h)² + (y − k)² = r²</code></td></tr>
+      </table>
+    </section>
+
+  </div>
+</div>
+
+<footer class="notes-footer">
+  Glencoe Geometry TX 2015 · Chapter 10 ·
+  <a href="../cheatsheets/ch10-cheatsheet.html">Cheatsheet</a> ·
+  <a href="../slides/ch10-circles.html">Slides</a> ·
+  <a href="../quizzes/ch10-quiz.html">Quiz</a>
+</footer>
+
+</body>
+</html>
